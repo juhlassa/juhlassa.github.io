@@ -17,6 +17,13 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Pramiat vadit</title>
+    <script>
+        const searchParams = new URLSearchParams(window.location.search)
+        const pathname = searchParams.get('pathname')
+        if (pathname && pathname !== '/') {
+            window.history.replaceState(null, null, pathname)
+        }
+    </script>
 </head>
 <body>
 <div id="root"></div>

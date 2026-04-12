@@ -15,7 +15,7 @@ export const Layout: FC<LayoutProps> = ({ pageTitle, content, footer }) => {
 
   return (
     <>
-      <div className="navigation" onClick={() => location.assign('#/')}>
+      <div className="navigation" onClick={() => location.assign('/')}>
         <div className="navigationContent"></div>
       </div>
       <div className="navigation-small sticky">
