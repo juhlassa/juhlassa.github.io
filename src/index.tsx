@@ -17,6 +17,11 @@ import './assets/styles.css'
 import type { NavigationItem } from './types.ts'
 
 export const navigation: NavigationItem[] = [
+  {
+    route: '/',
+    name: '<img src="/kuvat/koti.png" alt="Koti" class="home">',
+    element: <Frontpage />
+  },
   { route: '/astiastot', name: 'Astiastot', element: <Vanilja /> },
   { route: '/vanilja', name: 'Vanilja', element: <Vanilja />, tableset: true },
   {
@@ -42,7 +47,6 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Frontpage />} />
         {navigation.map((item) => (
           <Route key={item.route} path={item.route} element={item.element} />
         ))}
