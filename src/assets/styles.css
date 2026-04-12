@@ -184,9 +184,15 @@ td:nth-of-type(1) {
         font-size: 80%;
     }
 
+    td:nth-of-type(1) {
+        vertical-align: top;
+        padding: 0 !important;
+    }
+
     .content img {
         float: none !important;
         width: 100% !important;
+        max-width: 100% !important;
         margin: 0 0 30px 0 !important;
     }
 
