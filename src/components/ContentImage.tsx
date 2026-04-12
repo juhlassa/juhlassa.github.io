@@ -4,6 +4,7 @@ type ContentImageProps = {
   marginLeft?: string
   marginRight?: string
   float?: string
+  loading?: 'lazy' | 'eager'
 }
 
 const defaultStyles = {
@@ -12,10 +13,15 @@ const defaultStyles = {
   width: 'calc(100% - 60px)'
 }
 
-export const ContentImage = ({ url, maxWidth, float }: ContentImageProps) => {
+export const ContentImage = ({
+  url,
+  maxWidth,
+  float,
+  loading
+}: ContentImageProps) => {
   //const src = new URL(url, import.meta.url).href
   const src = url //new URL(url).href
-  const styles = { maxWidth, float }
+  const styles = { maxWidth, float, loading }
   // @ts-expect-error compiler confused about float: string
   return <img src={src} alt={src} style={{ ...defaultStyles, ...styles }} />
 }
