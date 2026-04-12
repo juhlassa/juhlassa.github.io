@@ -42,6 +42,11 @@ export function RentalItemsTable({
       <table style={{ width: '100%' }}>
         <tbody>
           {rentalItems.map((item, index) => {
+            const itemNameHash = item.name
+              .replace(/(,|&shy;|\/)/g, '')
+              .replace(/&nbsp;/g, ' ')
+              .replace(/\s+/g, '-')
+              .toLowerCase()
             const itemDetails = [
               details('materiaali', item.material),
               details('leveys', item.width, 'cm'),
@@ -55,39 +60,35 @@ export function RentalItemsTable({
             return (
               <tr key={index}>
                 <td style={{ width: '50%' }}>
-                  <b style={{ fontSize: '120%' }}>
-                    <span dangerouslySetInnerHTML={{ __html: item.name }} />
-                  </b>
+                  <div
+                    className="anchor"
+                    id={itemNameHash}
+                    dangerouslySetInnerHTML={{ __html: item.name }}
+                    onClick={() => (window.location.hash = itemNameHash)}
+                  />
                   {item.brand && (
                     <>
-                      <br />
-                      <span style={{ fontSize: '75%' }}>{item.brand}</span>
+                      <div style={{ fontSize: '75%' }}>{item.brand}</div>
                     </>
                   )}
-                  <br />
-                  Saatavana {item.pcs} {item.unit ?? 'kpl'}
-                  <br />
+                  <div>
+                    Saatavana {item.pcs} {item.unit ?? 'kpl'}
+                  </div>
                   {item.price > 0 && (
-                    <span>
+                    <div>
                       Hinta{' '}
                       {item.price.toLocaleString('fi', {
                         minimumFractionDigits: 2,
                         maximumFractionDigits: 2
                       })}{' '}
                       € / {item.unit ?? 'kpl'}
-                    </span>
+                    </div>
                   )}
                   {itemDetails && (
-                    <span style={{ fontSize: '75%' }}>
-                      <br />
-                      {itemDetails}
-                    </span>
+                    <div style={{ fontSize: '75%' }}>{itemDetails}</div>
                   )}
                   {item.description && (
-                    <span style={{ fontSize: '75%' }}>
-                      <br />
-                      {item.description}
-                    </span>
+                    <div style={{ fontSize: '75%' }}>{item.description}</div>
                   )}
                 </td>
                 <td style={{ width: '50%' }}>
