@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { HashRouter, Route, Routes } from 'react-router'
+import { BrowserRouter, Route, Routes } from 'react-router'
 import Frontpage from './Frontpage.tsx'
 import Vanilja from './Vanilja.tsx'
 import GreenGate from './GreenGate.tsx'
@@ -40,13 +40,13 @@ export const navigation: NavigationItem[] = [
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Frontpage />} />
         {navigation.map((item) => (
           <Route key={item.route} path={item.route} element={item.element} />
         ))}
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   </StrictMode>
 )
