@@ -1,5 +1,6 @@
 import { Layout } from './components/Layout'
 import {
+  ContentImage,
   LeftContentImage,
   RightContentImage
 } from './components/ContentImage.tsx'
@@ -25,7 +26,7 @@ const Terms = () => {
             myöhemmin. Haku- ja nouto sovitaan sinulle sopivaan aikaan.
           </p>
           <p>Minimiostos on 20 €.</p>
-          <LeftContentImage url="/kuvat/donitsiteline.jpg" />
+          <LeftContentImage url="/kuvat/tarjottavat.jpg" maxWidth={'300px'} />
           <p>
             Yli 100 euron vuokramaksusta laskutamme etukäteen varausmaksuna
             puolet loppusummasta. Laskun eräpäivä on kaksi viikkoa ennen
@@ -43,6 +44,11 @@ const Terms = () => {
             kosketuksessa kosteiden tarjottavien kanssa. Tämän takia herkkujen
             alla on käytettävä kakkupaperia tai muuta suojaa.
           </p>
+          <ContentImage
+            url={'/kuvat/brita.jpg'}
+            maxWidth={'300px'}
+            float={'right'}
+          />
           <p>
             Jalallisen, suorakaiteen muotoisen tarjottimen mukana saat neljä
             astiaan sopivaa muovitarjotinta, joilla on helppo nostaa esimerkiksi
