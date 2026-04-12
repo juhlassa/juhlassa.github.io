@@ -1,0 +1,12 @@
+name: pramiatvadit
+services:
+  webserver:
+    container_name: pramatvadit_nginx
+    image: nginx:stable-alpine-slim
+    restart: unless-stopped
+    ports:
+      - '8777:80'
+    environment:
+      NODE_ENV: development
+    volumes:
+      - ./dist:/usr/share/nginx/html
