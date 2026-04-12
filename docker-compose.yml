@@ -1,0 +1,10 @@
+name: juhlassa.fi
+services:
+  webserver:
+    container_name: juhlassa_nginx
+    image: nginx:stable-alpine-slim
+    restart: unless-stopped
+    ports:
+      - '8777:80'
+    volumes:
+      - ./dist:/usr/share/nginx/html

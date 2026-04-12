@@ -1,0 +1,202 @@
+import { type RentalItem } from './types.ts'
+import { RentalItemsTable } from './components/RentalItemsTable.tsx'
+import { Layout } from './components/Layout.tsx'
+import { TablesetsNavigation } from './components/TablesetsNavigation.tsx'
+import { LeftContentImage } from './components/ContentImage.tsx'
+
+const rentalItems: RentalItem[] = [
+  {
+    name: 'Kahvikuppi, asetti ja lautanen',
+    pcs: 29,
+    image: '/kuvat/vanilja/kahvikuppi.jpg',
+    price: 2
+  },
+  {
+    name: 'Teemuki ja lautanen',
+    pcs: 8,
+    diameter: 21,
+    image: '/kuvat/vanilja/teekuppi.jpg',
+    price: 1.5
+  },
+  {
+    name: 'Kermakko ja sokerikko',
+    pcs: 3,
+    image: '/kuvat/vanilja/sokerikkokermakko.jpg',
+    price: 5
+  },
+  {
+    name: 'Kannu',
+    volume: 0.6,
+    pcs: 1,
+    image: '/kuvat/vanilja/kannu.jpg',
+    price: 5
+  },
+  {
+    name: 'Jälkiruokakulho',
+    pcs: 12,
+    diameter: 14,
+    height: 6,
+    image: '/kuvat/vanilja/jalkiruokakulho.jpg',
+    price: 3
+  },
+  {
+    name: 'Syvä ruokalautanen',
+    diameter: 21,
+    pcs: 10,
+    image: '/kuvat/vanilja/syvalautanen.jpg',
+    price: 2
+  },
+  {
+    name: 'Matala ruokalautanen',
+    diameter: 28,
+    pcs: 27,
+    image: '/kuvat/vanilja/lautanen.jpg',
+    price: 2
+  },
+  {
+    name: 'Sydänlautanen',
+    diameter: 17,
+    height: 5,
+    pcs: 4,
+    image: '/kuvat/vanilja/sydanlautanen.jpg',
+    price: 2
+  },
+  {
+    name: 'Jalallinen tarjoilukulho',
+    diameter: 20,
+    height: 20,
+    pcs: 8,
+    image: '/kuvat/vanilja/tarjoilukulho.jpg',
+    price: 3
+  },
+  {
+    name: 'Pieni tarjoilukulho',
+    diameter: 21,
+    height: 11,
+    pcs: 2,
+    image: '/kuvat/vanilja/pienitarjoilukulho.jpg',
+    price: 3
+  },
+  {
+    name: 'Iso tarjoilukulho',
+    diameter: 27,
+    height: 13,
+    pcs: 1,
+    image: '/kuvat/vanilja/isotarjoilukulho.jpg',
+    price: 4
+  },
+  {
+    name: 'Laakea tarjoiluvati',
+    diameter: 30,
+    height: 7,
+    pcs: 3,
+    image: '/kuvat/vanilja/laakeakulho.jpg',
+    price: 4
+  },
+  {
+    name: 'Pieni piirakkavuoka / tarjoiluvati',
+    diameter: 22,
+    height: 6,
+    pcs: 1,
+    image: '/kuvat/vanilja/pienipiirakkavuoka.jpg',
+    price: 3
+  },
+  {
+    name: 'Piirakkavuoka / tarjoiluvati',
+    diameter: 30,
+    pcs: 2,
+    image: '/kuvat/vanilja/isopiirakkavuoka.jpg',
+    price: 4
+  },
+  {
+    name: 'Korkea kulho',
+    diameter: 30,
+    pcs: 3,
+    image: '/kuvat/vanilja/korkeakulho.jpg',
+    price: 4
+  },
+  {
+    name: 'Maljakko, sopii myös tarjoiluun',
+    diameter: 20,
+    height: 19,
+    pcs: 4,
+    image: '/kuvat/vanilja/maljakko.jpg',
+    price: 3
+  },
+  {
+    name: 'Kakkutarjotin',
+    diameter: 28,
+    height: 20,
+    pcs: 1,
+    image: '/kuvat/vanilja/kakkulautanen.jpg',
+    price: 5
+  },
+  {
+    name: 'Kynttilänjalka',
+    pcs: 2,
+    height: 10,
+    image: '/kuvat/vanilja/kynttilajalka.jpg',
+    price: 2
+  }
+]
+
+const Vanilja = () => {
+  return (
+    <Layout
+      pageTitle="Astiastot"
+      content={
+        <>
+          <TablesetsNavigation selected="vanilja" />
+          <div>
+            <LeftContentImage
+              url={'/kuvat/kahvikupit.jpg'}
+              maxWidth={'450px'}
+            />
+            <h2 id="Vanilja">Pentik Vanilja</h2>
+            <p>
+              Pentikin omistajan, Anu Pentikin, suunnittelema Vanilija-sarja on
+              jo klassikko. Suomalaiset rakastavat sarjaa sen persoonallisen
+              muotoilun ja pintaa elävöittävän vaalean koristekuvion ansiosta.
+              Tämä astiasarja sopii juhlaan kuin juhlaan. Lautasliinoilla,
+              kukilla ja muilla somisteilla vaalea astiasto muuttaa muotoaan
+              juhlan teeman mukaan.
+            </p>
+            <p>
+              Meillä on tarjolla laaja setti, jolla katat pöydän tyylikkäästi
+              niin kahvikekkereille kuin ruokavieraillekin.
+            </p>
+            <p>Astiat voi pestä tiskikoneessa.</p>
+
+            <RentalItemsTable rentalItems={rentalItems} gapBeforeList={true} />
+          </div>
+
+          <div>
+            <h2 id="greengate">Green Gate</h2>
+            <p>
+              Green Gate -astiat luovat kattaukseen ainutlaatuista tunnelmaa,
+              jossa yhdistyvät romanttinen vintage-tyyli ja moderni
+              käytännöllisyys.
+            </p>
+            <p>
+              Tanskalainen merkki tunnetaan kauniisti kuvioiduista astioistaan,
+              joiden pehmeät värit ja kukkakuosit ihastuttavat romantiikan
+              ystäviä. Värejä ja kuoseja voi yhdistellä omien mieltymysten
+              mukaan.
+            </p>
+            <p>
+              Sarja on erityisesti nuorempien asiakkaiden mieleen, koska se
+              yhdistää nykypäivän mukikulttuurin ja kauneuden. Lattekuppi on
+              reilun kokoinen eikä sitä tarvitse olla koko ajan täyttämässä.
+            </p>
+            <p>
+              Kun katat pöydän suloisilla Green Gate -astioilla, vieraiden
+              huomio on taattu. Tätä sarjaa et helposti muualta löydä.
+            </p>
+          </div>
+        </>
+      }
+    />
+  )
+}
+
+export default Vanilja
