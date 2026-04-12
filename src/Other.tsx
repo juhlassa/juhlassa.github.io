@@ -20,14 +20,14 @@ const rentalItems: RentalItem[] = [
     price: 0.5
   },
   {
-    name: 'Paikka- tai tarjoiluinfopidike',
+    name: 'Paikka- tai tarjoilu&shy;infopidike',
     height: 5,
     pcs: 35,
     image: '/kuvat/muut/kylttipidike2.jpg',
     price: 0.5
   },
   {
-    name: 'Paikka- tai tarjoiluinfopidike',
+    name: 'Paikka- tai tarjoilu&shy;infopidike',
     height: 12,
     pcs: 12,
     image: '/kuvat/muut/kylttipidike.jpg',
@@ -60,7 +60,7 @@ const rentalItems: RentalItem[] = [
     price: 7
   },
   {
-    name: 'Voileipäkakkukupu',
+    name: 'Voileipä&shy;kakkukupu',
     brand: 'Tupperware',
     width: 40,
     length: 16,

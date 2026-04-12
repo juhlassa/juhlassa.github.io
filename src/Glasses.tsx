@@ -4,7 +4,7 @@ import { RentalItemsTable } from './components/RentalItemsTable.tsx'
 
 const rentalItems: RentalItem[] = [
   {
-    name: 'Kuohuviinilasi',
+    name: 'Kuohu&shy;viini&shy;lasi',
     pcs: 96,
     height: 10,
     volume: 0.1,

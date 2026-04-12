@@ -33,7 +33,9 @@ export function RentalItemsTable({
             return (
               <tr key={index}>
                 <td style={{ width: '50%' }}>
-                  <b style={{ fontSize: '120%' }}>{item.name}</b>
+                  <b style={{ fontSize: '120%' }}>
+                    <span dangerouslySetInnerHTML={{ __html: item.name }} />
+                  </b>
                   {item.brand && (
                     <>
                       <br />
