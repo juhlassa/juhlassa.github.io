@@ -53,7 +53,9 @@ const ContactInformation = () => {
         mielikuvitusta. Autan mielelläni suunnittelemaan kattaukset, jotka
         omalta osaltaan tekevät merkkipäivästä ainutlaatuisen.
       </p>
-      <p>Virpi Kupiainen-Ämmälä</p>
+      <p>
+        <b>Virpi Kupiainen-Ämmälä</b>
+      </p>
     </div>
   )
   return <Layout pageTitle="Yhteystiedot" content={content} />
