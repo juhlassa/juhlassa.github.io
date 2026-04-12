@@ -24,8 +24,8 @@ const Terms = () => {
             Jos tuotteet ovat vapaana, ne saa noutaa aikaisemmin tai palauttaa
             myöhemmin. Haku- ja nouto sovitaan sinulle sopivaan aikaan.
           </p>
-          <LeftContentImage url="/kuvat/donitsiteline.jpg" />
           <p>Minimiostos on 20 €.</p>
+          <LeftContentImage url="/kuvat/donitsiteline.jpg" />
           <p>
             Yli 100 euron vuokramaksusta laskutamme etukäteen varausmaksuna
             puolet loppusummasta. Laskun eräpäivä on kaksi viikkoa ennen
@@ -36,6 +36,17 @@ const Terms = () => {
           <p>
             Jos tuote rikkoutuu, katoaa tai vaurioituu, asiakas on velvollinen
             maksamaan summa, jolla hankimme uuden, vastaavan tuotteen.
+          </p>
+          <p>
+            Hopean väriset astiat on tarkoitettu elintarvikekäyttöön, mutta
+            niiden pinta vaurioituu helposti varsinkin silloin, jos ne ovat
+            kosketuksessa kosteiden tarjottavien kanssa. Tämän takia herkkujen
+            alla on käytettävä kakkupaperia tai muuta suojaa.
+          </p>
+          <p>
+            Jalallisen, suorakaiteen muotoisen tarjottimen mukana saat neljä
+            astiaan sopivaa muovitarjotinta, joilla on helppo nostaa esimerkiksi
+            voileipäkakku paikalleen ja vaihtaa se nopeasti uuteen.
           </p>
           <p>
             Tuotteet sijaitsevat Ilmajoen keskustassa. Kuljetus on mahdollista
