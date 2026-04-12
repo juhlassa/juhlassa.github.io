@@ -177,6 +177,13 @@ const rentalItems: RentalItem[] = [
     price: 0
   },
   {
+    name: 'Juoma-astia',
+    pcs: 3,
+    description: 'Erilaisia hanallisia juoma-astioita. Kuvat tulossa.',
+    image: '/kuvat/tarjoilu/juoma-astia.jpg',
+    price: 4
+  },
+  {
     name: 'Juustotarjotin',
     diameter: 25,
     pcs: 3,
