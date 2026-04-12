@@ -2,6 +2,8 @@
   "name": "pramiatvadit",
   "private": true,
   "version": "0.0.1",
+  "homepage": "https://juhlassa.github.io/",
+  "repository": "https://pramiatvadit.fi/",
   "type": "module",
   "scripts": {
     "dev": "vite",
