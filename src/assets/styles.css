@@ -205,6 +205,7 @@ td:nth-of-type(1) {
     .content img {
         float: none !important;
         width: 100% !important;
+        max-width: 100% !important;
         margin: 0 0 30px 0 !important;
     }
 
