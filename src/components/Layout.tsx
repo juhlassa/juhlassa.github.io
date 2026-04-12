@@ -10,6 +10,7 @@ export const Layout: FC<LayoutProps> = ({ pageTitle, content, footer }) => {
 
   useEffect(() => {
     document.title = `Pramiat vadit - ${pageTitle}`
+    scrollTo(0, 0)
   }, [])
 
   return (
