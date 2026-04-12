@@ -179,6 +179,27 @@ td:nth-of-type(1) {
     border-top: 1px solid gray;
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.popup-image {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    z-index: 101;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 680px) {
     body {
         font-size: 80%;

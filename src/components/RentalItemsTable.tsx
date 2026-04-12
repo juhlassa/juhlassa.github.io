@@ -1,5 +1,6 @@
 import { ContentImage } from './ContentImage'
 import { type RentalItem } from '../types'
+import { useEffect, useState } from 'react'
 
 export function RentalItemsTable({
   rentalItems,
@@ -8,6 +9,21 @@ export function RentalItemsTable({
   rentalItems: RentalItem[]
   gapBeforeList?: boolean
 }) {
+  const [showImage, setShowImage] = useState<string>('')
+
+  function handleEscapeKey(e: KeyboardEvent) {
+    if (e.key === 'Escape') {
+      setShowImage('')
+    }
+  }
+
+  useEffect(() => {
+    addEventListener('keydown', handleEscapeKey)
+    return () => {
+      removeEventListener('keydown', handleEscapeKey)
+    }
+  }, [])
+
   return (
     <>
       {gapBeforeList && (
@@ -15,6 +31,12 @@ export function RentalItemsTable({
           <p>{'\u00a0'}</p>
           <p>{'\u00a0'}</p>
         </>
+      )}
+
+      {showImage && (
+        <div className="overlay" onClick={() => setShowImage('')}>
+          <img className="popup-image" src={showImage} />
+        </div>
       )}
 
       <table style={{ width: '100%' }}>
@@ -70,13 +92,16 @@ export function RentalItemsTable({
                 </td>
                 <td style={{ width: '50%' }}>
                   {item.image && (
-                    <a href={item.image} target="_blank">
+                    <span
+                      style={{ cursor: 'pointer' }}
+                      onClick={() => setShowImage(item.image!)}
+                    >
                       <ContentImage
                         url={item.image}
                         maxWidth={'100%'}
                         float={'right'}
                       />
-                    </a>
+                    </span>
                   )}
                 </td>
               </tr>
