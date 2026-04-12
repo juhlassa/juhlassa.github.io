@@ -112,6 +112,7 @@ export function RentalItemsTable({
                         url={item.image}
                         maxWidth={'100%'}
                         float={'right'}
+                        loading={'lazy'}
                       />
                     </span>
                   )}
