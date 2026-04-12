@@ -32,7 +32,7 @@ const rentalItems: RentalItem[] = [
     price: 0
   },
   {
-    name: 'Jälkiruokakulho',
+    name: 'Jälki&shy;ruoka&shy;kulho',
     pcs: 12,
     diameter: 14,
     height: 6,
@@ -40,21 +40,21 @@ const rentalItems: RentalItem[] = [
     price: 0
   },
   {
-    name: 'Syvä ruokalautanen',
+    name: 'Syvä ruoka&shy;lautanen',
     diameter: 21,
     pcs: 10,
     image: '/kuvat/vanilja/syvalautanen.jpg',
     price: 0
   },
   {
-    name: 'Matala ruokalautanen',
+    name: 'Matala ruoka&shy;lautanen',
     diameter: 28,
     pcs: 27,
     image: '/kuvat/vanilja/lautanen.jpg',
     price: 0
   },
   {
-    name: 'Sydänlautanen',
+    name: 'Sydän&shy;lautanen',
     diameter: 17,
     height: 5,
     pcs: 4,
@@ -62,7 +62,7 @@ const rentalItems: RentalItem[] = [
     price: 0
   },
   {
-    name: 'Jalallinen tarjoilukulho',
+    name: 'Jalallinen tarjoilu&shy;kulho',
     diameter: 20,
     height: 20,
     pcs: 8,
@@ -70,7 +70,7 @@ const rentalItems: RentalItem[] = [
     price: 0
   },
   {
-    name: 'Pieni tarjoilukulho',
+    name: 'Pieni tarjoilu&shy;kulho',
     diameter: 21,
     height: 11,
     pcs: 2,
@@ -78,7 +78,7 @@ const rentalItems: RentalItem[] = [
     price: 0
   },
   {
-    name: 'Iso tarjoilukulho',
+    name: 'Iso tarjoilu&shy;kulho',
     diameter: 27,
     height: 13,
     pcs: 1,

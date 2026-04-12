@@ -9,6 +9,7 @@ const rentalItems: RentalItem[] = [
     name: 'Lattemuki',
     pcs: 40,
     volume: 0.3,
+    description: 'Kuosit vaihtelevat.',
     image: '/kuvat/greengate/lattemuki.jpg',
     price: 0
   },
@@ -16,6 +17,7 @@ const rentalItems: RentalItem[] = [
     name: 'Lautanen',
     pcs: 40,
     diameter: 20,
+    description: 'Kuosit vaihtelevat.',
     image: '/kuvat/greengate/lattemuki.jpg',
     price: 0
   },
