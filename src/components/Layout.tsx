@@ -44,7 +44,7 @@ export const Layout: FC<LayoutProps> = ({ pageTitle, content, footer }) => {
                         : 'item link'
                     }
                   >
-                    {item.name}
+                    <span dangerouslySetInnerHTML={{ __html: item.name }} />
                   </Link>
                 )
             )}
