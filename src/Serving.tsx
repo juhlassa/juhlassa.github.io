@@ -4,7 +4,7 @@ import { RentalItemsTable } from './components/RentalItemsTable.tsx'
 
 const rentalItems: RentalItem[] = [
   {
-    name: 'Kerrostarjotin, 2 kerrosta',
+    name: 'Kerrostarjotin, 2&nbsp;kerrosta',
     brand: 'Riviera Maison',
     height: 46,
     pcs: 3,
@@ -12,7 +12,7 @@ const rentalItems: RentalItem[] = [
     price: 7
   },
   {
-    name: 'Kerrostarjotin, 3 kerrosta',
+    name: 'Kerrostarjotin, 3&nbsp;kerrosta',
     brand: 'Riviera Maison',
     height: 72,
     pcs: 1,
@@ -20,7 +20,7 @@ const rentalItems: RentalItem[] = [
     price: 12
   },
   {
-    name: 'Kerrostarjotin, 5 kerrosta',
+    name: 'Kerrostarjotin, 5&nbsp;kerrosta',
     brand: 'Riviera Maison',
     height: 87,
     description:
@@ -30,7 +30,7 @@ const rentalItems: RentalItem[] = [
     price: 15
   },
   {
-    name: 'Kapea kerrostarjotin, 3 kerrosta',
+    name: 'Kapea kerrostarjotin, 3&nbsp;kerrosta',
     height: 44,
     description:
       'Kokonaisuutta voi muokata lisäämällä vain tarvittavat kerrokset',
