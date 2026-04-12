@@ -82,7 +82,7 @@ const rentalItems: RentalItem[] = [
     material: 'muovi',
     pcs: 3,
     image: '/kuvat/koristelu/kukkakimppu.jpg',
-    price: 4
+    price: 1.5
   },
   {
     name: 'Pallovalot',
@@ -107,6 +107,14 @@ const rentalItems: RentalItem[] = [
     price: 3
   },
   {
+    name: 'Sydänvalot',
+    pcs: 3,
+    description:
+      'Toimii paristoilla (koko AA), paristot eivät kuulu vuokrahintaan.',
+    image: '/kuvat/koristelu/sydanvalot.jpg',
+    price: 3
+  },
+  {
     name: 'Valoputous',
     pcs: 8,
     description: 'Toimii verkkovirralla.',
@@ -114,7 +122,7 @@ const rentalItems: RentalItem[] = [
     price: 5
   },
   {
-    name: 'Sydänkranssi',
+    name: 'Sydän&shy;koriste',
     diameter: 26,
     pcs: 1,
     image: '/kuvat/koristelu/sydankranssi.jpg',

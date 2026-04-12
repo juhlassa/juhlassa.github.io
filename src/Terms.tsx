@@ -1,5 +1,8 @@
 import { Layout } from './components/Layout'
-import { RightContentImage } from './components/ContentImage.tsx'
+import {
+  LeftContentImage,
+  RightContentImage
+} from './components/ContentImage.tsx'
 
 const Terms = () => {
   return (
@@ -7,7 +10,7 @@ const Terms = () => {
       pageTitle="Vuokraehdot"
       content={
         <div>
-          <RightContentImage url="/kuvat/donitsiteline.jpg" />
+          <RightContentImage url="/kuvat/herkut.jpg" />
           <p>Voit tulla tutustumaan tuotteisiin etukäteen.</p>
           <p>
             Toivomme, että käsittelet vuokratuotteita yhtä hyvin kuin omiasi.
@@ -21,6 +24,8 @@ const Terms = () => {
             Jos tuotteet ovat vapaana, ne saa noutaa aikaisemmin tai palauttaa
             myöhemmin. Haku- ja nouto sovitaan sinulle sopivaan aikaan.
           </p>
+          <LeftContentImage url="/kuvat/donitsiteline.jpg" />
+          <p>Minimiostos on 20 €.</p>
           <p>
             Yli 100 euron vuokramaksusta laskutamme etukäteen varausmaksuna
             puolet loppusummasta. Laskun eräpäivä on kaksi viikkoa ennen
@@ -28,7 +33,6 @@ const Terms = () => {
             ei palauteta.
           </p>
           <p>Jos tuotteet palautetaan likaisena, vuokramaksu tuplautuu.</p>
-          <p>Minimiostos on 20 €.</p>
           <p>
             Jos tuote rikkoutuu, katoaa tai vaurioituu, asiakas on velvollinen
             maksamaan summa, jolla hankimme uuden, vastaavan tuotteen.

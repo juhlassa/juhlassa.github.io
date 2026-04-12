@@ -15,7 +15,7 @@ const Frontpage = () => {
           <p>
             Onnistuneet juhlat syntyvät vieraista, tunnelmasta ja
             huolettomuudesta. Juhlia on elämässä aivan liian vähän, mutta
-            silloin kun kokoonnutaan yhteen, hyvä ruoka ja kaunis kattaus
+            silloin, kun kokoonnutaan yhteen, hyvä ruoka ja kaunis kattaus
             kruunaavat merkkihetket.
           </p>
           <LeftContentImage url="/kuvat/kuohuviinit.jpg" maxWidth={'300px'} />

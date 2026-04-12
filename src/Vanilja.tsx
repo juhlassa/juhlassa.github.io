@@ -121,7 +121,7 @@ const rentalItems: RentalItem[] = [
     height: 19,
     pcs: 4,
     image: '/kuvat/vanilja/maljakko.jpg',
-    price: 3
+    price: 4
   },
   {
     name: 'Kakkutarjotin',
@@ -168,30 +168,6 @@ const Vanilja = () => {
             <p>Astiat voi pestä tiskikoneessa.</p>
 
             <RentalItemsTable rentalItems={rentalItems} gapBeforeList={true} />
-          </div>
-
-          <div>
-            <h2 id="greengate">Green Gate</h2>
-            <p>
-              Green Gate -astiat luovat kattaukseen ainutlaatuista tunnelmaa,
-              jossa yhdistyvät romanttinen vintage-tyyli ja moderni
-              käytännöllisyys.
-            </p>
-            <p>
-              Tanskalainen merkki tunnetaan kauniisti kuvioiduista astioistaan,
-              joiden pehmeät värit ja kukkakuosit ihastuttavat romantiikan
-              ystäviä. Värejä ja kuoseja voi yhdistellä omien mieltymysten
-              mukaan.
-            </p>
-            <p>
-              Sarja on erityisesti nuorempien asiakkaiden mieleen, koska se
-              yhdistää nykypäivän mukikulttuurin ja kauneuden. Lattekuppi on
-              reilun kokoinen eikä sitä tarvitse olla koko ajan täyttämässä.
-            </p>
-            <p>
-              Kun katat pöydän suloisilla Green Gate -astioilla, vieraiden
-              huomio on taattu. Tätä sarjaa et helposti muualta löydä.
-            </p>
           </div>
         </>
       }

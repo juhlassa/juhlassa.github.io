@@ -4,7 +4,17 @@ import { ContentImage } from './components/ContentImage'
 const ContactInformation = () => {
   const content = (
     <div>
-      <p>Meidät tavoittaa parhaiten sähköpostilla. Yhteystiedot alla.</p>
+      <p>
+        Meidät tavoittaa parhaiten sähköpostilla osoitteesta{' '}
+        <a className="link" href="mailto:info@pramiatvadit.fi">
+          info@pramiatvadit.fi
+        </a>{' '}
+        tai puhelimella numerosta{' '}
+        <a className="link" href="tel:0405242071">
+          040{'\u00a0'}524{'\u00a0'}2071
+        </a>
+        .
+      </p>
       <p>
         Tuotteet sijaitsevat Ilmajoen keskustassa. Kuljetus on mahdollista
         korvausta vastaan.
@@ -22,14 +32,15 @@ const ContactInformation = () => {
       <ContentImage url="/kuvat/virpi.jpg" maxWidth="300px" float={'right'} />
       <p>
         Rakastan juhlia, etenkin niiden suunnittelua. Leipominen ja kokkaaminen
-        eivät minua kiinnosta, mutta herkkuja tilatessani niiden ulkonäkö on
-        vähintään yhtä merkityksellistä kuin maku.
+        eivät kiinnosta, mutta herkkuja tilatessani niiden ulkonäkö on vähintään
+        yhtä merkityksellinen kuin maku.
       </p>
       <p>
         Yksityiskohdat ovat tärkeitä. Niiden ei tarvtse varastaa huomiota, mutta
-        toivon vieraan kokevan olonsa erityisen tervetulleeksi silloin, kun
+        toivon vieraan kokevan olonsa erityisen tervetulleeksi silloin, kun hän
         huomaa asian, joka saattaa muilta juhlijoilta jäädä noteeraamatta.
-        Juhlat eivät ole vain päivänsakarille, vaan vieraat tekevät juhlan.
+        Merkkipäivät eivät ole vain päivänsankarille, vaan vieraat tekevät
+        juhlan.
       </p>
       <p>
         Kattauksessa ja pöytien koristelussa yksityiskohdat luovat
@@ -39,9 +50,10 @@ const ContactInformation = () => {
       </p>
       <p>
         Usein kyse on ideasta, jonka toteuttamiseen vaaditaan rahaa enemmän
-        mielikuvitusta. Autan sinua mielelläni suunnittelemaan kattaukset, jotka
-        omalta osaltaan tekevät merkkipäivästäsi ainutlaatuisen.
+        mielikuvitusta. Autan mielelläni suunnittelemaan kattaukset, jotka
+        omalta osaltaan tekevät merkkipäivästä ainutlaatuisen.
       </p>
+      <p>Virpi Kupiainen-Ämmälä</p>
     </div>
   )
   return <Layout pageTitle="Yhteystiedot" content={content} />
