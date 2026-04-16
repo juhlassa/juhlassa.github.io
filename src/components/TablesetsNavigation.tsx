@@ -1,9 +1,11 @@
-import { Link } from 'react-router'
-import { navigation } from '../index.tsx'
+import Link from 'next/link'
 import type { NavigationItem } from '../types.ts'
+import { navigation } from '../navigation'
 
 export const TablesetsNavigation = ({ selected }: { selected: string }) => {
-  const tablesets = navigation.filter((item: NavigationItem) => item.tableset)
+  const tablesets: NavigationItem[] = navigation.filter(
+    (item: NavigationItem) => item.tableset
+  )
 
   return tablesets.map((item) => (
     <Link
@@ -11,7 +13,7 @@ export const TablesetsNavigation = ({ selected }: { selected: string }) => {
       className={
         item.route.includes(selected) ? 'item link selected' : 'item link'
       }
-      to={item.route}
+      href={item.route}
     >
       {item.name}
     </Link>

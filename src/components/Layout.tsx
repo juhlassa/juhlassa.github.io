@@ -1,7 +1,8 @@
 import React, { useEffect, type FC } from 'react'
-import type { LayoutProps } from '../types.ts'
-import { Link } from 'react-router'
-import { navigation } from '../index.tsx'
+import { LayoutProps } from '../types'
+import Link from 'next/link'
+import { navigation } from '../navigation'
+import Head from 'next/head'
 
 export const Layout: FC<LayoutProps> = ({ pageTitle, content, footer }) => {
   const [menuOpened, setMenuOpened] = React.useState(false)
@@ -9,13 +10,88 @@ export const Layout: FC<LayoutProps> = ({ pageTitle, content, footer }) => {
   const showFooter = footer !== false
 
   useEffect(() => {
-    document.title = `Pramiat vadit - ${pageTitle}`
-    scrollTo(0, 0)
+    if (!window.location.hash) {
+      scrollTo(0, 0)
+    }
   }, [])
 
   return (
     <>
-      <div className="navigation" onClick={() => location.assign('/')}>
+      <Head>
+        <title>{`Pramiat vadit - ${pageTitle}`}</title>
+        <meta charSet="UTF-8" />
+        <link
+          rel="apple-touch-icon"
+          sizes="57x57"
+          href="/apple-icon-57x57.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="60x60"
+          href="/apple-icon-60x60.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="/apple-icon-72x72.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="76x76"
+          href="/apple-icon-76x76.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="114x114"
+          href="/apple-icon-114x114.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="120x120"
+          href="/apple-icon-120x120.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="/apple-icon-144x144.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="/apple-icon-152x152.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-icon-180x180.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="192x192"
+          href="/android-icon-192x192.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="96x96"
+          href="/favicon-96x96.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
+      <div className="navigation" onClick={() => window.location.assign('/')}>
         <div className="navigationContent"></div>
       </div>
       <div className="navigation-small sticky">
@@ -37,7 +113,7 @@ export const Layout: FC<LayoutProps> = ({ pageTitle, content, footer }) => {
                 !item.tableset && (
                   <Link
                     key={item.route}
-                    to={item.route}
+                    href={item.route}
                     className={
                       item.name === pageTitle
                         ? 'item link selected'

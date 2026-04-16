@@ -1,6 +1,6 @@
-import { Layout } from './components/Layout'
-import type { RentalItem } from './types.ts'
-import { RentalItemsTable } from './components/RentalItemsTable.tsx'
+import { Layout } from '../../components/Layout'
+import type { RentalItem } from '../../types'
+import { RentalItemsTable } from '../../components/RentalItemsTable'
 
 const rentalItems: RentalItem[] = [
   {
@@ -161,7 +161,7 @@ const rentalItems: RentalItem[] = [
   }
 ]
 
-const Decorating = () => {
+const Index = () => {
   return (
     <Layout
       pageTitle="Koristelu"
@@ -174,4 +174,4 @@ const Decorating = () => {
   )
 }
 
-export default Decorating
+export default Index

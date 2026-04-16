@@ -1,8 +1,8 @@
-import { type RentalItem } from './types.ts'
-import { RentalItemsTable } from './components/RentalItemsTable.tsx'
-import { Layout } from './components/Layout.tsx'
-import { TablesetsNavigation } from './components/TablesetsNavigation.tsx'
-import { LeftContentImage } from './components/ContentImage.tsx'
+import { type RentalItem } from '../../types'
+import { RentalItemsTable } from '../../components/RentalItemsTable'
+import { Layout } from '../../components/Layout'
+import { TablesetsNavigation } from '../../components/TablesetsNavigation'
+import { LeftContentImage } from '../../components/ContentImage'
 
 const rentalItems: RentalItem[] = [
   {
@@ -143,7 +143,7 @@ const rentalItems: RentalItem[] = [
 const Vanilja = () => {
   return (
     <Layout
-      pageTitle="Astiastot"
+      pageTitle="Vanilja"
       content={
         <>
           <TablesetsNavigation selected="vanilja" />
