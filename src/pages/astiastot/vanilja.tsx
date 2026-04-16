@@ -144,6 +144,7 @@ const Vanilja = () => {
   return (
     <Layout
       pageTitle="Vanilja"
+      track={true}
       content={
         <>
           <TablesetsNavigation selected="vanilja" />

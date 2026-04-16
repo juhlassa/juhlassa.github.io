@@ -165,6 +165,7 @@ const Index = () => {
   return (
     <Layout
       pageTitle="Koristelu"
+      track={true}
       content={
         <div>
           <RentalItemsTable rentalItems={rentalItems} />
