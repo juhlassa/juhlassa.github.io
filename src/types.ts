@@ -1,5 +1,3 @@
-import type { ComponentType } from 'react'
-
 export type LayoutProps = {
   pageTitle: string
   content: React.ReactElement
@@ -11,6 +9,7 @@ export type LayoutProps = {
 
 export type NavigationItem = {
   route: string
+  keywords?: string[]
   tableset?: boolean
   name: string
 }
