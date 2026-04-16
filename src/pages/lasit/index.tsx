@@ -48,6 +48,7 @@ const Index = () => {
   return (
     <Layout
       pageTitle="Lasit"
+      track={true}
       content={
         <div>
           <RentalItemsTable rentalItems={rentalItems} />

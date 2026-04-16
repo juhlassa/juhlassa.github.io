@@ -5,6 +5,7 @@ const Index = () => {
   return (
     <Layout
       pageTitle="Vuokraa. Juhli. Palauta."
+      track={true}
       content={
         <div>
           <p>

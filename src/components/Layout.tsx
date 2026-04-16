@@ -4,9 +4,14 @@ import Link from 'next/link'
 import { navigation } from '../navigation'
 import Head from 'next/head'
 
-export const Layout: FC<LayoutProps> = ({ pageTitle, content, footer }) => {
+export const Layout: FC<LayoutProps> = ({
+  pageTitle,
+  content,
+  track,
+  footer
+}) => {
   const [menuOpened, setMenuOpened] = React.useState(false)
-  const trackPage = false //track !== false && process.env.NODE_ENV === 'production'
+  const trackPage = !!track && process.env.NODE_ENV !== 'development'
   const showFooter = footer !== false
 
   useEffect(() => {
@@ -136,7 +141,7 @@ export const Layout: FC<LayoutProps> = ({ pageTitle, content, footer }) => {
         {trackPage && (
           <script
             async
-            src="https://www.googletagmanager.com/gtag/js?id=G-VYXNRYKDCQ"
+            src="https://www.googletagmanager.com/gtag/js?id=G-Y0E9FK86YP"
           />
         )}
         {trackPage && (
@@ -147,7 +152,7 @@ export const Layout: FC<LayoutProps> = ({ pageTitle, content, footer }) => {
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-VYXNRYKDCQ');`
+  gtag('config', 'G-Y0E9FK86YP');`
             }}
           />
         )}

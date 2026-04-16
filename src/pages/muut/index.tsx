@@ -147,6 +147,7 @@ const Index = () => {
   return (
     <Layout
       pageTitle="Muut"
+      track={true}
       content={
         <>
           <div>
