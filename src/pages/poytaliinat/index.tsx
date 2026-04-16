@@ -18,6 +18,7 @@ const Index = () => {
   return (
     <Layout
       pageTitle="Pöytäliinat"
+      track={true}
       content={
         <>
           <div>

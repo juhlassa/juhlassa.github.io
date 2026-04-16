@@ -9,6 +9,7 @@ const Index = () => {
   return (
     <Layout
       pageTitle="Vuokraehdot"
+      track={true}
       content={
         <div>
           <RightContentImage url="/kuvat/herkut.jpg" />
