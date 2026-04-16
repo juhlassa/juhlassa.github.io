@@ -55,6 +55,7 @@ const Greengate = () => {
   return (
     <Layout
       pageTitle="Green Gate"
+      track={true}
       content={
         <>
           <TablesetsNavigation selected="greengate" />

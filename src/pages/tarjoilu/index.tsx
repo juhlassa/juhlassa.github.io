@@ -202,6 +202,7 @@ const Index = () => {
   return (
     <Layout
       pageTitle="Tarjoilu"
+      track={true}
       content={
         <div>
           <RentalItemsTable rentalItems={rentalItems} />
