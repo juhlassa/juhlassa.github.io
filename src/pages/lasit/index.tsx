@@ -1,6 +1,6 @@
-import { Layout } from './components/Layout'
-import type { RentalItem } from './types.ts'
-import { RentalItemsTable } from './components/RentalItemsTable.tsx'
+import { Layout } from '../../components/Layout'
+import type { RentalItem } from '../../types'
+import { RentalItemsTable } from '../../components/RentalItemsTable'
 
 const rentalItems: RentalItem[] = [
   {
@@ -44,7 +44,7 @@ const rentalItems: RentalItem[] = [
   }
 ]
 
-const Glasses = () => {
+const Index = () => {
   return (
     <Layout
       pageTitle="Lasit"
@@ -57,4 +57,4 @@ const Glasses = () => {
   )
 }
 
-export default Glasses
+export default Index

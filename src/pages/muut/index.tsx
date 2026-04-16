@@ -1,6 +1,6 @@
-import { Layout } from './components/Layout'
-import { type RentalItem } from './types'
-import { RentalItemsTable } from './components/RentalItemsTable'
+import { Layout } from '../../components/Layout'
+import { type RentalItem } from '../../types'
+import { RentalItemsTable } from '../../components/RentalItemsTable'
 
 const rentalItems: RentalItem[] = [
   {
@@ -15,7 +15,7 @@ const rentalItems: RentalItem[] = [
     pcs: 1,
     unit: 'setti',
     description:
-      'Näyttävä karkkibuffet syntyy esimerkiksi Vanilja-sarjan kulhoista. Voit koota niin laajan kokonaisuuden kuin haluat.',
+      'Näyttävä karkkibuffet syntyy esimerkiksi Index-sarjan kulhoista. Voit koota niin laajan kokonaisuuden kuin haluat.',
     image: '/kuvat/muut/karkkibuffet.jpg',
     price: 0
   },
@@ -143,7 +143,7 @@ const rentalItems: RentalItem[] = [
   }
 ]
 
-const Other = () => {
+const Index = () => {
   return (
     <Layout
       pageTitle="Muut"
@@ -158,4 +158,4 @@ const Other = () => {
   )
 }
 
-export default Other
+export default Index

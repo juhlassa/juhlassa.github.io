@@ -1,6 +1,6 @@
-import { Layout } from './components/Layout'
-import type { RentalItem } from './types.ts'
-import { RentalItemsTable } from './components/RentalItemsTable.tsx'
+import { Layout } from '../../components/Layout'
+import type { RentalItem } from '../../types'
+import { RentalItemsTable } from '../../components/RentalItemsTable'
 
 const rentalItems: RentalItem[] = [
   {
@@ -198,7 +198,7 @@ const rentalItems: RentalItem[] = [
   }
 ]
 
-const Serving = () => {
+const Index = () => {
   return (
     <Layout
       pageTitle="Tarjoilu"
@@ -211,4 +211,4 @@ const Serving = () => {
   )
 }
 
-export default Serving
+export default Index
