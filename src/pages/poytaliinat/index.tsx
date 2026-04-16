@@ -18,6 +18,7 @@ const Index = () => {
   return (
     <Layout
       pageTitle="Pöytäliinat"
+      mediaImage="/kuvat/poytaliinat/poytaliina.jpg"
       track={true}
       content={
         <>
