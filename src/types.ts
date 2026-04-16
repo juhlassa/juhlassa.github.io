@@ -1,4 +1,4 @@
-import type { JSX } from 'react'
+import type { ComponentType } from 'react'
 
 export type LayoutProps = {
   pageTitle: string
@@ -11,7 +11,6 @@ export type LayoutProps = {
 
 export type NavigationItem = {
   route: string
-  element: JSX.Element
   tableset?: boolean
   name: string
 }

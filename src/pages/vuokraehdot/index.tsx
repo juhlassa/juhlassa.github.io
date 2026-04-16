@@ -1,11 +1,11 @@
-import { Layout } from './components/Layout'
+import { Layout } from '../../components/Layout'
 import {
   ContentImage,
   LeftContentImage,
   RightContentImage
-} from './components/ContentImage.tsx'
+} from '../../components/ContentImage'
 
-const Terms = () => {
+const Index = () => {
   return (
     <Layout
       pageTitle="Vuokraehdot"
@@ -64,4 +64,4 @@ const Terms = () => {
   )
 }
 
-export default Terms
+export default Index

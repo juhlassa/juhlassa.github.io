@@ -1,8 +1,8 @@
-import { Layout } from './components/Layout.tsx'
-import { TablesetsNavigation } from './components/TablesetsNavigation.tsx'
-import { RentalItemsTable } from './components/RentalItemsTable.tsx'
-import type { RentalItem } from './types.ts'
-import { ContentImage } from './components/ContentImage.tsx'
+import { Layout } from '../../components/Layout'
+import { TablesetsNavigation } from '../../components/TablesetsNavigation'
+import { RentalItemsTable } from '../../components/RentalItemsTable'
+import type { RentalItem } from '../../types'
+import { ContentImage } from '../../components/ContentImage'
 
 const rentalItems: RentalItem[] = [
   {
@@ -51,10 +51,10 @@ const rentalItems: RentalItem[] = [
   }
 ]
 
-const GreenGate = () => {
+const Greengate = () => {
   return (
     <Layout
-      pageTitle="Astiastot"
+      pageTitle="Green Gate"
       content={
         <>
           <TablesetsNavigation selected="greengate" />
@@ -93,4 +93,4 @@ const GreenGate = () => {
   )
 }
 
-export default GreenGate
+export default Greengate
