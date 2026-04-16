@@ -1,7 +1,7 @@
-import { Layout } from './components/Layout'
-import { ContentImage } from './components/ContentImage'
+import { Layout } from '../../components/Layout'
+import { ContentImage } from '../../components/ContentImage'
 
-const ContactInformation = () => {
+const Index = () => {
   const content = (
     <div>
       <p>
@@ -60,4 +60,4 @@ const ContactInformation = () => {
   return <Layout pageTitle="Yhteystiedot" content={content} />
 }
 
-export default ContactInformation
+export default Index

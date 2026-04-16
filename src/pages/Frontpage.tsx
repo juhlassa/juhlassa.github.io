@@ -1,7 +1,7 @@
-import { LeftContentImage, RightContentImage } from './components/ContentImage'
-import { Layout } from './components/Layout.tsx'
+import { LeftContentImage, RightContentImage } from '../components/ContentImage'
+import { Layout } from '../components/Layout'
 
-const Frontpage = () => {
+const Index = () => {
   return (
     <Layout
       pageTitle="Vuokraa. Juhli. Palauta."
@@ -48,4 +48,4 @@ const Frontpage = () => {
   )
 }
 
-export default Frontpage
+export default Index
