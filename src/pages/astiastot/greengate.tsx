@@ -55,6 +55,7 @@ const Greengate = () => {
   return (
     <Layout
       pageTitle="Green Gate"
+      mediaImage="/kuvat/greengate.jpg"
       track={true}
       content={
         <>

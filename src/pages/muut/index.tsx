@@ -147,6 +147,7 @@ const Index = () => {
   return (
     <Layout
       pageTitle="Muut"
+      mediaImage="/kuvat/muut/karkkibuffet.jpg"
       track={true}
       content={
         <>
