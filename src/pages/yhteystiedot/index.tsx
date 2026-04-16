@@ -57,7 +57,13 @@ const Index = () => {
       </p>
     </div>
   )
-  return <Layout pageTitle="Yhteystiedot" content={content} />
+  return (
+    <Layout
+      pageTitle="Yhteystiedot"
+      mediaImage="/kuvat/virpi.jpg"
+      content={content}
+    />
+  )
 }
 
 export default Index

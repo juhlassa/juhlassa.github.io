@@ -6,6 +6,7 @@ const Index = () => {
     <Layout
       pageTitle="Vuokraa. Juhli. Palauta."
       track={true}
+      mediaImage="/kuvat/juhlapoyta.jpg"
       content={
         <div>
           <p>

@@ -48,6 +48,7 @@ const Index = () => {
   return (
     <Layout
       pageTitle="Lasit"
+      mediaImage="/kuvat/lasit/kuohuviinilasit.jpg"
       track={true}
       content={
         <div>

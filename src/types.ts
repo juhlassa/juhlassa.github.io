@@ -9,6 +9,7 @@ export type LayoutProps = {
 
 export type NavigationItem = {
   route: string
+  keywords?: string[]
   tableset?: boolean
   name: string
 }

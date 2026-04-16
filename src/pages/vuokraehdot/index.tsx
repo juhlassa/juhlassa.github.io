@@ -9,6 +9,7 @@ const Index = () => {
   return (
     <Layout
       pageTitle="Vuokraehdot"
+      mediaImage="/kuvat/brita.jpg"
       track={true}
       content={
         <div>

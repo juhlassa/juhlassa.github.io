@@ -144,6 +144,7 @@ const Vanilja = () => {
   return (
     <Layout
       pageTitle="Vanilja"
+      mediaImage="/kuvat/kahvikupit.jpg"
       track={true}
       content={
         <>

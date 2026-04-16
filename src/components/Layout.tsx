@@ -1,18 +1,21 @@
 import React, { useEffect, type FC } from 'react'
 import { LayoutProps } from '../types'
 import Link from 'next/link'
-import { navigation } from '../navigation'
+import { defaultKeywords, navigation } from '../navigation'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 
 export const Layout: FC<LayoutProps> = ({
   pageTitle,
   content,
+  mediaImage,
   track,
   footer
 }) => {
   const [menuOpened, setMenuOpened] = React.useState(false)
   const trackPage = !!track && process.env.NODE_ENV !== 'development'
   const showFooter = footer !== false
+  const router = useRouter()
 
   useEffect(() => {
     if (!window.location.hash) {
@@ -25,6 +28,25 @@ export const Layout: FC<LayoutProps> = ({
       <Head>
         <title>{`Pramiat vadit - ${pageTitle}`}</title>
         <meta charSet="UTF-8" />
+        <meta name="robots" content="index, follow" />
+        {mediaImage && (
+          <meta
+            property="og:image"
+            content={`https://pramiatvadit.fi${mediaImage}`}
+          />
+        )}
+        <meta
+          property="og:url"
+          content={`https://pramiatvadit.fi${router.pathname}`}
+        />
+        <meta name="author" content="Pramiat Vadit" />
+        <meta name="description" content={pageTitle} />
+        <meta
+          name="keywords"
+          content={navigation
+            .find((item) => item.name === pageTitle)
+            ?.keywords?.join(' ')}
+        />
         <link
           rel="apple-touch-icon"
           sizes="57x57"
