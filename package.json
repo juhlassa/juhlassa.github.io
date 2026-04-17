@@ -8,12 +8,14 @@
   "scripts": {
     "dev": "next dev -p 8765",
     "build": "next build",
+    "postbuild": "next-sitemap --config next-sitemap.config.mjs",
     "lint": "eslint .",
     "start": "next start"
   },
   "dependencies": {
     "@fontsource/varela-round": "^5.2.8",
     "next": "^16.2.3",
+    "next-sitemap": "^4.2.3",
     "react": "^19.2.4",
     "react-dom": "^19.2.4"
   },
