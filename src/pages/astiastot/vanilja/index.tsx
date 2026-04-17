@@ -1,8 +1,8 @@
-import { type RentalItem } from '../../types'
-import { RentalItemsTable } from '../../components/RentalItemsTable'
-import { Layout } from '../../components/Layout'
-import { TablesetsNavigation } from '../../components/TablesetsNavigation'
-import { LeftContentImage } from '../../components/ContentImage'
+import { type RentalItem } from '../../../types'
+import { RentalItemsTable } from '../../../components/RentalItemsTable'
+import { Layout } from '../../../components/Layout'
+import { TablesetsNavigation } from '../../../components/TablesetsNavigation'
+import { LeftContentImage } from '../../../components/ContentImage'
 
 const rentalItems: RentalItem[] = [
   {
@@ -140,7 +140,7 @@ const rentalItems: RentalItem[] = [
   }
 ]
 
-const Vanilja = () => {
+const Index = () => {
   return (
     <Layout
       pageTitle="Vanilja"
@@ -177,4 +177,4 @@ const Vanilja = () => {
   )
 }
 
-export default Vanilja
+export default Index

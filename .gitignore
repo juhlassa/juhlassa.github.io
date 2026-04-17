@@ -13,6 +13,7 @@ dist-ssr
 *.local
 original-images
 .next
+sitemap*.xml
 
 # Editor directories and files
 .vscode/*
