@@ -1,7 +1,7 @@
 import React, { useEffect, type FC } from 'react'
 import { LayoutProps } from '../types'
 import Link from 'next/link'
-import { defaultKeywords, navigation } from '../navigation'
+import { navigation } from '../navigation'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
@@ -142,7 +142,7 @@ export const Layout: FC<LayoutProps> = ({
                     key={item.route}
                     href={item.route}
                     className={
-                      item.name === pageTitle
+                      router.route.includes(item.route)
                         ? 'item link selected'
                         : 'item link'
                     }
