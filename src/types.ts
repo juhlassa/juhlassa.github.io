@@ -1,15 +1,15 @@
 export type LayoutProps = {
   pageTitle: string
   content: React.ReactElement
+  description?: string
   mediaImage?: string
   username?: string
-  track?: boolean
+  track: boolean
   footer?: boolean
 }
 
 export type NavigationItem = {
   route: string
-  keywords?: string[]
   tableset?: boolean
   name: string
 }

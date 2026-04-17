@@ -14,7 +14,7 @@ const Error404 = () => {
       </p>
     </>
   )
-  return <Layout pageTitle="Sivua ei löydy" content={content} />
+  return <Layout pageTitle="Sivua ei löydy" content={content} track={false} />
 }
 
 export default Error404

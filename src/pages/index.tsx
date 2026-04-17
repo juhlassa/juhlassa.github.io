@@ -1,11 +1,13 @@
 import { LeftContentImage, RightContentImage } from '../components/ContentImage'
 import { Layout } from '../components/Layout'
+import basicInfo from '../basicInfo'
 
 const Index = () => {
   return (
     <Layout
-      pageTitle="Vuokraa. Juhli. Palauta."
+      pageTitle={basicInfo.slogan}
       track={true}
+      description="Astiavuokrausta Seinäjoen seudulla. Vuokraa astiat, kattaustarvikkeet ja koristeet helposti."
       mediaImage="/kuvat/juhlapoyta.jpg"
       content={
         <div>
