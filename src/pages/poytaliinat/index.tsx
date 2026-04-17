@@ -1,18 +1,6 @@
 import { Layout } from '../../components/Layout'
-import type { RentalItem } from '../../types'
 import { RentalItemsTable } from '../../components/RentalItemsTable'
-
-const rentalItems: RentalItem[] = [
-  {
-    name: 'Pöytäliina, valkoinen',
-    width: 145,
-    length: 240,
-    pcs: 10,
-    material: 'polyesteri',
-    image: '/kuvat/poytaliinat/poytaliina.jpg',
-    price: 0
-  }
-]
+import { tableClothingsResolved } from '../../rentalItems/tableClothings'
 
 const Index = () => {
   return (
@@ -22,9 +10,7 @@ const Index = () => {
       track={true}
       content={
         <>
-          <div>
-            <RentalItemsTable rentalItems={rentalItems} />
-          </div>
+          <RentalItemsTable rentalItems={tableClothingsResolved()} />
           <div>
             <p>
               Pöytäliinat luovutetaan ja palautetaan pestynä ja viikattuna.
