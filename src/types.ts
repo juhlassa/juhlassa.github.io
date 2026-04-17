@@ -1,6 +1,7 @@
 export type LayoutProps = {
   pageTitle: string
   content: React.ReactElement
+  description?: string
   mediaImage?: string
   username?: string
   track?: boolean
@@ -9,7 +10,6 @@ export type LayoutProps = {
 
 export type NavigationItem = {
   route: string
-  keywords?: string[]
   tableset?: boolean
   name: string
 }

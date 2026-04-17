@@ -1,27 +1,9 @@
 import { NavigationItem } from './types'
 
-export const defaultKeywords = [
-  'pramiatvadit',
-  'astiavuokraus',
-  'astiavuokraamo',
-  'vuokra-astiat',
-  'juhlavuokraus',
-  'juhlat',
-  'ilmajoki',
-  'seinäjoki',
-  'etelä-pohjanmaa',
-  'virpi kupiainen'
-]
-
 export const navigation: NavigationItem[] = [
   {
     route: '/',
-    name: '<img src="/kuvat/koti.png" alt="Koti" class="home">',
-    keywords: defaultKeywords.concat([
-      'kattaus',
-      'kynttiläjalka',
-      'juhlakoristelu'
-    ])
+    name: '<img src="/kuvat/koti.png" alt="Koti" class="home">'
   },
   {
     route: '/astiastot',
@@ -30,70 +12,39 @@ export const navigation: NavigationItem[] = [
   {
     route: '/astiastot/vanilja',
     name: 'Vanilja',
-    tableset: true,
-    keywords: defaultKeywords.concat([
-      'astiasto',
-      'kattaus',
-      'pentik',
-      'vanilja'
-    ])
+    tableset: true
   },
   {
     route: '/astiastot/greengate',
     name: 'Green Gate',
-    tableset: true,
-    keywords: defaultKeywords.concat(['astiasto', 'kattaus', 'greengate'])
+    tableset: true
   },
   {
     route: '/tarjoilu',
-    name: 'Tarjoilu',
-    keywords: defaultKeywords.concat([
-      'tarjoilu',
-      'iittala',
-      'riviera mason',
-      'perfect home'
-    ])
+    name: 'Tarjoilu'
   },
   {
     route: '/lasit',
-    name: 'Lasit',
-    keywords: defaultKeywords.concat(['pentik', 'verna', 'tsaikka'])
+    name: 'Lasit'
   },
   {
     route: '/poytaliinat',
-    name: 'Pöytäliinat',
-    keywords: defaultKeywords.concat(['pöytäliinat'])
+    name: 'Pöytäliinat'
   },
   {
     route: '/koristelu',
-    name: 'Koristelu',
-    keywords: defaultKeywords.concat([
-      'koristelu',
-      'koristeet',
-      'kynttilä, kynttelikkö',
-      'kynttiläjalka',
-      'valot',
-      'pallovalot'
-    ])
+    name: 'Koristelu'
   },
   {
     route: '/muut',
-    name: 'Muut',
-    keywords: defaultKeywords.concat([
-      'peräkärrypalju',
-      'palju',
-      'kuvausseinä',
-      'partylite'
-    ])
+    name: 'Muut'
   },
   {
     route: '/vuokraehdot',
-    name: 'Vuokraehdot',
-    keywords: defaultKeywords.concat(['vuokraehdot'])
+    name: 'Vuokraehdot'
   },
   {
     route: '/yhteystiedot',
-    name: 'Yhteystiedot',
-    keywords: defaultKeywords.concat(['yhteystiedot', 'leinikintie 12'])
+    name: 'Yhteystiedot'
   }
 ]

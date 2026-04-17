@@ -4,10 +4,12 @@ import Link from 'next/link'
 import { navigation } from '../navigation'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+import basicInfo from '../basicInfo'
 
 export const Layout: FC<LayoutProps> = ({
   pageTitle,
   content,
+  description,
   mediaImage,
   track,
   footer
@@ -16,6 +18,22 @@ export const Layout: FC<LayoutProps> = ({
   const trackPage = !!track && process.env.NODE_ENV !== 'development'
   const showFooter = footer !== false
   const router = useRouter()
+  const {
+    businessName,
+    baseUrl,
+    logo,
+    address,
+    areasServed,
+    map,
+    email,
+    telephone,
+    vatNumber,
+    keywords,
+    slogan,
+    gtagId
+  } = basicInfo
+  const pageTitleWithSiteName = `${pageTitle} | ${businessName} / Seinäjoen seutu`
+  const url = `${baseUrl}${router.pathname}`
 
   useEffect(() => {
     if (!window.location.hash) {
@@ -23,30 +41,47 @@ export const Layout: FC<LayoutProps> = ({
     }
   }, [])
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Store',
+    name: pageTitleWithSiteName,
+    url,
+    logo,
+    image: mediaImage,
+    description,
+    areaServed: areasServed.join(', '),
+    map,
+    address,
+    email,
+    telephone,
+    keywords,
+    slogan,
+    vatID: `FI${vatNumber.split('-')[0]}`
+  }
+
   return (
     <>
       <Head>
-        <title>{`Pramiat vadit - ${pageTitle}`}</title>
-        <meta charSet="UTF-8" />
+        <title>{pageTitleWithSiteName}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow" />
-        {mediaImage && (
-          <meta
-            property="og:image"
-            content={`https://pramiatvadit.fi${mediaImage}`}
-          />
-        )}
-        <meta
-          property="og:url"
-          content={`https://pramiatvadit.fi${router.pathname}`}
-        />
         <meta name="author" content="Pramiat Vadit" />
-        <meta name="description" content={pageTitle} />
         <meta
-          name="keywords"
-          content={navigation
-            .find((item) => item.name === pageTitle)
-            ?.keywords?.join(' ')}
+          name="description"
+          content={description ?? pageTitleWithSiteName}
         />
+        <meta name="keywords" content={keywords} />
+        <meta property="og:title" content={pageTitleWithSiteName} />
+        <meta
+          property="og:description"
+          content={description ?? pageTitleWithSiteName}
+        />
+        {mediaImage && (
+          <meta property="og:image" content={`${baseUrl}${mediaImage}`} />
+        )}
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href={url} />
         <link
           rel="apple-touch-icon"
           sizes="57x57"
@@ -116,7 +151,30 @@ export const Layout: FC<LayoutProps> = ({
           sizes="16x16"
           href="/favicon-16x16.png"
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c')
+          }}
+        />
+        {trackPage && (
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${gtagId}`}
+          />
+        )}
+        {trackPage && (
+          <script
+            id="gtag"
+            dangerouslySetInnerHTML={{
+              __html: `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '${gtagId}');`
+            }}
+          />
+        )}
       </Head>
       <div className="navigation" onClick={() => window.location.assign('/')}>
         <div className="navigationContent"></div>
@@ -160,35 +218,17 @@ export const Layout: FC<LayoutProps> = ({
           <h1>{pageTitle}</h1>
           {content}
         </div>
-        {trackPage && (
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-Y0E9FK86YP"
-          />
-        )}
-        {trackPage && (
-          <script
-            id="gtag"
-            dangerouslySetInnerHTML={{
-              __html: `
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-Y0E9FK86YP');`
-            }}
-          />
-        )}
         {showFooter && (
           <div className="footer">
             <span>
               Kysy lisää numerosta{' '}
-              <a className="link" href="tel:0405242071">
-                040&nbsp;524&nbsp;2071
+              <a className="link" href={`tel:${telephone.replace(/\s/g, '')}`}>
+                {telephone.replace(/\s/g, '\u00a0')}
               </a>{' '}
             </span>
             <span> tai sähköpostilla </span>
-            <a className="link" href="mailto:pramiatvadit@gmail.com">
-              pramiatvadit@gmail.com
+            <a className="link" href={`mailto:${email}`}>
+              {email}
             </a>
             .
           </div>

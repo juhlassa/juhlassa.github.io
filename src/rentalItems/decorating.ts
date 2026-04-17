@@ -163,7 +163,7 @@ export const decorating: RentalItem[] = [
     name: 'Tauluteline',
     width: 20,
     height: 30,
-    pcs: 2,
+    pcs: 3,
     image: '/kuvat/koristelu/taulutelineet.jpg',
     price: 1
   },
