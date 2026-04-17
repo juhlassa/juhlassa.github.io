@@ -15,6 +15,7 @@ export type NavigationItem = {
 }
 
 export type RentalItem = {
+  id?: number // for linking only
   name: string
   brand?: string
   description?: string
@@ -29,3 +30,7 @@ export type RentalItem = {
   unit?: string
   price: number
 }
+
+export type LinkedRentalItem = { linked: number }
+
+export type RentalOrLinkedRentalItem = RentalItem | LinkedRentalItem
