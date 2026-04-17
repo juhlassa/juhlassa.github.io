@@ -3,58 +3,15 @@ import { TablesetsNavigation } from '../../../components/TablesetsNavigation'
 import { RentalItemsTable } from '../../../components/RentalItemsTable'
 import type { RentalItem } from '../../../types'
 import { ContentImage } from '../../../components/ContentImage'
+import { rentalItemsByGroup } from '../../../rentalItems/allItems'
 
-const rentalItems: RentalItem[] = [
-  {
-    name: 'Lattemuki',
-    pcs: 40,
-    volume: 0.3,
-    description: 'Kuosit vaihtelevat.',
-    image: '/kuvat/greengate/lattemuki.jpg',
-    price: 0
-  },
-  {
-    name: 'Lautanen',
-    pcs: 40,
-    diameter: 20,
-    description: 'Kuosit vaihtelevat.',
-    image: '/kuvat/greengate/lattemuki.jpg',
-    price: 0
-  },
-  {
-    name: 'Kermakko ja sokerikko',
-    pcs: 1,
-    volume: 0.5,
-    image: '/kuvat/greengate/kermakkosokerikko.jpg',
-    price: 0
-  },
-  {
-    name: 'Kapea tarjoiluvati',
-    width: 15,
-    length: 32,
-    pcs: 1,
-    image: '/kuvat/greengate/kapea_tarjoiluvati.jpg',
-    price: 0
-  },
-  {
-    name: 'Sydänvadit',
-    diameter: 27,
-    pcs: 1,
-    image: '/kuvat/greengate/sydanvadit.jpg',
-    price: 0
-  },
-  {
-    name: 'Teepannu',
-    pcs: 1,
-    image: '/kuvat/greengate/teepannu.jpg',
-    price: 0
-  }
-]
+const groupName = 'Green Gate'
+const items = rentalItemsByGroup(groupName)
 
 const Index = () => {
   return (
     <Layout
-      pageTitle="Green Gate"
+      pageTitle={groupName}
       mediaImage="/kuvat/greengate.jpg"
       track={true}
       content={
@@ -88,7 +45,7 @@ const Index = () => {
               huomio on taattu. Tätä sarjaa et helposti muualta löydä.{' '}
             </p>
           </div>
-          <RentalItemsTable rentalItems={rentalItems} gapBeforeList={true} />
+          <RentalItemsTable rentalItems={items} gapBeforeList={true} />
         </>
       }
     />

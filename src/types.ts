@@ -14,6 +14,15 @@ export type NavigationItem = {
   name: string
 }
 
+export type Group =
+  | 'Vanilja'
+  | 'Green Gate'
+  | 'Tarjoilu'
+  | 'Lasit'
+  | 'Koristelu'
+  | 'Pöytäliinat'
+  | 'Muut'
+
 export type RentalItem = {
   name: string
   brand?: string
@@ -28,4 +37,5 @@ export type RentalItem = {
   image?: string
   unit?: string
   price: number
+  groups?: Group[]
 }

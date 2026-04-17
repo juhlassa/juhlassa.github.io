@@ -1,30 +1,19 @@
 import { Layout } from '../../components/Layout'
-import type { RentalItem } from '../../types'
 import { RentalItemsTable } from '../../components/RentalItemsTable'
+import { rentalItemsByGroup } from '../../rentalItems/allItems'
 
-const rentalItems: RentalItem[] = [
-  {
-    name: 'Pöytäliina, valkoinen',
-    width: 145,
-    length: 240,
-    pcs: 10,
-    material: 'polyesteri',
-    image: '/kuvat/poytaliinat/poytaliina.jpg',
-    price: 0
-  }
-]
+const groupName = 'Pöytäliinat'
+const items = rentalItemsByGroup(groupName)
 
 const Index = () => {
   return (
     <Layout
-      pageTitle="Pöytäliinat"
+      pageTitle={groupName}
       mediaImage="/kuvat/poytaliinat/poytaliina.jpg"
       track={true}
       content={
         <>
-          <div>
-            <RentalItemsTable rentalItems={rentalItems} />
-          </div>
+          <RentalItemsTable rentalItems={items} />
           <div>
             <p>
               Pöytäliinat luovutetaan ja palautetaan pestynä ja viikattuna.
