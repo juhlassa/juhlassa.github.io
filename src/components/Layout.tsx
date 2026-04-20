@@ -227,7 +227,7 @@ export const Layout: FC<LayoutProps> = ({
               Kysy lisää numerosta{' '}
               <a className="link" href={`tel:${telephone.replace(/\s/g, '')}`}>
                 {telephone.replace(/\s/g, '\u00a0')}
-              </a>{' '}
+              </a>
             </span>
             <span> tai sähköpostilla </span>
             <a className="link" href={`mailto:${email}`}>

@@ -4,7 +4,7 @@ import { rentalItemsResolved } from './allItems'
 export function serving(): RentalOrLinkedRentalItem[] {
   return [
     {
-      name: 'Kerrostarjotin, 5&nbsp;kerrosta',
+      name: 'Kerros&shy;tarjotin, 5&nbsp;kerrosta',
       brand: 'Riviera Maison',
       height: 87,
       description:
@@ -14,7 +14,7 @@ export function serving(): RentalOrLinkedRentalItem[] {
       price: 0
     },
     {
-      name: 'Kerrostarjotin, 3&nbsp;kerrosta',
+      name: 'Kerros&shy;tarjotin, 3&nbsp;kerrosta',
       brand: 'Riviera Maison',
       height: 72,
       pcs: 1,
@@ -22,7 +22,7 @@ export function serving(): RentalOrLinkedRentalItem[] {
       price: 0
     },
     {
-      name: 'Kerrostarjotin, 3&nbsp;kerrosta',
+      name: 'Kerros&shy;tarjotin, 3&nbsp;kerrosta',
       brand: 'Affari of Sweden',
       height: 49,
       diameter: 28,
@@ -31,14 +31,14 @@ export function serving(): RentalOrLinkedRentalItem[] {
       price: 0
     },
     {
-      name: 'Kapea kerrostarjotin, 3&nbsp;kerrosta',
+      name: 'Kapea kerros&shy;tarjotin, 3&nbsp;kerrosta',
       height: 44,
       pcs: 1,
       image: '/kuvat/tarjoilu/pieni_kerrosvati3.jpg',
       price: 0
     },
     {
-      name: 'Kerrostarjotin, 2&nbsp;kerrosta',
+      name: 'Kerros&shy;tarjotin, 2&nbsp;kerrosta',
       brand: 'Riviera Maison',
       height: 46,
       pcs: 3,
@@ -54,7 +54,7 @@ export function serving(): RentalOrLinkedRentalItem[] {
       price: 0
     },
     {
-      name: 'Peilitarjotin',
+      name: 'Peili&shy;tarjotin',
       width: 36,
       length: 32,
       pcs: 2,
@@ -62,14 +62,14 @@ export function serving(): RentalOrLinkedRentalItem[] {
       price: 0
     },
     {
-      name: 'Sydäntarjotin',
+      name: 'Sydän&shy;tarjotin',
       diameter: 17,
       pcs: 2,
       image: '/kuvat/tarjoilu/sydantarjotin.jpg',
       price: 0
     },
     {
-      name: 'Kakkutarjotin',
+      name: 'Kakku&shy;tarjotin',
       brand: 'Riviera Maison',
       diameter: 30,
       description: 'Cake My Day',
@@ -268,10 +268,10 @@ export function serving(): RentalOrLinkedRentalItem[] {
     },
     {
       id: 1,
-      name: 'Jäätelö-/jälki&shy;ruoka&shy;malja/maljakko',
+      name: 'Jäätelö- / jälki&shy;ruoka&shy;malja / maljakko',
       pcs: 26,
       image: '/kuvat/tarjoilu/jalkiruokalasi.jpg',
-      description: 'Sopii myös pöytäkoristeasetelmiin.',
+      description: 'Sopii myös pöytä&shy;koriste&shy;asetelmiin.',
       price: 0
     },
     {
@@ -280,19 +280,19 @@ export function serving(): RentalOrLinkedRentalItem[] {
       diameter: 30,
       height: 11,
       pcs: 3,
-      material: 'elintarvikemuovi',
+      material: 'elin&shy;tarvike&shy;muovi',
       image: '/kuvat/tarjoilu/jalallinen_kakkutarjotin.jpg',
       price: 0
     },
     {
-      name: 'Paikka- tai tarjoilu&shy;infopidike',
+      name: 'Paikka- tai tarjoilu&shy;info&shy;pidike',
       height: 5,
       pcs: 35,
       image: '/kuvat/tarjoilu/kylttipidike2.jpg',
       price: 0
     },
     {
-      name: 'Paikka- tai tarjoilu&shy;infopidike',
+      name: 'Paikka- tai tarjoilu&shy;info&shy;pidike',
       height: 12,
       pcs: 12,
       image: '/kuvat/tarjoilu/kylttipidike.jpg',

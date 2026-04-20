@@ -20,7 +20,7 @@ export function decorating(): RentalOrLinkedRentalItem[] {
       price: 0
     },
     {
-      name: 'Vaaleanpunaiset kynttilämansetit',
+      name: 'Vaalean&shy;punaiset kynttilä&shy;mansetit',
       pcs: 1,
       unit: 'setti',
       description: 'Viisi pientä kynttilämansettia.',
@@ -43,7 +43,7 @@ export function decorating(): RentalOrLinkedRentalItem[] {
       price: 0
     },
     {
-      name: 'Enkelikynttiläjalka',
+      name: 'Enkeli&shy;kynttilä&shy;jalka',
       height: 22,
       pcs: 1,
       description: 'Ristiäisiin, rippijuhliin yms.',
@@ -169,7 +169,7 @@ export function decorating(): RentalOrLinkedRentalItem[] {
       price: 0
     },
     {
-      name: 'Pieni sydänpidike, vaaleanpunainen',
+      name: 'Pieni sydänpidike, vaalean&shy;punainen',
       width: 27,
       height: 24,
       pcs: 1,
@@ -177,7 +177,7 @@ export function decorating(): RentalOrLinkedRentalItem[] {
       price: 0
     },
     {
-      name: 'Sydänvalokoriste',
+      name: 'Sydän&shy;valo&shy;koriste',
       height: 36,
       pcs: 1,
       image: '/kuvat/koristelu/sydanvalokoriste.jpg',

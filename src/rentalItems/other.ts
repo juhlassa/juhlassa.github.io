@@ -70,7 +70,7 @@ export function other(): RentalOrLinkedRentalItem[] {
     },
     {
       id: 67,
-      name: '<a class="link" href="https://www.paljussa.fi/" target="_blank">Peräkärrypalju</a>',
+      name: '<a class="link" href="https://www.paljussa.fi/" target="_blank">Perä&shy;kärry&shy;palju</a>',
       diameter: 180,
       height: 100,
       volume: 1500,
