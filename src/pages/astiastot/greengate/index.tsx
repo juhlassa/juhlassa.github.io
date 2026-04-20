@@ -8,6 +8,7 @@ const Index = () => {
   return (
     <Layout
       pageTitle="Green Gate"
+      description="Green Gate -astiat tuovat kattaukseen romanttista tunnelmaa yhdistettynä moderniin käytännöllisyyteen. Kauniit kukkakuosit, pehmeät sävyt ja yhdisteltävät designit tekevät sarjasta erityisesti nuorempien suosikin – täydellinen valinta näyttävään ja persoonalliseen kattaukseen."
       mediaImage="/kuvat/greengate.jpg"
       track={true}
       content={
@@ -38,8 +39,9 @@ const Index = () => {
             </p>
             <p>
               Kun katat pöydän suloisilla Green Gate -astioilla, vieraiden
-              huomio on taattu. Tätä sarjaa et helposti muualta löydä.{' '}
+              huomio on taattu. Tätä sarjaa et helposti muualta löydä.
             </p>
+            <p>Astiat voi pestä tiskikoneessa.</p>
           </div>
           <RentalItemsTable
             rentalItems={greenGateResolved()}

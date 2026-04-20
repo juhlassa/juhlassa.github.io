@@ -8,6 +8,7 @@ const Index = () => {
   return (
     <Layout
       pageTitle="Vanilja"
+      description="Pentikin klassinen Vanilja-astiasto hurmaa ajattomalla muotoilullaan ja vaalealla koristeellaan. Monipuolinen ja muuntautuva sarja sopii juhlapöytään, ja laajalla setillä katat tyylikkäästi kaiken kahvihetkistä illallisiin."
       mediaImage="/kuvat/kahvikupit.jpg"
       track={true}
       content={
@@ -20,7 +21,7 @@ const Index = () => {
             />
             <h2 id="Vanilja">Pentik Vanilja</h2>
             <p>
-              Pentikin omistajan, Anu Pentikin, suunnittelema Vanilija-sarja on
+              Pentikin omistajan, Anu Pentikin, suunnittelema Vanilja-sarja on
               jo klassikko. Suomalaiset rakastavat sarjaa sen persoonallisen
               muotoilun ja pintaa elävöittävän vaalean koristekuvion ansiosta.
               Tämä astiasarja sopii juhlaan kuin juhlaan. Lautasliinoilla,

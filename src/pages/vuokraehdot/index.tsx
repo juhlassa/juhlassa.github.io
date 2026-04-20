@@ -9,6 +9,7 @@ const Index = () => {
   return (
     <Layout
       pageTitle="Vuokraehdot"
+      description="Tutustu vuokraehtoihin – tiedot varauksesta, maksamisesta ja vastuista."
       mediaImage="/kuvat/brita.jpg"
       track={true}
       content={
@@ -30,10 +31,8 @@ const Index = () => {
           <p>Minimiostos on 20 €.</p>
           <LeftContentImage url="/kuvat/tarjottavat.jpg" maxWidth={'300px'} />
           <p>
-            Yli 100 euron vuokramaksusta laskutamme etukäteen varausmaksuna
-            puolet loppusummasta. Laskun eräpäivä on kaksi viikkoa ennen
-            vuokra-ajan alkua. Jos vuokraus perutaan sen jälkeen, varausmaksua
-            ei palauteta.
+            Laskun eräpäivä on kaksi viikkoa ennen vuokra-ajan alkua. Jos
+            vuokraus perutaan sen jälkeen, maksua ei palauteta.
           </p>
           <p>Jos tuotteet palautetaan likaisena, vuokramaksu tuplautuu.</p>
           <p>
@@ -57,8 +56,7 @@ const Index = () => {
             voileipäkakku paikalleen ja vaihtaa se nopeasti uuteen.
           </p>
           <p>
-            Tuotteet sijaitsevat Ilmajoen keskustassa. Kuljetus on mahdollista
-            korvausta vastaan.
+            Huomioithan, että tuotteet ovat salonkikelpoisia, mutta eivät uusia.
           </p>
         </div>
       }
