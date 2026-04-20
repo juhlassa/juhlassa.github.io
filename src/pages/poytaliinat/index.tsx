@@ -6,6 +6,7 @@ const Index = () => {
   return (
     <Layout
       pageTitle="Pöytäliinat"
+      description="Viimeistele juhlapöytä pöytäliinoilla – vuokraa helppohoitoiset liinat helposti eri tilaisuuksiin ja kattauksiin."
       mediaImage="/kuvat/poytaliinat/poytaliina.jpg"
       track={true}
       content={

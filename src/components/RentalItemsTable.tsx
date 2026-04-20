@@ -93,7 +93,10 @@ export function RentalItemsTable({
                     </div>
                   )}
                   {itemDetails && (
-                    <div style={{ fontSize: '75%' }}>{itemDetails}</div>
+                    <div
+                      style={{ fontSize: '75%' }}
+                      dangerouslySetInnerHTML={{ __html: itemDetails }}
+                    />
                   )}
                   {item.description && (
                     <div
