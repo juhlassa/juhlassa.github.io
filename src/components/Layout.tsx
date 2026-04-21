@@ -179,10 +179,18 @@ export const Layout: FC<LayoutProps> = ({
           />
         )}
       </Head>
-      <div className="navigation" onClick={() => window.location.assign('/')}>
+      <div
+        className="navigation"
+        onClick={() =>
+          menuOpened ? setMenuOpened(false) : window.location.assign('/')
+        }
+      >
         <div className="navigationContent"></div>
       </div>
-      <div className="navigation-small sticky">
+      <div
+        className="navigation-small sticky"
+        onClick={() => setMenuOpened(false)}
+      >
         <div className="navigationContent">
           <div
             className="menu"
@@ -216,7 +224,7 @@ export const Layout: FC<LayoutProps> = ({
         </div>
       </div>
 
-      <div className="container">
+      <div className="container" onClick={() => setMenuOpened(false)}>
         <div className="content">
           <h1>{pageTitle}</h1>
           {content}
