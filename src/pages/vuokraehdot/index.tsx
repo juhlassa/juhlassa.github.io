@@ -14,7 +14,10 @@ const Index = () => {
       track={true}
       content={
         <div>
-          <RightContentImage url="/kuvat/herkut.jpg" />
+          <RightContentImage
+            url="/kuvat/herkut.jpg"
+            alt="Kerrostarjotin herkkuineen"
+          />
           <p>Voit tulla tutustumaan tuotteisiin etukäteen.</p>
           <p>
             Toivomme, että käsittelet vuokratuotteita yhtä hyvin kuin omiasi.
@@ -29,7 +32,11 @@ const Index = () => {
             myöhemmin. Haku- ja nouto sovitaan sinulle sopivaan aikaan.
           </p>
           <p>Minimiostos on 20 €.</p>
-          <LeftContentImage url="/kuvat/tarjottavat.jpg" maxWidth={'300px'} />
+          <LeftContentImage
+            url="/kuvat/tarjottavat.jpg"
+            alt="Tarjoiluvati täynnä naposteltavaa"
+            styles={{ maxWidth: '300px' }}
+          />
           <p>
             Laskun eräpäivä on kaksi viikkoa ennen vuokra-ajan alkua. Jos
             vuokraus perutaan sen jälkeen, maksua ei palauteta.
@@ -47,8 +54,11 @@ const Index = () => {
           </p>
           <ContentImage
             url={'/kuvat/brita.jpg'}
-            maxWidth={'300px'}
-            float={'right'}
+            alt={'Brita-kakku'}
+            styles={{
+              maxWidth: '300px',
+              float: 'right'
+            }}
           />
           <p>
             Jalallisen, suorakaiteen muotoisen tarjottimen mukana saat neljä

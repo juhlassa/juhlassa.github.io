@@ -12,7 +12,11 @@ const Index = () => {
       content={
         <div>
           <p>
-            <RightContentImage url="/kuvat/juhlapoyta.jpg" maxWidth={'300px'} />
+            <RightContentImage
+              url="/kuvat/juhlapoyta.jpg"
+              alt="Juhlapöydän antimia"
+              styles={{ maxWidth: '300px' }}
+            />
             Onnea! Koska vierailet sivustollamme, sinulla on todennäköisesti
             aihetta juhlaan.
           </p>
@@ -22,7 +26,11 @@ const Index = () => {
             silloin, kun kokoonnutaan yhteen, hyvä ruoka ja kaunis kattaus
             kruunaavat merkkihetket.
           </p>
-          <LeftContentImage url="/kuvat/kuohuviinit.jpg" maxWidth={'300px'} />
+          <LeftContentImage
+            url="/kuvat/kuohuviinit.jpg"
+            alt="Kuohuviinilasit"
+            styles={{ maxWidth: '300px' }}
+          />
           <p>
             Kuinka usein tarvitset kymmeniä lautasia, kahvikuppeja,
             kuohuviinilaseja tai kakkukupuja? Kaikkea ei tarvitse omistaa itse.
