@@ -44,7 +44,11 @@ const Index = () => {
         tuotesarjoja ja vaihtelisin niitä kattauksissa mielialan ja vuodenajan
         mukaan.
       </p>
-      <ContentImage url="/kuvat/virpi.jpg" maxWidth="300px" float={'right'} />
+      <ContentImage
+        url="/kuvat/virpi.jpg"
+        alt="Virpi"
+        styles={{ maxWidth: '300px', float: 'right' }}
+      />
       <p>
         Kun rakensimme omakotitalon Ilmajoelle haaveilin isosta astiahuoneesta,
         mutta sitä ei valitettavasti saatu mahdutettua pohjapiirustukseen. Se on
