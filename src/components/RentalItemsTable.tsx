@@ -59,7 +59,7 @@ export function RentalItemsTable({
               details('tilavuus', item.volume, 'l')
             ]
               .filter(Boolean)
-              .join(', ')
+              .join(' ')
             return (
               <tr key={index}>
                 <td>
@@ -138,8 +138,13 @@ export function RentalItemsTable({
   )
 }
 
-function details(text: string, value?: string | number, unit: string = '') {
+function details(
+  text: string,
+  value?: string | number,
+  unit: string = '',
+  bullet: boolean = true
+) {
   return value === undefined
     ? undefined
-    : `${text}:\u00a0${value}${unit ? `\u00a0${unit}` : ''}`
+    : `${bullet ? '●\u00a0' : ''}${text}:\u00a0${value}${unit ? `\u00a0${unit}` : ''}`
 }
