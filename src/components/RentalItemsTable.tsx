@@ -9,11 +9,11 @@ export function RentalItemsTable({
   rentalItems: RentalItem[]
   gapBeforeList?: boolean
 }) {
-  const [showImage, setShowImage] = useState<string>('')
+  const [showItem, setShowItem] = useState<RentalItem | null>(null)
 
   function handleEscapeKey(e: KeyboardEvent) {
     if (e.key === 'Escape') {
-      setShowImage('')
+      setShowItem(null)
     }
   }
 
@@ -33,9 +33,13 @@ export function RentalItemsTable({
         </>
       )}
 
-      {showImage && (
-        <div className="overlay" onClick={() => setShowImage('')}>
-          <img className="popup-image" src={showImage} />
+      {showItem && (
+        <div className="overlay" onClick={() => setShowItem(null)}>
+          <img
+            className="popup-image"
+            alt={showItem.name}
+            src={showItem.image}
+          />
         </div>
       )}
 
@@ -107,15 +111,15 @@ export function RentalItemsTable({
                 </td>
                 <td>
                   {item.image && (
-                    <span
-                      style={{ cursor: 'pointer' }}
-                      onClick={() => setShowImage(item.image!)}
-                    >
+                    <span onClick={() => setShowItem(item)}>
                       <ContentImage
                         url={item.image}
-                        maxWidth={'100%'}
-                        float={'right'}
-                        loading={'lazy'}
+                        alt={item.name}
+                        loading="lazy"
+                        styles={{
+                          maxWidth: '100%',
+                          float: 'right'
+                        }}
                       />
                     </span>
                   )}

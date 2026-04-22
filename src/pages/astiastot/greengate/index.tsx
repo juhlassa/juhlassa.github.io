@@ -17,8 +17,11 @@ const Index = () => {
           <div>
             <ContentImage
               url={'/kuvat/greengate.jpg'}
-              float={'left'}
-              maxWidth={'280px'}
+              alt={'Green Gate -astiastoa'}
+              styles={{
+                float: 'left',
+                maxWidth: '280px'
+              }}
             />
             <h2>Green Gate</h2>
             <p>
