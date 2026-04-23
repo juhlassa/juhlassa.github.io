@@ -1,7 +1,7 @@
 import { Layout } from '../../../components/Layout'
 import { TablesetsNavigation } from '../../../components/TablesetsNavigation'
 import { RentalItemsTable } from '../../../components/RentalItemsTable'
-import { ContentImage } from '../../../components/ContentImage'
+import { LeftContentImage } from '../../../components/ContentImage'
 import { greenGateResolved } from '../../../rentalItems/greengate'
 
 const Index = () => {
@@ -15,11 +15,11 @@ const Index = () => {
         <>
           <TablesetsNavigation selected="greengate" />
           <div>
-            <ContentImage
+            <LeftContentImage
               url={'/kuvat/greengate.jpg'}
               alt={'Green Gate -astiastoa'}
               styles={{
-                float: 'left',
+                marginLeft: '30px',
                 maxWidth: '280px'
               }}
             />

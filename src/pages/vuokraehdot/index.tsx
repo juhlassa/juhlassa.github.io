@@ -1,6 +1,5 @@
 import { Layout } from '../../components/Layout'
 import {
-  ContentImage,
   LeftContentImage,
   RightContentImage
 } from '../../components/ContentImage'
@@ -52,12 +51,12 @@ const Index = () => {
             kosketuksessa kosteiden tarjottavien kanssa. Tämän takia herkkujen
             alla on käytettävä kakkupaperia tai muuta suojaa.
           </p>
-          <ContentImage
+          <RightContentImage
             url={'/kuvat/brita.jpg'}
             alt={'Brita-kakku'}
             styles={{
               maxWidth: '300px',
-              float: 'right'
+              marginRight: '30px'
             }}
           />
           <p>
