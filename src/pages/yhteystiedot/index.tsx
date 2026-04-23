@@ -1,5 +1,5 @@
 import { Layout } from '../../components/Layout'
-import { ContentImage } from '../../components/ContentImage'
+import { RightContentImage } from '../../components/ContentImage'
 import basicInfo from '../../basicInfo'
 
 const Index = () => {
@@ -44,10 +44,10 @@ const Index = () => {
         tuotesarjoja ja vaihtelisin niitä kattauksissa mielialan ja vuodenajan
         mukaan.
       </p>
-      <ContentImage
+      <RightContentImage
         url="/kuvat/virpi.jpg"
         alt="Virpi"
-        styles={{ maxWidth: '300px', float: 'right' }}
+        styles={{ maxWidth: '300px', marginRight: '30px' }}
       />
       <p>
         Kun rakensimme omakotitalon Ilmajoelle haaveilin isosta astiahuoneesta,

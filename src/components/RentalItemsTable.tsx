@@ -1,4 +1,4 @@
-import { ContentImage } from './ContentImage'
+import { RightContentImage } from './ContentImage'
 import { type RentalItem } from '../types'
 import { useEffect, useState } from 'react'
 
@@ -111,14 +111,17 @@ export function RentalItemsTable({
                 </td>
                 <td>
                   {item.image && (
-                    <span onClick={() => setShowItem(item)}>
-                      <ContentImage
+                    <span
+                      style={{ cursor: 'pointer' }}
+                      onClick={() => setShowItem(item)}
+                    >
+                      <RightContentImage
                         url={item.image}
                         alt={item.name}
                         loading="lazy"
                         styles={{
                           maxWidth: '100%',
-                          float: 'right'
+                          marginRight: '30px'
                         }}
                       />
                     </span>
