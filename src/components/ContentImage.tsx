@@ -20,23 +20,6 @@ function humanReadableName(name?: string) {
   return name?.replace(/&shy;/g, '').replace(/&nbsp;/g, ' ')
 }
 
-export const ContentImage = ({
-  url,
-  alt,
-  loading,
-  styles
-}: ContentImageProps) => {
-  return (
-    <img
-      src={url}
-      alt={humanReadableName(alt) ?? url}
-      loading={loading}
-      // @ts-expect-error compiler confused about float: string
-      style={{ ...defaultStyles, ...styles }}
-    />
-  )
-}
-
 export const LeftContentImage = ({
   url,
   alt,
