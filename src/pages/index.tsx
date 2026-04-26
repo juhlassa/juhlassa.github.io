@@ -13,8 +13,8 @@ const Index = () => {
         <div>
           <p>
             <RightContentImage
-              url="/kuvat/juhlapoyta.jpg"
-              alt="Juhlapöydän antimia"
+              url="/kuvat/kuohuviinit.jpg"
+              alt="Kuohuviinilasit"
               styles={{ maxWidth: '300px' }}
             />
             Onnea! Koska vierailet sivustollamme, sinulla on todennäköisesti
@@ -26,11 +26,6 @@ const Index = () => {
             silloin, kun kokoonnutaan yhteen, hyvä ruoka ja kaunis kattaus
             kruunaavat merkkihetket.
           </p>
-          <LeftContentImage
-            url="/kuvat/kuohuviinit.jpg"
-            alt="Kuohuviinilasit"
-            styles={{ maxWidth: '300px' }}
-          />
           <p>
             Kuinka usein tarvitset kymmeniä lautasia, kahvikuppeja,
             kuohuviinilaseja tai kakkukupuja? Kaikkea ei tarvitse omistaa itse.
@@ -40,6 +35,11 @@ const Index = () => {
             astiat kiertävät tilaisuudesta toiseen, mikä vähentää turhaa
             kulutusta ja säästää luonnonvaroja.
           </p>
+          <LeftContentImage
+            url="/kuvat/juhlapoyta.jpg"
+            alt="Juhlapöydän antimia"
+            styles={{ maxWidth: '280px' }}
+          />
           <p>
             Sinun ei kannata hankkia tai säilyttää suuria määriä astioita ja
             muita juhlatarvikkeita vain yhtä päivää varten – saat kaiken

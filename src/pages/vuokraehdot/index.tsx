@@ -16,6 +16,7 @@ const Index = () => {
           <RightContentImage
             url="/kuvat/herkut.jpg"
             alt="Kerrostarjotin herkkuineen"
+            styles={{ maxWidth: '280px' }}
           />
           <p>Voit tulla tutustumaan tuotteisiin etukäteen.</p>
           <p>
@@ -30,12 +31,12 @@ const Index = () => {
             Jos tuotteet ovat vapaana, ne saa noutaa aikaisemmin tai palauttaa
             myöhemmin. Haku- ja nouto sovitaan sinulle sopivaan aikaan.
           </p>
-          <p>Minimiostos on 20 €.</p>
           <LeftContentImage
             url="/kuvat/tarjottavat.jpg"
             alt="Tarjoiluvati täynnä naposteltavaa"
-            styles={{ maxWidth: '300px' }}
+            styles={{ maxWidth: '200px' }}
           />
+          <p>Minimiostos on 20&nbsp;€.</p>
           <p>
             Laskun eräpäivä on kaksi viikkoa ennen vuokra-ajan alkua. Jos
             vuokraus perutaan sen jälkeen, maksua ei palauteta.
@@ -45,20 +46,17 @@ const Index = () => {
             Jos tuote rikkoutuu, katoaa tai vaurioituu, asiakas on velvollinen
             maksamaan summa, jolla hankimme uuden, vastaavan tuotteen.
           </p>
-          <p>
-            Hopean väriset astiat on tarkoitettu elintarvikekäyttöön, mutta
-            niiden pinta vaurioituu helposti varsinkin silloin, jos ne ovat
-            kosketuksessa kosteiden tarjottavien kanssa. Tämän takia herkkujen
-            alla on käytettävä kakkupaperia tai muuta suojaa.
-          </p>
           <RightContentImage
             url={'/kuvat/brita.jpg'}
             alt={'Brita-kakku'}
-            styles={{
-              maxWidth: '300px',
-              marginRight: '30px'
-            }}
+            styles={{ maxWidth: '300px' }}
           />
+          <p>
+            Hopean väriset astiat on tarkoitettu elin&shy;tarvike&shy;käyttöön,
+            mutta niiden pinta vaurioituu helposti varsinkin silloin, jos ne
+            ovat kosketuksessa kosteiden tarjottavien kanssa. Tämän takia
+            herkkujen alla on käytettävä kakkupaperia tai muuta suojaa.
+          </p>
           <p>
             Jalallisen, suorakaiteen muotoisen tarjottimen mukana saat neljä
             astiaan sopivaa muovitarjotinta, joilla on helppo nostaa esimerkiksi
