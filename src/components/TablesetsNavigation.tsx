@@ -7,15 +7,20 @@ export const TablesetsNavigation = ({ selected }: { selected: string }) => {
     (item: NavigationItem) => item.tableset
   )
 
-  return tablesets.map((item) => (
-    <Link
-      key={item.name}
-      className={
-        item.route.includes(selected) ? 'item link selected' : 'item link'
-      }
-      href={item.route}
-    >
-      {item.name}
-    </Link>
-  ))
+  return (
+    <>
+      <span>Katso myös: </span>
+      {tablesets
+        .filter((item) => !item.route.includes(selected))
+        .map((item) => (
+          <Link
+            key={item.name}
+            className="item link underlined"
+            href={item.route}
+          >
+            {item.name}
+          </Link>
+        ))}
+    </>
+  )
 }

@@ -20,7 +20,6 @@ const Index = () => {
               alt={'Vanilja-kahvikupit'}
               styles={{ maxWidth: '350px' }}
             />
-            <h2 id="Vanilja">Pentik Vanilja</h2>
             <p>
               Pentikin omistajan, Anu Pentikin, suunnittelema Vanilja-sarja on
               jo klassikko. Suomalaiset rakastavat sarjaa sen persoonallisen
