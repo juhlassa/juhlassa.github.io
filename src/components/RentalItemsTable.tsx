@@ -119,10 +119,7 @@ export function RentalItemsTable({
                         url={item.image}
                         alt={item.name}
                         loading="lazy"
-                        styles={{
-                          maxWidth: '100%',
-                          marginRight: '30px'
-                        }}
+                        styles={{ maxWidth: '100%' }}
                       />
                     </span>
                   )}

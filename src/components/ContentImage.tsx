@@ -29,7 +29,8 @@ export const LeftContentImage = ({
   const modifiedStyles = {
     ...styles,
     float: 'left',
-    marginLeft: styles?.marginLeft ?? '-200px',
+    marginLeft: styles?.marginLeft ?? '30px',
+    marginRight: styles?.marginRight ?? '30px',
     maxWidth: styles?.maxWidth ?? '360px'
   }
 
@@ -53,7 +54,8 @@ export const RightContentImage = ({
   const modifiedStyles = {
     ...styles,
     float: 'right',
-    marginRight: styles?.marginRight ?? '-200px',
+    marginLeft: styles?.marginLeft ?? '30px',
+    marginRight: styles?.marginRight ?? '30px',
     maxWidth: styles?.maxWidth ?? '360px'
   }
   return (
