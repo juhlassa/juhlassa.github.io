@@ -6,7 +6,7 @@ export const navigation: NavigationItem[] = [
     name: '<img src="/kuvat/koti.png" alt="Koti" class="home">'
   },
   {
-    route: '/astiastot',
+    route: '/astiastot/vanilja',
     name: 'Astiastot'
   },
   {
