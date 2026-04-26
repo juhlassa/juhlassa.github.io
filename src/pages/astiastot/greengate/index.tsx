@@ -20,7 +20,6 @@ const Index = () => {
               alt={'Green Gate -astiastoa'}
               styles={{ maxWidth: '280px' }}
             />
-            <h2>Green Gate</h2>
             <p>
               Green Gate -astiat luovat kattaukseen ainutlaatuista tunnelmaa,
               jossa yhdistyvät romanttinen vintage-tyyli ja moderni
