@@ -47,7 +47,7 @@ const Index = () => {
       <RightContentImage
         url="/kuvat/virpi.jpg"
         alt="Virpi"
-        styles={{ maxWidth: '300px', marginRight: '30px' }}
+        styles={{ maxWidth: '300px' }}
       />
       <p>
         Kun rakensimme omakotitalon Ilmajoelle haaveilin isosta astiahuoneesta,

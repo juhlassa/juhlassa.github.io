@@ -18,7 +18,7 @@ const Index = () => {
             <LeftContentImage
               url={'/kuvat/kahvikupit.jpg'}
               alt={'Vanilja-kahvikupit'}
-              styles={{ maxWidth: '450px' }}
+              styles={{ maxWidth: '350px' }}
             />
             <h2 id="Vanilja">Pentik Vanilja</h2>
             <p>
