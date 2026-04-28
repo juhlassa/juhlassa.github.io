@@ -33,7 +33,6 @@ const Index = () => {
       <iframe
         width="100%"
         height="300"
-        style={{ border: 0 }}
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
         src={basicInfo.map}
@@ -47,7 +46,7 @@ const Index = () => {
       <RightContentImage
         url="/kuvat/virpi.jpg"
         alt="Virpi"
-        styles={{ maxWidth: '300px' }}
+        className="size-l"
       />
       <p>
         Kun rakensimme omakotitalon Ilmajoelle haaveilin isosta astiahuoneesta,

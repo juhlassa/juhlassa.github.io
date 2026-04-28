@@ -26,13 +26,6 @@ export function RentalItemsTable({
 
   return (
     <>
-      {gapBeforeList && (
-        <>
-          <p>{'\u00a0'}</p>
-          <p>{'\u00a0'}</p>
-        </>
-      )}
-
       {showItem && (
         <div className="overlay" onClick={() => setShowItem(null)}>
           <img
@@ -43,7 +36,7 @@ export function RentalItemsTable({
         </div>
       )}
 
-      <table style={{ width: '100%' }}>
+      <table className={`rental-items ${gapBeforeList ? 'gap-before' : ''}`}>
         <tbody>
           {rentalItems.map((item, index) => {
             const itemNameHash = item.name.match(/<[^<]+>/)
@@ -78,7 +71,7 @@ export function RentalItemsTable({
                   />
                   {item.brand && (
                     <>
-                      <div style={{ fontSize: '75%' }}>{item.brand}</div>
+                      <div className="rental-item-small-text">{item.brand}</div>
                     </>
                   )}
                   {item.pcs > 0 && (
@@ -98,13 +91,13 @@ export function RentalItemsTable({
                   )}
                   {itemDetails && (
                     <div
-                      style={{ fontSize: '75%' }}
+                      className="rental-item-small-text"
                       dangerouslySetInnerHTML={{ __html: itemDetails }}
                     />
                   )}
                   {item.description && (
                     <div
-                      style={{ fontSize: '75%' }}
+                      className="rental-item-small-text"
                       dangerouslySetInnerHTML={{ __html: item.description }}
                     />
                   )}
@@ -112,14 +105,14 @@ export function RentalItemsTable({
                 <td>
                   {item.image && (
                     <span
-                      style={{ cursor: 'pointer' }}
+                      className="rental-item-image"
                       onClick={() => setShowItem(item)}
                     >
                       <RightContentImage
+                        className="rental-item-image"
                         url={item.image}
                         alt={item.name}
                         loading="lazy"
-                        styles={{ maxWidth: '100%' }}
                       />
                     </span>
                   )}

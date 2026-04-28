@@ -12,7 +12,7 @@ const Index = () => {
       content={
         <>
           <RentalItemsTable rentalItems={tableClothingsResolved()} />
-          <div>
+          <div className="gap-before">
             <p>
               Pöytäliinat luovutetaan ja palautetaan pestynä ja viikattuna.
               Koska jokaisella on omat vaatimukset silityksen laadulle,
