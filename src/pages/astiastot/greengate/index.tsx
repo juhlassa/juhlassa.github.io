@@ -16,9 +16,9 @@ const Index = () => {
           <TablesetsNavigation selected="greengate" />
           <div>
             <LeftContentImage
+              className="size-m"
               url={'/kuvat/greengate.jpg'}
               alt={'Green Gate -astiastoa'}
-              styles={{ maxWidth: '280px' }}
             />
             <p>
               Green Gate -astiat luovat kattaukseen ainutlaatuista tunnelmaa,
