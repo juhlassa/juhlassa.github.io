@@ -14,9 +14,9 @@ const Index = () => {
       content={
         <div>
           <RightContentImage
+            className="size-m"
             url="/kuvat/herkut.jpg"
             alt="Kerrostarjotin herkkuineen"
-            styles={{ maxWidth: '280px' }}
           />
           <p>Voit tulla tutustumaan tuotteisiin etukäteen.</p>
           <p>
@@ -32,9 +32,9 @@ const Index = () => {
             myöhemmin. Haku- ja nouto sovitaan sinulle sopivaan aikaan.
           </p>
           <LeftContentImage
+            className="size-s"
             url="/kuvat/tarjottavat.jpg"
             alt="Tarjoiluvati täynnä naposteltavaa"
-            styles={{ maxWidth: '200px' }}
           />
           <p>Minimiostos on 20&nbsp;€.</p>
           <p>
@@ -47,9 +47,9 @@ const Index = () => {
             maksamaan summa, jolla hankimme uuden, vastaavan tuotteen.
           </p>
           <RightContentImage
+            className="size-l"
             url={'/kuvat/brita.jpg'}
             alt={'Brita-kakku'}
-            styles={{ maxWidth: '300px' }}
           />
           <p>
             Hopean väriset astiat on tarkoitettu elin&shy;tarvike&shy;käyttöön,

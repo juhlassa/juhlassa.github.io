@@ -2,18 +2,7 @@ type ContentImageProps = {
   url: string
   alt?: string
   loading?: 'lazy' | 'eager'
-  styles?: {
-    maxWidth?: string
-    marginLeft?: string
-    marginRight?: string
-    float?: string
-  }
-}
-
-const defaultStyles = {
-  borderRadius: '10px',
-  margin: '30px',
-  width: 'calc(100% - 60px)'
+  className?: string
 }
 
 function humanReadableName(name?: string) {
@@ -24,23 +13,14 @@ export const LeftContentImage = ({
   url,
   alt,
   loading,
-  styles
+  className
 }: ContentImageProps) => {
-  const modifiedStyles = {
-    ...styles,
-    float: 'left',
-    marginLeft: styles?.marginLeft ?? '30px',
-    marginRight: styles?.marginRight ?? '30px',
-    maxWidth: styles?.maxWidth ?? '360px'
-  }
-
   return (
     <img
+      className={`${className} content-image float-left`}
       src={url}
       alt={humanReadableName(alt) ?? url}
       loading={loading}
-      // @ts-expect-error style cannot contain float: string
-      style={{ ...defaultStyles, ...modifiedStyles }}
     />
   )
 }
@@ -49,22 +29,14 @@ export const RightContentImage = ({
   url,
   alt,
   loading,
-  styles
+  className
 }: ContentImageProps) => {
-  const modifiedStyles = {
-    ...styles,
-    float: 'right',
-    marginLeft: styles?.marginLeft ?? '30px',
-    marginRight: styles?.marginRight ?? '30px',
-    maxWidth: styles?.maxWidth ?? '360px'
-  }
   return (
     <img
+      className={`content-image float-right ${className ?? ''}`}
       src={url}
       alt={humanReadableName(alt) ?? url}
       loading={loading}
-      // @ts-expect-error style cannot contain float: string
-      style={{ ...defaultStyles, ...modifiedStyles }}
     />
   )
 }

@@ -16,9 +16,9 @@ const Index = () => {
           <TablesetsNavigation selected="vanilja" />
           <div>
             <LeftContentImage
+              className="size-xl"
               url={'/kuvat/kahvikupit.jpg'}
               alt={'Vanilja-kahvikupit'}
-              styles={{ maxWidth: '350px' }}
             />
             <p>
               Pentikin omistajan, Anu Pentikin, suunnittelema Vanilja-sarja on

@@ -13,9 +13,9 @@ const Index = () => {
         <div>
           <p>
             <RightContentImage
+              className="size-l"
               url="/kuvat/kuohuviinit.jpg"
               alt="Kuohuviinilasit"
-              styles={{ maxWidth: '300px' }}
             />
             Onnea! Koska vierailet sivustollamme, sinulla on todennäköisesti
             aihetta juhlaan.
@@ -36,9 +36,9 @@ const Index = () => {
             kulutusta ja säästää luonnonvaroja.
           </p>
           <LeftContentImage
+            className="size-m"
             url="/kuvat/juhlapoyta.jpg"
             alt="Juhlapöydän antimia"
-            styles={{ maxWidth: '280px' }}
           />
           <p>
             Sinun ei kannata hankkia tai säilyttää suuria määriä astioita ja
