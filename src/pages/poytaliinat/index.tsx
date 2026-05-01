@@ -1,17 +1,18 @@
 import { Layout } from '../../components/Layout'
 import { RentalItemsTable } from '../../components/RentalItemsTable'
-import { tableClothingsResolved } from '../../rentalItems/tableClothings'
+
+const group = 'Pöytäliinat'
 
 const Index = () => {
   return (
     <Layout
-      pageTitle="Pöytäliinat"
+      pageTitle={group}
       description="Viimeistele juhlapöytä pöytäliinoilla – vuokraa helppohoitoiset liinat helposti eri tilaisuuksiin ja kattauksiin."
       mediaImage="/kuvat/poytaliinat/poytaliina.jpg"
       track={true}
       content={
         <>
-          <RentalItemsTable rentalItems={tableClothingsResolved()} />
+          <RentalItemsTable group={group} />
           <div className="gap-before">
             <p>
               Pöytäliinat luovutetaan ja palautetaan pestynä ja viikattuna.

@@ -2,12 +2,13 @@ import { Layout } from '../../../components/Layout'
 import { TablesetsNavigation } from '../../../components/TablesetsNavigation'
 import { RentalItemsTable } from '../../../components/RentalItemsTable'
 import { LeftContentImage } from '../../../components/ContentImage'
-import { greenGateResolved } from '../../../rentalItems/greengate'
+
+const group = 'Green Gate'
 
 const Index = () => {
   return (
     <Layout
-      pageTitle="Green Gate"
+      pageTitle={group}
       description="Green Gate -astiat tuovat kattaukseen romanttista tunnelmaa yhdistettynä moderniin käytännöllisyyteen. Kauniit kukkakuosit, pehmeät sävyt ja yhdisteltävät designit tekevät sarjasta erityisesti nuorempien suosikin – täydellinen valinta näyttävään ja persoonalliseen kattaukseen."
       mediaImage="/kuvat/greengate.jpg"
       track={true}
@@ -42,10 +43,7 @@ const Index = () => {
             </p>
             <p>Astiat voi pestä tiskikoneessa.</p>
           </div>
-          <RentalItemsTable
-            rentalItems={greenGateResolved()}
-            gapBeforeList={true}
-          />
+          <RentalItemsTable group={group} gapBeforeList={true} />
         </>
       }
     />

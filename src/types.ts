@@ -14,6 +14,18 @@ export type NavigationItem = {
   name: string
 }
 
+export const Groups = [
+  'Vanilja',
+  'Green Gate',
+  'Tarjoilu',
+  'Lasit',
+  'Pöytäliinat',
+  'Koristelu',
+  'Muut'
+] as const
+
+export type Group = (typeof Groups)[number]
+
 export type RentalItem = {
   id?: number // for linking only
   name: string
@@ -27,8 +39,8 @@ export type RentalItem = {
   material?: string
   volume?: number
   image?: string
-  unit?: string
-  price: number
+  unit?: string[]
+  price?: number
 }
 
 export type LinkedRentalItem = { linked: number }

@@ -1,15 +1,17 @@
 import { RightContentImage } from './ContentImage'
-import { type RentalItem } from '../types'
+import { Group, type RentalItem } from '../types'
 import { useEffect, useState } from 'react'
+import { allRentalItemsByGroup } from '../rentalItems'
 
 export function RentalItemsTable({
-  rentalItems,
+  group,
   gapBeforeList
 }: {
-  rentalItems: RentalItem[]
+  group: Group
   gapBeforeList?: boolean
 }) {
   const [showItem, setShowItem] = useState<RentalItem | null>(null)
+  const rentalItems = allRentalItemsByGroup[group]
 
   function handleEscapeKey(e: KeyboardEvent) {
     if (e.key === 'Escape') {
@@ -42,7 +44,7 @@ export function RentalItemsTable({
             const itemNameHash = item.name.match(/<[^<]+>/)
               ? undefined
               : item.name
-                  .replace(/(,|&shy;|\/)/g, '')
+                  .replace(/([,/()]|&shy;|)/g, '')
                   .replace(/&nbsp;/g, ' ')
                   .replace(/[\s-]+/g, '-')
                   .toLowerCase()
@@ -76,7 +78,12 @@ export function RentalItemsTable({
                   )}
                   {item.pcs > 0 && (
                     <div>
-                      Saatavana {item.pcs} {item.unit ?? 'kpl'}
+                      Saatavana {item.pcs}{' '}
+                      {!item.unit
+                        ? 'kpl'
+                        : item.pcs === 1
+                          ? item.unit[0]
+                          : item.unit[1]}
                     </div>
                   )}
                   {item.price > 0 && (
@@ -86,7 +93,7 @@ export function RentalItemsTable({
                         minimumFractionDigits: 2,
                         maximumFractionDigits: 2
                       })}{' '}
-                      € / {item.unit ?? 'kpl'}
+                      € / {!item.unit ? 'kpl' : (item.unit[0] ?? 'kpl')}
                     </div>
                   )}
                   {itemDetails && (
