@@ -2,7 +2,8 @@ import { RentalItemsTable } from '../../../components/RentalItemsTable'
 import { Layout } from '../../../components/Layout'
 import { TablesetsNavigation } from '../../../components/TablesetsNavigation'
 import { LeftContentImage } from '../../../components/ContentImage'
-import { vaniljaResolved } from '../../../rentalItems/vanilja'
+
+const group = 'Vanilja'
 
 const Index = () => {
   return (
@@ -34,10 +35,7 @@ const Index = () => {
             </p>
             <p>Astiat voi pestä tiskikoneessa.</p>
           </div>
-          <RentalItemsTable
-            rentalItems={vaniljaResolved()}
-            gapBeforeList={true}
-          />
+          <RentalItemsTable group={group} gapBeforeList={true} />
         </>
       }
     />

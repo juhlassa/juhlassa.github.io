@@ -1,0 +1,893 @@
+{
+  "Vanilja": [
+    {
+      "name": "Kahvikuppi, asetti ja lautanen",
+      "pcs": 29,
+      "image": "/kuvat/vanilja/kahvikuppi.jpg",
+      "price": 1.5
+    },
+    {
+      "name": "Teemuki ja lautanen",
+      "pcs": 8,
+      "diameter": 21,
+      "image": "/kuvat/vanilja/teekuppi.jpg",
+      "price": 1.5
+    },
+    {
+      "linked": 2
+    },
+    {
+      "name": "Kermakko ja sokerikko",
+      "pcs": 3,
+      "image": "/kuvat/vanilja/sokerikkokermakko.jpg",
+      "price": 3
+    },
+    {
+      "name": "Kannu",
+      "volume": 0.6,
+      "pcs": 1,
+      "image": "/kuvat/vanilja/kannu.jpg",
+      "price": 4
+    },
+    {
+      "name": "Iso kannu",
+      "volume": 1.8,
+      "pcs": 1,
+      "image": "/kuvat/vanilja/kannu_1.8.jpg",
+      "price": 5
+    },
+    {
+      "name": "Jälki&shy;ruoka&shy;kulho",
+      "pcs": 12,
+      "diameter": 14,
+      "height": 6,
+      "image": "/kuvat/vanilja/jalkiruokakulho.jpg",
+      "price": 1.5
+    },
+    {
+      "name": "Syvä ruoka&shy;lautanen",
+      "diameter": 21,
+      "pcs": 10,
+      "image": "/kuvat/vanilja/syvalautanen.jpg",
+      "price": 1.5
+    },
+    {
+      "name": "Matala ruoka&shy;lautanen",
+      "diameter": 28,
+      "pcs": 27,
+      "image": "/kuvat/vanilja/lautanen.jpg",
+      "price": 1.5
+    },
+    {
+      "name": "Sydän&shy;lautanen",
+      "diameter": 17,
+      "height": 5,
+      "pcs": 1,
+      "image": "/kuvat/vanilja/sydanlautanen_pentik.jpg",
+      "price": 2
+    },
+    {
+      "name": "Sydän&shy;lautanen, kukka",
+      "diameter": 17,
+      "height": 5,
+      "pcs": 4,
+      "image": "/kuvat/vanilja/sydanlautanen.jpg",
+      "price": 2
+    },
+    {
+      "name": "Jalallinen tarjoilu&shy;kulho",
+      "diameter": 20,
+      "height": 20,
+      "pcs": 8,
+      "image": "/kuvat/vanilja/tarjoilukulho.jpg",
+      "price": 2.5
+    },
+    {
+      "name": "Pieni tarjoilu&shy;kulho",
+      "diameter": 21,
+      "height": 11,
+      "pcs": 2,
+      "image": "/kuvat/vanilja/pienitarjoilukulho.jpg",
+      "price": 2.5
+    },
+    {
+      "name": "Iso tarjoilu&shy;kulho",
+      "diameter": 27,
+      "height": 13,
+      "pcs": 1,
+      "image": "/kuvat/vanilja/isotarjoilukulho.jpg",
+      "price": 3
+    },
+    {
+      "name": "Laakea tarjoiluvati",
+      "diameter": 30,
+      "height": 7,
+      "pcs": 3,
+      "image": "/kuvat/vanilja/laakeakulho.jpg",
+      "price": 3
+    },
+    {
+      "name": "Pieni piirakkavuoka / tarjoiluvati",
+      "diameter": 22,
+      "height": 6,
+      "pcs": 1,
+      "image": "/kuvat/vanilja/pienipiirakkavuoka.jpg",
+      "price": 3
+    },
+    {
+      "name": "Piirakkavuoka / tarjoiluvati",
+      "diameter": 30,
+      "pcs": 2,
+      "image": "/kuvat/vanilja/isopiirakkavuoka.jpg",
+      "price": 3
+    },
+    {
+      "name": "Korkea kulho",
+      "diameter": 30,
+      "pcs": 3,
+      "image": "/kuvat/vanilja/korkeakulho.jpg",
+      "price": 3
+    },
+    {
+      "name": "Maljakko, sopii myös tarjoiluun",
+      "diameter": 20,
+      "height": 19,
+      "pcs": 4,
+      "image": "/kuvat/vanilja/maljakko.jpg",
+      "price": 4
+    },
+    {
+      "name": "Kakkutarjotin",
+      "diameter": 28,
+      "height": 20,
+      "pcs": 1,
+      "image": "/kuvat/vanilja/kakkulautanen.jpg",
+      "price": 4
+    },
+    {
+      "name": "Kynttilänjalka",
+      "pcs": 2,
+      "height": 10,
+      "image": "/kuvat/vanilja/kynttilajalka.jpg",
+      "price": 1.5
+    }
+  ],
+  "Green Gate": [
+    {
+      "name": "Lattemuki",
+      "pcs": 40,
+      "volume": 0.3,
+      "description": "Kuosit vaihtelevat.",
+      "image": "/kuvat/greengate/lattemuki.jpg",
+      "price": 1.5
+    },
+    {
+      "linked": 2
+    },
+    {
+      "name": "Lautanen",
+      "pcs": 40,
+      "diameter": 20,
+      "description": "Kuosit vaihtelevat.",
+      "image": "/kuvat/greengate/lattemuki.jpg",
+      "price": 1.5
+    },
+    {
+      "name": "Kermakko ja sokerikko",
+      "pcs": 1,
+      "volume": 0.5,
+      "image": "/kuvat/greengate/kermakkosokerikko.jpg",
+      "price": 4
+    },
+    {
+      "name": "Kapea tarjoiluvati",
+      "width": 15,
+      "length": 32,
+      "pcs": 1,
+      "image": "/kuvat/greengate/kapea_tarjoiluvati.jpg",
+      "price": 2
+    },
+    {
+      "name": "Sydänvadit",
+      "diameter": 27,
+      "pcs": 1,
+      "image": "/kuvat/greengate/sydanvadit.jpg",
+      "price": 2
+    },
+    {
+      "name": "Teepannu",
+      "pcs": 1,
+      "image": "/kuvat/greengate/teepannu.jpg",
+      "price": 3
+    }
+  ],
+  "Tarjoilu": [
+    {
+      "name": "Kerros&shy;tarjotin, 5&nbsp;kerrosta",
+      "brand": "Riviera Maison",
+      "height": 87,
+      "description": "Kokonaisuutta voi muokata lisäämällä vain tarvittavat kerrokset.",
+      "pcs": 1,
+      "image": "/kuvat/tarjoilu/kerrostarjotin_5.jpg",
+      "price": 20
+    },
+    {
+      "name": "Kerros&shy;tarjotin, 3&nbsp;kerrosta",
+      "height": 82,
+      "diameter": 40,
+      "description": "Tasojen korkeutta voi säätää portaattomasti.",
+      "pcs": 1,
+      "image": "/kuvat/tarjoilu/kerrostarjotin_3_lasi.jpg",
+      "price": 20
+    },
+    {
+      "name": "Kerros&shy;tarjotin, 3&nbsp;kerrosta (lasitasot)",
+      "brand": "Riviera Maison",
+      "height": 72,
+      "diameter": 36,
+      "pcs": 1,
+      "image": "/kuvat/tarjoilu/kerrostarjotin_riviera_3.jpg",
+      "price": 18
+    },
+    {
+      "name": "Kerros&shy;tarjotin, 3&nbsp;kerrosta",
+      "brand": "Affari of Sweden",
+      "height": 49,
+      "diameter": 28,
+      "pcs": 1,
+      "image": "/kuvat/tarjoilu/kerrostarjotin_affari_3.jpg",
+      "price": 15
+    },
+    {
+      "name": "Kapea kerros&shy;tarjotin, 3&nbsp;kerrosta",
+      "height": 44,
+      "pcs": 1,
+      "image": "/kuvat/tarjoilu/pieni_kerrosvati_3.jpg",
+      "price": 7
+    },
+    {
+      "name": "Kerros&shy;tarjotin, 2&nbsp;kerrosta",
+      "height": 48,
+      "diameter": 29,
+      "pcs": 1,
+      "image": "/kuvat/tarjoilu/kerrostarjotin_2_metalli.jpg",
+      "price": 10
+    },
+    {
+      "name": "Kerros&shy;tarjotin, 2&nbsp;kerrosta (lasitasot)",
+      "brand": "Riviera Maison",
+      "height": 46,
+      "pcs": 3,
+      "image": "/kuvat/tarjoilu/kerrostarjotin_2_lasi.jpg",
+      "price": 10
+    },
+    {
+      "name": "Pieni kerros&shy;tarjotin, 2&nbsp;kerrosta",
+      "height": 32,
+      "pcs": 1,
+      "image": "/kuvat/tarjoilu/kerrostarjotin_2.jpg",
+      "price": 5
+    },
+    {
+      "name": "Mini&shy;kerros&shy;tarjotin, 2&nbsp;kerrosta",
+      "brand": "Riviera Maison",
+      "height": 20,
+      "diameter": 16,
+      "pcs": 1,
+      "image": "/kuvat/tarjoilu/kerrostarjotin_pieni_2.jpg",
+      "price": 5
+    },
+    {
+      "name": "Iso tarjotin",
+      "width": 42,
+      "length": 65,
+      "pcs": 1,
+      "image": "/kuvat/tarjoilu/iso_tarjotin.jpg",
+      "price": 5
+    },
+    {
+      "name": "Peili&shy;tarjotin",
+      "width": 36,
+      "length": 32,
+      "pcs": 2,
+      "image": "/kuvat/tarjoilu/peilitarjotin.jpg",
+      "price": 4
+    },
+    {
+      "name": "Jalallinen sydän&shy;tarjotin",
+      "diameter": 17,
+      "pcs": 2,
+      "image": "/kuvat/tarjoilu/jalallinen_sydantarjotin.jpg",
+      "price": 5
+    },
+    {
+      "name": "Sydän&shy;tarjotin",
+      "length": 26,
+      "width": 25,
+      "pcs": 1,
+      "image": "/kuvat/tarjoilu/sydantarjotin.jpg",
+      "price": 4
+    },
+    {
+      "name": "Kakku&shy;tarjotin",
+      "brand": "Riviera Maison",
+      "diameter": 30,
+      "description": "Cake My Day",
+      "pcs": 1,
+      "image": "/kuvat/tarjoilu/kakkutarjotin.jpg",
+      "price": 10
+    },
+    {
+      "name": "Suorakulmainen tarjotin",
+      "brand": "Perfect Home",
+      "width": 20,
+      "length": 45,
+      "pcs": 2,
+      "image": "/kuvat/tarjoilu/tarjotin.jpg",
+      "price": 7
+    },
+    {
+      "name": "Jalallinen tarjotin",
+      "brand": "Riviera Maison",
+      "width": 25,
+      "length": 36,
+      "height": 12,
+      "pcs": 1,
+      "image": "/kuvat/tarjoilu/voileipakakkutarjotin.jpg",
+      "price": 10
+    },
+    {
+      "name": "Iso juomacooleri",
+      "brand": "Orrefors",
+      "diameter": 47,
+      "height": 34,
+      "pcs": 1,
+      "image": "/kuvat/tarjoilu/cooler_iso.jpg",
+      "price": 15
+    },
+    {
+      "name": "Juomacooleri",
+      "diameter": 34,
+      "height": 23,
+      "pcs": 1,
+      "image": "/kuvat/tarjoilu/cooler.jpg",
+      "price": 4
+    },
+    {
+      "name": "Pieni juomacooleri",
+      "diameter": 29,
+      "height": 22,
+      "pcs": 1,
+      "image": "/kuvat/tarjoilu/cooler_pieni.jpg",
+      "price": 8
+    },
+    {
+      "name": "Hanallinen juoma-astia, 6.5&nbsp;l",
+      "volume": 6.5,
+      "diameter": 20,
+      "height": 30,
+      "pcs": 2,
+      "description": "Toinen astia ei sisällä telinettä (korkeus mitattu ilman telinettä).",
+      "image": "/kuvat/tarjoilu/juoma-astia_6.jpg",
+      "price": 8
+    },
+    {
+      "name": "Hanallinen juoma-astia, 5.5&nbsp;l",
+      "volume": 5.5,
+      "height": 62,
+      "image": "/kuvat/tarjoilu/juoma-astia_5.5.jpg",
+      "description": "Juoma-astiassa on irrallinen osa, jonka sisään voi laittaa esimerkiksi jääpaloja, kukkia tai pattereilla toimivat valot. Sisäastian tilavuus on 1.5 l.",
+      "pcs": 1,
+      "price": 10
+    },
+    {
+      "name": "Hanallinen juoma-astia telineellä, 6&nbsp;l",
+      "volume": 6,
+      "diameter": 20,
+      "height": 32,
+      "pcs": 1,
+      "description": "(korkeus mitattu ilman telinettä).",
+      "image": "/kuvat/tarjoilu/juoma-astia_5.jpg",
+      "price": 8
+    },
+    {
+      "name": "Hanallinen juoma-astia, 6&nbsp;l",
+      "volume": 6,
+      "height": 32,
+      "diameter": 20,
+      "pcs": 2,
+      "description": "Ei telinettä.",
+      "image": "/kuvat/tarjoilu/juoma-astia_6_jalaton.jpg",
+      "price": 6
+    },
+    {
+      "name": "Hanallinen juoma-astia, 4&nbsp;l",
+      "volume": 4,
+      "height": 26,
+      "width": 15,
+      "pcs": 1,
+      "description": "Ei telinettä. Kyljessä teksti \"GLASSWARE Established 1898\".",
+      "image": "/kuvat/tarjoilu/juoma-astia_4.jpg",
+      "price": 4
+    },
+    {
+      "name": "Hanallinen juoma-astia, 3.8&nbsp;l",
+      "volume": 3.8,
+      "height": 32,
+      "diameter": 14,
+      "pcs": 1,
+      "description": "Kyljessä teksti \"QUALITY ~ Refreshing Ice Cold Drink\".",
+      "image": "/kuvat/tarjoilu/juoma-astia_3.8.jpg",
+      "price": 4
+    },
+    {
+      "name": "Hanallinen juoma-astia, 3&nbsp;l",
+      "volume": 3,
+      "height": 27,
+      "diameter": 14,
+      "pcs": 1,
+      "description": "Kyljessä teksti \"Hello SUMMER ENJOY THIS SEASON\".",
+      "image": "/kuvat/tarjoilu/juoma-astia_3.jpg",
+      "price": 4
+    },
+    {
+      "name": "Kannu",
+      "volume": 1.8,
+      "pcs": 1,
+      "image": "/kuvat/tarjoilu/kannu.jpg",
+      "price": 2
+    },
+    {
+      "name": "Maitokannu",
+      "volume": 0.8,
+      "pcs": 1,
+      "image": "/kuvat/tarjoilu/maitokannu.jpg",
+      "price": 2
+    },
+    {
+      "name": "Lasikannu",
+      "volume": 0.55,
+      "pcs": 1,
+      "image": "/kuvat/tarjoilu/lasikannut.jpg",
+      "price": 2
+    },
+    {
+      "name": "Lasikannu, pieni",
+      "volume": 0.25,
+      "pcs": 2,
+      "image": "/kuvat/tarjoilu/lasikannut.jpg",
+      "price": 1
+    },
+    {
+      "name": "\"Mariskooli\" XXL, kirkas",
+      "height": 20,
+      "diameter": 20,
+      "pcs": 3,
+      "description": "Kuvattu oikeiden Mariskoolien vierellä koon hahmottamiseksi.",
+      "image": "/kuvat/tarjoilu/mariskoolit.jpg",
+      "price": 5
+    },
+    {
+      "name": "Mariskooli, kirkas, iso",
+      "brand": "Iittala",
+      "height": 15.5,
+      "diameter": 12,
+      "pcs": 12,
+      "image": "/kuvat/tarjoilu/mariskooli_kirkas_iso.jpg",
+      "price": 3
+    },
+    {
+      "name": "Mariskooli, kirkas, pieni",
+      "brand": "Iittala",
+      "height": 12,
+      "diameter": 9.5,
+      "pcs": 8,
+      "image": "/kuvat/tarjoilu/mariskooli_kirkas_pieni.jpg",
+      "price": 3
+    },
+    {
+      "name": "Mariskooli, turkoosi, iso",
+      "brand": "Iittala",
+      "height": 15.5,
+      "diameter": 12,
+      "pcs": 12,
+      "image": "/kuvat/tarjoilu/mariskooli_sininen_pieni.jpg",
+      "price": 3
+    },
+    {
+      "name": "Mariskooli, turkoosi, pieni",
+      "brand": "Iittala",
+      "height": 12,
+      "diameter": 9.5,
+      "pcs": 8,
+      "image": "/kuvat/tarjoilu/mariskooli_sininen_pieni.jpg",
+      "price": 3
+    },
+    {
+      "id": 1,
+      "name": "Jäätelö- / jälki&shy;ruoka&shy;malja / maljakko",
+      "pcs": 26,
+      "image": "/kuvat/tarjoilu/jalkiruokalasi.jpg",
+      "description": "Sopii myös pöytä&shy;koriste&shy;asetelmiin.",
+      "price": 0.5
+    },
+    {
+      "name": "Jalallinen kakkutarjotin",
+      "brand": "Tupperware",
+      "diameter": 30,
+      "height": 11,
+      "pcs": 3,
+      "material": "elin&shy;tarvike&shy;muovi",
+      "image": "/kuvat/tarjoilu/jalallinen_kakkutarjotin.jpg",
+      "price": 3
+    },
+    {
+      "name": "Paikka- tai tarjoilu&shy;info&shy;pidike",
+      "height": 5,
+      "pcs": 35,
+      "image": "/kuvat/tarjoilu/kylttipidike2.jpg",
+      "price": 0.5
+    },
+    {
+      "name": "Paikka- tai tarjoilu&shy;info&shy;pidike",
+      "height": 12,
+      "pcs": 12,
+      "image": "/kuvat/tarjoilu/kylttipidike.jpg",
+      "price": 0.5
+    },
+    {
+      "name": "Tarjoilupihdit",
+      "length": 12,
+      "pcs": 18,
+      "image": "/kuvat/tarjoilu/pinsetit.jpg",
+      "price": 0.5
+    },
+    {
+      "id": 2,
+      "name": "Kahvilusikat",
+      "length": 14,
+      "pcs": 60,
+      "image": "/kuvat/tarjoilu/lusikat.jpg",
+      "price": 0.3
+    },
+    {
+      "name": "Juustotarjotin",
+      "diameter": 25,
+      "pcs": 3,
+      "image": "/kuvat/tarjoilu/juustotarjotin.jpg",
+      "price": 3
+    }
+  ],
+  "Lasit": [
+    {
+      "name": "Kuohu&shy;viini&shy;lasi",
+      "pcs": 96,
+      "height": 10,
+      "volume": 0.1,
+      "image": "/kuvat/lasit/kuohuviinilasit.jpg",
+      "price": 0.5
+    },
+    {
+      "name": "Sydänlasi",
+      "brand": "Pentik",
+      "pcs": 18,
+      "image": "/kuvat/lasit/sydanlasi.jpg",
+      "price": 1
+    },
+    {
+      "name": "Verna",
+      "brand": "Iittala",
+      "pcs": 12,
+      "volume": 0.22,
+      "image": "/kuvat/lasit/verna_sininen.jpg",
+      "price": 1.5
+    },
+    {
+      "name": "Tsaikka",
+      "brand": "Iittala",
+      "pcs": 15,
+      "volume": 0.23,
+      "image": "/kuvat/lasit/tsaikka.jpg",
+      "price": 1
+    },
+    {
+      "linked": 1
+    }
+  ],
+  "Koristelu": [
+    {
+      "name": "Kynttelikkö",
+      "height": 42,
+      "pcs": 3,
+      "image": "/kuvat/koristelu/kynttilajalka.jpg",
+      "price": 10
+    },
+    {
+      "name": "Helmikoristeet",
+      "pcs": 1,
+      "unit": "setti",
+      "description": "Viisi pientä kynttilämansettia ja neljä isoa helmikoristetta.",
+      "image": "/kuvat/koristelu/kynttelikko.jpg",
+      "price": 3
+    },
+    {
+      "name": "Vaalean&shy;punaiset kynttilä&shy;mansetit",
+      "pcs": 1,
+      "unit": "setti",
+      "description": "Viisi pientä kynttilämansettia.",
+      "image": "/kuvat/koristelu/kynttilamansetti_vaaleanpunainen.jpg",
+      "price": 3
+    },
+    {
+      "name": "Vaaleanpunaiset kynttilämansetit",
+      "pcs": 1,
+      "unit": "setti",
+      "description": "Neljä kynttilämansettia ja yksi iso.",
+      "image": "/kuvat/koristelu/mansetti_vaaleanpunainen.jpg",
+      "price": 3
+    },
+    {
+      "name": "Kynttiläjalka lasilla",
+      "height": 50,
+      "pcs": 1,
+      "image": "/kuvat/koristelu/kynttilajalka_lasilla.jpg",
+      "price": 7
+    },
+    {
+      "name": "Enkeli&shy;kynttilä&shy;jalka",
+      "height": 22,
+      "pcs": 1,
+      "description": "Ristiäisiin, rippijuhliin yms.",
+      "image": "/kuvat/koristelu/enkelikynttilajalka.jpg",
+      "price": 5
+    },
+    {
+      "name": "Kynttilälyhty, kirkas",
+      "brand": "Perfect Home",
+      "height": 36,
+      "pcs": 2,
+      "image": "/kuvat/koristelu/kynttilalyhty_kirkas.jpg",
+      "price": 5
+    },
+    {
+      "name": "Kynttilälyhty, utu",
+      "brand": "Perfect Home",
+      "height": 25,
+      "pcs": 1,
+      "image": "/kuvat/koristelu/kynttilalyhty.jpg",
+      "price": 5
+    },
+    {
+      "name": "Kynttiläastia, sydän",
+      "brand": "Partylite",
+      "width": 8,
+      "height": 7,
+      "pcs": 17,
+      "image": "/kuvat/koristelu/sydantuikku.jpg",
+      "price": 0.8
+    },
+    {
+      "linked": 1
+    },
+    {
+      "name": "Kukkakranssi",
+      "brand": "Finnmari",
+      "diameter": 33,
+      "material": "muovi",
+      "pcs": 3,
+      "image": "/kuvat/koristelu/kranssi.jpg",
+      "price": 4
+    },
+    {
+      "name": "Kukkakimppu",
+      "brand": "Finnmari",
+      "length": 30,
+      "material": "muovi",
+      "pcs": 3,
+      "image": "/kuvat/koristelu/kukkakimppu.jpg",
+      "price": 1.5
+    },
+    {
+      "name": "Pallovalot",
+      "pcs": 1,
+      "description": "Toimii verkkovirralla.",
+      "image": "/kuvat/koristelu/pallovalot_vaaleanpunainen.jpg",
+      "price": 3
+    },
+    {
+      "name": "Pallovalot",
+      "pcs": 1,
+      "description": "Toimii verkkovirralla.",
+      "image": "/kuvat/koristelu/pallovalot_valkoinen.jpg",
+      "price": 3
+    },
+    {
+      "name": "Pallovalot",
+      "pcs": 3,
+      "description": "Toimii paristoilla (koko AA), paristot eivät kuulu vuokrahintaan.",
+      "image": "/kuvat/koristelu/punaiset_pallovalot.jpg",
+      "price": 3
+    },
+    {
+      "name": "Sydänvalot",
+      "pcs": 3,
+      "description": "Toimii paristoilla (koko AA), paristot eivät kuulu vuokrahintaan.",
+      "image": "/kuvat/koristelu/sydanvalot.jpg",
+      "price": 3
+    },
+    {
+      "name": "Valoputous",
+      "pcs": 8,
+      "description": "Toimii verkkovirralla.",
+      "image": "/kuvat/koristelu/valoputous.jpg",
+      "price": 5
+    },
+    {
+      "name": "Sydän&shy;koriste",
+      "diameter": 26,
+      "pcs": 1,
+      "image": "/kuvat/koristelu/sydankranssi.jpg",
+      "price": 2
+    },
+    {
+      "name": "Sydänkranssi",
+      "diameter": 27,
+      "pcs": 1,
+      "image": "/kuvat/koristelu/punottu_sydankranssi.jpg",
+      "price": 2
+    },
+    {
+      "name": "Sydäntaulu kirjaimilla",
+      "width": 30,
+      "height": 20,
+      "pcs": 1,
+      "image": "/kuvat/koristelu/sydantaulu_kirjaimilla.jpg",
+      "price": 2
+    },
+    {
+      "name": "Sydännauha",
+      "length": 150,
+      "pcs": 3,
+      "image": "/kuvat/koristelu/sydannauha.jpg",
+      "price": 1.5
+    },
+    {
+      "name": "Sydäntaulu valokuville, korteille yms.",
+      "width": 39,
+      "height": 50,
+      "pcs": 1,
+      "image": "/kuvat/koristelu/sydantaulu.jpg",
+      "price": 2
+    },
+    {
+      "name": "Pieni sydänpidike, vaalean&shy;punainen",
+      "width": 27,
+      "height": 24,
+      "pcs": 1,
+      "image": "/kuvat/koristelu/sydantaulu_pieni.jpg",
+      "price": 1
+    },
+    {
+      "name": "Sydän&shy;valo&shy;koriste",
+      "height": 36,
+      "pcs": 1,
+      "image": "/kuvat/koristelu/sydanvalokoriste.jpg",
+      "price": 1
+    },
+    {
+      "name": "Somiste",
+      "pcs": 1,
+      "width": 23,
+      "height": 12,
+      "image": "/kuvat/koristelu/love.jpg",
+      "price": 0.5
+    },
+    {
+      "name": "Pöytänumerot 1&nbsp;-&nbsp;10",
+      "pcs": 1,
+      "height": 9,
+      "unit": "setti",
+      "image": "/kuvat/koristelu/numerot.jpg",
+      "price": 1
+    },
+    {
+      "name": "Tauluteline",
+      "width": 20,
+      "height": 30,
+      "pcs": 3,
+      "image": "/kuvat/koristelu/taulutelineet.jpg",
+      "price": 1
+    },
+    {
+      "name": "Vihreä koristesetti",
+      "pcs": 1,
+      "unit": "setti",
+      "description": "Sisältää yhden ison ja neljä pientä kynttilämansettia sekä koristeperhosia ja -kiteitä.",
+      "image": "/kuvat/koristelu/vihrea_koristesetti.jpg",
+      "price": 5
+    }
+  ],
+  "Pöytäliinat": [
+    {
+      "name": "Pöytäliina, valkoinen",
+      "width": 145,
+      "length": 240,
+      "pcs": 10,
+      "material": "polyesteri",
+      "image": "/kuvat/poytaliinat/poytaliina.jpg",
+      "price": 4
+    }
+  ],
+  "Muut": [
+    {
+      "name": "Donitsibaari",
+      "pcs": 1,
+      "unit": "setti",
+      "image": "/kuvat/muut/donitsiteline.jpg",
+      "price": 12
+    },
+    {
+      "name": "Karkkibuffet",
+      "pcs": 0,
+      "description": "Näyttävä karkkibuffet syntyy esimerkiksi <a class=\"link underlined\" href=\"/astiastot/vanilja/\">Vanilja</a>-sarjan kulhoista. Voit koota niin laajan kokonaisuuden kuin haluat.",
+      "image": "/kuvat/muut/karkkibuffet.jpg",
+      "price": 0
+    },
+    {
+      "name": "Pyöreä kakkukupu",
+      "brand": "Tupperware",
+      "height": 18,
+      "diameter": 40,
+      "pcs": 2,
+      "image": "/kuvat/muut/pyorea_kakkukupu.jpg",
+      "price": 7
+    },
+    {
+      "name": "Iso kakkukupu",
+      "brand": "Tupperware",
+      "height": 16,
+      "width": 45,
+      "length": 29,
+      "pcs": 2,
+      "image": "/kuvat/muut/kakkukupu.jpg",
+      "price": 7
+    },
+    {
+      "name": "Voileipä&shy;kakkukupu",
+      "brand": "Tupperware",
+      "width": 40,
+      "length": 16,
+      "height": 18,
+      "pcs": 2,
+      "image": "/kuvat/muut/voileipakakkukupu.jpg",
+      "price": 7
+    },
+    {
+      "name": "Ruusuköynnös",
+      "length": 200,
+      "pcs": 1,
+      "description": "Sopii koristeeksi esimerkiksi pöydälle, valokuvaseinään tai hääkaareen.",
+      "image": "/kuvat/muut/ruusukoynnos.jpg",
+      "price": 1
+    },
+    {
+      "name": "Valo&shy;kuvaus&shy;seinä / Hää&shy;kaari",
+      "pcs": 1,
+      "width": 240,
+      "height": 240,
+      "description": "Sisältää läpikuultavat verhot. Teline menee pieneen tilaan ja on helppo koota. Työkaluja ei tarvita - osat kiinnitetään siipiruuveilla. Osista voi koota myös matalamman ja kapeamman version.",
+      "image": "/kuvat/muut/valokuvausseina.jpg",
+      "price": 60
+    },
+    {
+      "name": "<a class=\"link\" href=\"https://www.paljussa.fi/\" target=\"_blank\">Perä&shy;kärry&shy;palju</a>",
+      "diameter": 180,
+      "height": 100,
+      "volume": 1500,
+      "description": "Noin kuudelle henkilölle. Alkaen 50 €/vrk. Ks.&nbsp;kaikki <a class=\"link underlined\" href=\"https://www.paljussa.fi/hinnat\" target=\"_blank\">hinnat</a>.",
+      "pcs": 1,
+      "image": "/kuvat/muut/palju.jpg",
+      "price": 50
+    }
+  ]
+}
