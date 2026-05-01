@@ -58,11 +58,6 @@ const Index = () => {
             herkkujen alla on käytettävä kakkupaperia tai muuta suojaa.
           </p>
           <p>
-            Jalallisen, suorakaiteen muotoisen tarjottimen mukana saat neljä
-            astiaan sopivaa muovitarjotinta, joilla on helppo nostaa esimerkiksi
-            voileipäkakku paikalleen ja vaihtaa se nopeasti uuteen.
-          </p>
-          <p>
             Huomioithan, että tuotteet ovat salonkikelpoisia, mutta eivät uusia.
           </p>
         </div>
