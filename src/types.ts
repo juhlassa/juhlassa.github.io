@@ -14,6 +14,18 @@ export type NavigationItem = {
   name: string
 }
 
+export const Groups = [
+  'Vanilja',
+  'Green Gate',
+  'Tarjoilu',
+  'Lasit',
+  'Pöytäliinat',
+  'Koristelu',
+  'Muut'
+] as const
+
+export type Group = (typeof Groups)[number]
+
 export type RentalItem = {
   id?: number // for linking only
   name: string

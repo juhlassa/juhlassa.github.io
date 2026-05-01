@@ -1,15 +1,17 @@
 import { RightContentImage } from './ContentImage'
-import { type RentalItem } from '../types'
+import { Group, type RentalItem } from '../types'
 import { useEffect, useState } from 'react'
+import { allRentalItemsByGroup } from '../rentalItems'
 
 export function RentalItemsTable({
-  rentalItems,
+  group,
   gapBeforeList
 }: {
-  rentalItems: RentalItem[]
+  group: Group
   gapBeforeList?: boolean
 }) {
   const [showItem, setShowItem] = useState<RentalItem | null>(null)
+  const rentalItems = allRentalItemsByGroup[group]
 
   function handleEscapeKey(e: KeyboardEvent) {
     if (e.key === 'Escape') {
