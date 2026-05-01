@@ -46,3 +46,9 @@ export type RentalItem = {
 export type LinkedRentalItem = { linked: number }
 
 export type RentalOrLinkedRentalItem = RentalItem | LinkedRentalItem
+
+declare global {
+  interface Window {
+    gtag: (...args: unknown[]) => void
+  }
+}
