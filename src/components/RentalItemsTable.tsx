@@ -2,6 +2,7 @@ import { RightContentImage } from './ContentImage'
 import { Group, type RentalItem } from '../types'
 import { useEffect, useState } from 'react'
 import { allRentalItemsByGroup } from '../rentalItems'
+import { humanReadableName, trackEvent } from '../util'
 
 export function RentalItemsTable({
   group,
@@ -12,6 +13,7 @@ export function RentalItemsTable({
 }) {
   const [showItem, setShowItem] = useState<RentalItem | null>(null)
   const rentalItems = allRentalItemsByGroup[group]
+  const trackZoom = process.env.NODE_ENV !== 'development'
 
   function handleEscapeKey(e: KeyboardEvent) {
     if (e.key === 'Escape') {
@@ -108,7 +110,15 @@ export function RentalItemsTable({
                   {item.image && (
                     <span
                       className="rental-item-image"
-                      onClick={() => setShowItem(item)}
+                      onClick={() => {
+                        if (trackZoom) {
+                          trackEvent('zoom', {
+                            group,
+                            name: humanReadableName(item.name)
+                          })
+                        }
+                        setShowItem(item)
+                      }}
                     >
                       <RightContentImage
                         className="rental-item-image"

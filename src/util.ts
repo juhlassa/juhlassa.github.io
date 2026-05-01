@@ -1,4 +1,4 @@
-export default {
+export const basicInfo = {
   businessName: 'Pramiat vadit',
   baseUrl: 'https://pramiatvadit.fi',
   logo: '/kuvat/pramiatvadit.jpg',
@@ -12,4 +12,14 @@ export default {
     'pramiatvadit astiavuokraus astiavuokraamo vuokra-astiat juhlavuokraus juhlat ilmajoki seinäjoki etelä-pohjanmaa virpi kupiainen',
   slogan: 'Vuokraa. Juhli. Palauta.',
   gtagId: 'G-Y0E9FK86YP'
+}
+
+export function humanReadableName(name?: string) {
+  return name?.replace(/&shy;/g, '').replace(/&nbsp;/g, ' ')
+}
+
+export function trackEvent(event: string, params?: Record<string, unknown>) {
+  if (window.gtag) {
+    window.gtag('event', event, params)
+  }
 }
