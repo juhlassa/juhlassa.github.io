@@ -1,6 +1,6 @@
 import { LeftContentImage, RightContentImage } from '../components/ContentImage'
 import { Layout } from '../components/Layout'
-import basicInfo from '../basicInfo'
+import { basicInfo } from '../util'
 
 const Index = () => {
   return (

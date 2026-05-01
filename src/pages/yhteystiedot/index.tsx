@@ -1,6 +1,6 @@
 import { Layout } from '../../components/Layout'
 import { RightContentImage } from '../../components/ContentImage'
-import basicInfo from '../../basicInfo'
+import { basicInfo } from '../../util'
 
 const Index = () => {
   const content = (

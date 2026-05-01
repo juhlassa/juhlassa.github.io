@@ -1,12 +1,10 @@
+import { humanReadableName } from '../util'
+
 type ContentImageProps = {
   url: string
   alt?: string
   loading?: 'lazy' | 'eager'
   className?: string
-}
-
-function humanReadableName(name?: string) {
-  return name?.replace(/&shy;/g, '').replace(/&nbsp;/g, ' ')
 }
 
 export const LeftContentImage = ({
