@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { navigation } from '../navigation'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import basicInfo from '../basicInfo'
+import { basicInfo } from '../util'
 
 export const Layout: FC<LayoutProps> = ({
   pageTitle,
