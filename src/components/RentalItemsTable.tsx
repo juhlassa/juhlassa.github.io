@@ -21,7 +21,7 @@ export function RentalItemsTable({
       {showItem && (
         <div className="overlay" onClick={() => setShowItem(null)}>
           <img
-            className="popup-image"
+            className="popup popup-image"
             alt={showItem.name}
             src={showItem.image}
           />
@@ -61,9 +61,7 @@ export function RentalItemsTable({
                         : undefined
                     }
                   />
-                  {item.brand && (
-                    <div className="rental-item-small-text">{item.brand}</div>
-                  )}
+                  {item.brand && <div className="small-text">{item.brand}</div>}
                   {item.pcs !== undefined && item.pcs > 0 && (
                     <div>
                       Saatavana {item.pcs} {item.unit ?? 'kpl'}
@@ -81,7 +79,7 @@ export function RentalItemsTable({
                   )}
                   {itemDetails && (
                     <div
-                      className="rental-item-small-text"
+                      className="small-text"
                       dangerouslySetInnerHTML={{ __html: itemDetails }}
                     />
                   )}
