@@ -6,45 +6,45 @@ export const navigation: NavigationItem[] = [
     name: '<img src="/kuvat/koti.png" alt="Koti" class="home">'
   },
   {
-    route: '/astiastot/vanilja',
+    route: '/astiastot/vanilja/',
     name: 'Astiastot'
   },
   {
-    route: '/astiastot/vanilja',
+    route: '/astiastot/vanilja/',
     name: 'Vanilja',
     tableset: true
   },
   {
-    route: '/astiastot/greengate',
+    route: '/astiastot/greengate/',
     name: 'Green Gate',
     tableset: true
   },
   {
-    route: '/tarjoilu',
+    route: '/tarjoilu/',
     name: 'Tarjoilu'
   },
   {
-    route: '/lasit',
+    route: '/lasit/',
     name: 'Lasit'
   },
   {
-    route: '/poytaliinat',
+    route: '/poytaliinat/',
     name: 'Pöytäliinat'
   },
   {
-    route: '/koristelu',
+    route: '/koristelu/',
     name: 'Koristelu'
   },
   {
-    route: '/muut',
+    route: '/muut/',
     name: 'Muut'
   },
   {
-    route: '/vuokraehdot',
+    route: '/vuokraehdot/',
     name: 'Vuokraehdot'
   },
   {
-    route: '/yhteystiedot',
+    route: '/yhteystiedot/',
     name: 'Yhteystiedot'
   }
 ]
