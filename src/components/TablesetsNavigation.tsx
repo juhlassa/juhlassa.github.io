@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import type { NavigationItem } from '../types.ts'
 import { navigation } from '../navigation'
 
@@ -13,13 +12,9 @@ export const TablesetsNavigation = ({ selected }: { selected: string }) => {
       {tablesets
         .filter((item) => !item.route.includes(selected))
         .map((item) => (
-          <Link
-            key={item.name}
-            className="item link underlined"
-            href={item.route}
-          >
+          <a key={item.name} className="item link underlined" href={item.route}>
             {item.name}
-          </Link>
+          </a>
         ))}
     </>
   )
