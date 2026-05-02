@@ -13,7 +13,8 @@ export const basicInfo = {
   keywords:
     'pramiatvadit astiavuokraus astiavuokraamo vuokra-astiat juhlavuokraus juhlat ilmajoki seinäjoki etelä-pohjanmaa virpi kupiainen',
   slogan: 'Vuokraa. Juhli. Palauta.',
-  gtagId: 'G-Y0E9FK86YP'
+  gtagId: 'G-Y0E9FK86YP',
+  consentStateKey: 'consent_state'
 }
 
 export function humanReadableName(name?: string) {
@@ -21,7 +22,10 @@ export function humanReadableName(name?: string) {
 }
 
 export function trackEvent(event: string, params?: Record<string, unknown>) {
-  if (window.gtag) {
+  if (
+    window.gtag &&
+    localStorage.getItem(basicInfo.consentStateKey) === 'granted'
+  ) {
     window.gtag('event', event, params)
   }
 }

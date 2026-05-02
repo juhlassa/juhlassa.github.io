@@ -38,6 +38,27 @@ td:nth-of-type(1) {
     padding: 30px
 }
 
+button {
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button.primary {
+    background-color: #4e3e2f;
+    color: white;
+}
+
+button.secondary {
+    background-color: white;
+    color: #4e3e2f;
+    border: solid #4e3e2f 1px;
+}
+
 .container {
     width: 100%;
     padding-bottom: 80px;
@@ -74,6 +95,14 @@ td:nth-of-type(1) {
     border-bottom: 1px solid gray;
     background-color: white;
     height: 35px;
+}
+
+.privacy-policy {
+    float: right;
+}
+
+.menuItems .privacy-policy {
+    display: none;
 }
 
 .menuItems {
@@ -167,7 +196,7 @@ td:nth-of-type(1) {
 }
 
 .footer {
-    width: 100%;
+    width: calc(100% - 12px);
     font-size: 120%;
     padding: 6px;
     text-align: center;
@@ -187,16 +216,24 @@ td:nth-of-type(1) {
     z-index: 100;
 }
 
-.popup-image {
+.popup {
     position: fixed;
-    max-width: 90%;
-    max-height: 90%;
-    top: 50%;
+    width: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
     border-radius: 10px;
     z-index: 101;
+    padding: 30px;
+}
+
+.popup-image {
+    max-width: 95%;
+    max-height: 95%;
+    width: initial;
+    top: 50%;
+    padding: 0;
     cursor: pointer;
 }
 
@@ -211,7 +248,7 @@ td:nth-of-type(1) {
     width: 100%;
 }
 
-.rental-item-small-text {
+.small-text {
     font-size: 75%;
 }
 
@@ -347,6 +384,15 @@ td:nth-of-type(1) {
     .anchor {
         padding-top: 141px;
         margin-top: -141px;
+    }
+
+    .menuItems .privacy-policy {
+        display: block;
+        font-size: 75%;
+    }
+
+    .footer .privacy-policy {
+        display: none;
     }
 
     .inspiration-close {
