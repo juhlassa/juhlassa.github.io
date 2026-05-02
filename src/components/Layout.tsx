@@ -1,6 +1,5 @@
 import React, { useEffect, type FC } from 'react'
 import { LayoutProps } from '../types'
-import Link from 'next/link'
 import { navigation } from '../navigation'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
@@ -154,30 +153,6 @@ export const Layout: FC<LayoutProps> = ({
           sizes="16x16"
           href="/favicon-16x16.png"
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c')
-          }}
-        />
-        {trackPage && (
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${gtagId}`}
-          />
-        )}
-        {trackPage && (
-          <script
-            id="gtag"
-            dangerouslySetInnerHTML={{
-              __html: `
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', '${gtagId}');`
-            }}
-          />
-        )}
       </Head>
       <div
         className="navigation"
@@ -207,17 +182,17 @@ export const Layout: FC<LayoutProps> = ({
             {navigation.map(
               (item) =>
                 !item.tableset && (
-                  <Link
+                  <a
                     key={item.route}
                     href={item.route}
                     className={
-                      router.route.includes(item.route)
+                      item.route.includes(router.route) && router.route !== '/'
                         ? 'item link selected'
                         : 'item link'
                     }
                   >
                     <span dangerouslySetInnerHTML={{ __html: item.name }} />
-                  </Link>
+                  </a>
                 )
             )}
           </div>
@@ -245,6 +220,30 @@ export const Layout: FC<LayoutProps> = ({
           </div>
         )}
       </div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c')
+        }}
+      />
+      {trackPage && (
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${gtagId}`}
+        />
+      )}
+      {trackPage && (
+        <script
+          id="gtag"
+          dangerouslySetInnerHTML={{
+            __html: `
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '${gtagId}');`
+          }}
+        />
+      )}
     </>
   )
 }
