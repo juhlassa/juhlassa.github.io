@@ -1,0 +1,82 @@
+{
+  "Sydänsomiste": [
+    {
+      "name": "Budjettiystävälliset pöytäkoristeet",
+      "inspiration": "Tämä suloinen sydän muuntuu kynttiläastiasta helposti juhlavieraiden pöytien somisteeksi. Pienellä budjetilla näyttävyyttä kattaukseen saa vaikka ihan yhdellä ruusulla. Sen kaverina voi olla esimerkiksi helminauhaa, vihreitä lehtiä tai pikkuisia oksia. Kesällä kukkasieneen voi pistellä luonnonkukkia. Syksyllä pihlajanmarjaterttu on edullinen vaihtoehto. Jos haluat hoitaa yhden asian pois päiväjärjestyksestä hyvissä ajoin, tee  asetelmat kuiva- tai tekokukista. Mielikuvitus on rajana tässäkin!",
+      "image": "/kuvat/inspiraatio/sydansomiste_ruusu.jpg"
+    },
+    {
+      "name": "Tunnelmaa hämärään",
+      "inspiration": "Hämärässä kynttilät ovat varmoja tunnelman luojia. Suloisen sydämen epätasainen pinta päästää valon kauniisti läpi. Turvallisuuden takia tekokynttilät ovat hyvä vaihtoehto. Jos valitset perinteiset kynttilät, varmista onko tulen teko juhlapaikalla sallittua.",
+      "image": "/kuvat/inspiraatio/sydansomiste_tuikut.jpg"
+    }
+  ],
+  "Suorakulmainen tarjotin": [
+    {
+      "name": "Kukkasia tapas-lautasella",
+      "inspiration": "Tapas-lautanen tuo vaihtelua juhlapöytään. Annokset voi koota edellisenä iltana valmiiksi, mutta marjat ja muut ”kosteat” elementit kannattaa lisätä vasta juuri ennen tarjoilua. Näyttäviä kukkia on melko helppo tehdä esimerkiksi metwurstista, juustosta tai voista.",
+      "image": "/kuvat/inspiraatio/tapaslautanen.jpg"
+    }
+  ],
+  "Iso kakkukupu": [
+    {
+      "name": "Juhlaherkut turvallisesti perille",
+      "inspiration": "<p>Tupperwaren iso kakkukupu on niin valtava, että sinne mahtuu uunipellille tehty, puolitettu kakkupohja. Kakkukuvussa herkut on helppo kuljettaa ja säilöä. Tiiviin kuvun ansiosta voit olla varma, ettei täytekakkuun tartu jääkaapissa outoja makuja ja hajuja.</p>\n<p>Tämä kakku on koristeltu juhlan teemavärin mukaan violettisilla sarviorvokeilla. Ne ovat kauniita sellaisenaan, mutta kannattaa kokeilla myös orvokkien sokeroimista: Sivele kukkaan ohuesti kananmunan valkuaista, ripottele päälle hienoasokeria ja anna kuivahtaa. Lopputuloksena on täydellisiä koristeita juhlapöydän herkuille.</p>\n<p>Muita syötäviä kukkia ovat esimerkiksi ruusu, syreeni, kehäkukka, ruiskaunokki ja köynnöskrassi.</p>\n<p>Muista, että ravinnoksi  soveltuvat vain luomuviljellyt kasvit ja puhtailta kasvupaikoilta kerätyt kukat.</p>",
+      "image": "/kuvat/inspiraatio/taytekakku.jpg"
+    }
+  ],
+  "Valokuvausseinä / Hääkaari": [
+    {
+      "name": "Upea tausta, upeat kuvat",
+      "inspiration": "<p>Tämä valokuvausseinä on niin suuri, että koko seurue mahtuu sen eteen. Jos tarvitset kapeampaa taustaa tai vain matalaa sermiä, voit muokata telinettä toiveittesi mukaan.</p><p>Telineen mukana tulee valkoiset, läpikuultavat verhot. Ne voi ripustaa mukana tulevaan vaijerin ja laittaa raskaammat verhot telineen tankoon.</p><p>Verhojen värejä ja tyylejä vaihtelemalla teline saa nopeasti uuden ilmeen esimerkiksi kukilla, ilmapallokaarilla ja valoverhoilla. Lisäämällä romantiikkaa koristeluun, teline muuntuu näyttäväksi taustaksi hääparille tai muille päivänsankareille.</p>",
+      "image": "/kuvat/inspiraatio/valokuvausseina_valot.jpg"
+    },
+    {
+      "name": "Helppo koota ilman työkaluja",
+      "inspiration": "Teline menee pieneen tilaan ja on helppo koota. Työkaluja ei tarvita - osat kiinnitetään siipiruuveilla. Osista voi koota myös matalamman ja kapeamman version.",
+      "image": "/kuvat/inspiraatio/valokuvausseina_osat.jpg"
+    }
+  ],
+  "Kapea kerrostarjotin": [
+    {
+      "name": "Kaunis tilansäästäjä",
+      "inspiration": "Korkeassa ja kapeassa kerrostarjottimessa pienet leivonnaiset nousevat juhlapöydän kuninkaallisiksi. Tämä tarjotin on näyttävä, mutta vie pöydästä vain vähän tilaa.",
+      "image": "/kuvat/inspiraatio/macarons_kerrostarjotin.jpg"
+    }
+  ],
+  "Pieni kerrostarjotin": [
+    {
+      "name": "Pikkuherkut framille",
+      "inspiration": "Suloiset, pienet kerrosvadit ovat kuin tehtyjä macaronsien tarjoiluun. Niitä ei juhlapöydässä voi kerralla paljon olla, sillä lämmin ilma ei tee hyvää rapealle pinnalle.",
+      "image": "/kuvat/inspiraatio/macarons_pieni.jpg"
+    }
+  ],
+  "Minikerrostarjotin": [
+    {
+      "name": "Pikkuherkut framille",
+      "inspiration": "Suloiset, pienet kerrosvadit ovat kuin tehtyjä macaronsien tarjoiluun. Niitä ei juhlapöydässä voi kerralla paljon olla, sillä lämmin ilma ei tee hyvää rapealle pinnalle.",
+      "image": "/kuvat/inspiraatio/macarons_mini.jpg"
+    }
+  ],
+  "Hanallinen juoma-astia, pieni": [
+    {
+      "name": "Juomatonkka on helppo hygieeninen valinta",
+      "inspiration": " <p>Kuumana kesäpäivänä kylmä ja raikas juoma on parasta, mitä vieraille voi tarjota.</p><p>Hanallinen juoma-astia on sekä käytännöllinen että kaunis lisä kesäjuhliin, puutarhakutsuille tai terassille.</p><p>Meiltä voit vuokrata jopa 6,5 litran tonkan eikä sinun sen ansiosta tarvitse toimia koko päivää baarimikkona omissa kesteissäsi.</p><p>Juomatonkka on myös hygieeninen ratkaisu. Kaikissa mallimme ovat kannellisia, joten voit olla varma siitä, että vieraasi lasissa kelluu sitruunaviipale eikä kärpäsenraato.</p><p>Isoissa juhlissa juomia on tarjolla monta sorttia.  Valikoimissamme löydät varmasti sopivat koot juomalle kuin juomalle.</p>",
+      "image": "/kuvat/inspiraatio/juoma-astia_kesa.jpg"
+    }
+  ],
+  "Hanallinen juoma-astia": [
+    {
+      "name": "Katseet kääntävä kaunotar",
+      "inspiration": "Tässä on juoma-astia, jollaista ei ihan heti tule vastaan. Voit käyttää astiaa ilman sisäosaa, mutta siinä piilee astian juju. Laita somisteita lisäosaan. Kukat ovat varma vaihtoehto, persoonallisemman tunnelman luot sujauttamalla niiden taakse patterivalot. Jos laitat sisäosaan jäitä, saat juoman pysymään kylmänä, mutta sulaneet jäät eivät laimeana juomaa. Sisäosan tilavuus on 1.5&nbsp;l.",
+      "image": "/kuvat/inspiraatio/juoma-astia_koristeet.jpg"
+    }
+  ],
+  "Pöytäliinat": [
+    {
+      "name": "Valkoiset pöytäliinat lisäävät juhlan tuntua",
+      "inspiration": "<p>Valkoinen pöytäliina tuo kattaukseen juhlavuutta ja nostaa tunnelman ihan uudelle tasolle. Kun jokaisessa pöydässä on samanlainen liina, muut koristeet tulevat paremmin esiin.</p><p> Pöytäliinat luovutetaan ja palautetaan pestynä ja viikattuna. Koska jokaisella on omat vaatimukset silityksen laadulle, vuokraaja saa silittää liinat niin hyvin kuin haluaa. Suosittelemme ennen käyttöä pesemään liinat ja laittamaan ne narulle kuivumaan. Tämä suoristaa liinaa ja helpottaa silittämistä. </p>",
+      "image": "/kuvat/inspiraatio/poytaliinat_kaytossa.jpg"
+    }
+  ]
+}

@@ -6,16 +6,15 @@ import { useRouter } from 'next/router'
 import { basicInfo } from '../util'
 
 export const Layout: FC<LayoutProps> = ({
+  showHeader = true,
   pageTitle,
   content,
   description,
   mediaImage,
-  track,
-  footer
+  track
 }) => {
   const [menuOpened, setMenuOpened] = React.useState(false)
   const trackPage = track && process.env.NODE_ENV !== 'development'
-  const showFooter = footer !== false
   const router = useRouter()
   const {
     businessName,
@@ -154,71 +153,74 @@ export const Layout: FC<LayoutProps> = ({
           href="/favicon-16x16.png"
         />
       </Head>
-      <div
-        className="navigation"
-        onClick={() =>
-          menuOpened ? setMenuOpened(false) : window.location.assign('/')
-        }
-      >
-        <div className="navigationContent"></div>
-      </div>
-      <div
-        className="navigation-small sticky"
-        onClick={() => setMenuOpened(false)}
-      >
-        <div className="navigationContent">
+      {showHeader && (
+        <>
           <div
-            className="menu"
-            onClick={(e) => {
-              setMenuOpened(!menuOpened)
-              e.stopPropagation()
-            }}
+            className="navigation"
+            onClick={() =>
+              menuOpened ? setMenuOpened(false) : window.location.assign('/')
+            }
           >
-            &#9776;
+            <div className="navigationContent"></div>
           </div>
           <div
-            className={`menuItems ${menuOpened ? 'menuOpen' : 'menuClosed'}`}
+            className="navigation-small sticky"
+            onClick={() => setMenuOpened(false)}
           >
-            {navigation.map(
-              (item) =>
-                !item.tableset && (
-                  <a
-                    key={item.route}
-                    href={item.route}
-                    className={
-                      item.route.includes(router.route) && router.route !== '/'
-                        ? 'item link selected'
-                        : 'item link'
-                    }
-                  >
-                    <span dangerouslySetInnerHTML={{ __html: item.name }} />
-                  </a>
-                )
-            )}
+            <div className="navigationContent">
+              <div
+                className="menu"
+                onClick={(e) => {
+                  setMenuOpened(!menuOpened)
+                  e.stopPropagation()
+                }}
+              >
+                &#9776;
+              </div>
+              <div
+                className={`menuItems ${menuOpened ? 'menuOpen' : 'menuClosed'}`}
+              >
+                {navigation.map(
+                  (item) =>
+                    !item.tableset && (
+                      <a
+                        key={item.route}
+                        href={item.route}
+                        className={
+                          item.route.includes(router.route) &&
+                          router.route !== '/'
+                            ? 'item link selected'
+                            : 'item link'
+                        }
+                      >
+                        <span dangerouslySetInnerHTML={{ __html: item.name }} />
+                      </a>
+                    )
+                )}
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </>
+      )}
 
       <div className="container" onClick={() => setMenuOpened(false)}>
         <div className="content">
           <h1>{pageTitle}</h1>
           {content}
         </div>
-        {showFooter && (
-          <div className="footer">
-            <span>
-              Kysy lisää numerosta{' '}
-              <a className="link" href={`tel:${telephone.replace(/\s/g, '')}`}>
-                {telephone.replace(/\s/g, '\u00a0')}
-              </a>
-            </span>
-            <span> tai sähköpostilla </span>
-            <a className="link" href={`mailto:${email}`}>
-              {email}
+        <div className="footer">
+          <span>
+            Kysy lisää numerosta{' '}
+            <a className="link" href={`tel:${telephone.replace(/\s/g, '')}`}>
+              {telephone.replace(/\s/g, '\u00a0')}
             </a>
-            .
-          </div>
-        )}
+          </span>
+          <span> tai sähköpostilla </span>
+          <a className="link" href={`mailto:${email}`}>
+            {email}
+          </a>
+          .
+        </div>
       </div>
       <script
         type="application/ld+json"

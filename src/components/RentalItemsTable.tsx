@@ -1,8 +1,8 @@
 import { RightContentImage } from './ContentImage'
 import { Group, type RentalItem } from '../types'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { allRentalItemsByGroup } from '../rentalItems'
-import { humanReadableName, trackEvent } from '../util'
+import { humanReadableName, trackEvent, useEscKey } from '../util'
 
 export function RentalItemsTable({
   group,
@@ -13,20 +13,8 @@ export function RentalItemsTable({
 }) {
   const [showItem, setShowItem] = useState<RentalItem | null>(null)
   const rentalItems = allRentalItemsByGroup[group]
-  const trackZoom = process.env.NODE_ENV !== 'development'
 
-  function handleEscapeKey(e: KeyboardEvent) {
-    if (e.key === 'Escape') {
-      setShowItem(null)
-    }
-  }
-
-  useEffect(() => {
-    addEventListener('keydown', handleEscapeKey)
-    return () => {
-      removeEventListener('keydown', handleEscapeKey)
-    }
-  }, [])
+  useEscKey(() => setShowItem(null))
 
   return (
     <>
@@ -74,16 +62,14 @@ export function RentalItemsTable({
                     }
                   />
                   {item.brand && (
-                    <>
-                      <div className="rental-item-small-text">{item.brand}</div>
-                    </>
+                    <div className="rental-item-small-text">{item.brand}</div>
                   )}
-                  {item.pcs > 0 && (
+                  {item.pcs !== undefined && item.pcs > 0 && (
                     <div>
                       Saatavana {item.pcs} {item.unit ?? 'kpl'}
                     </div>
                   )}
-                  {item.price > 0 && (
+                  {item.price !== undefined && item.price > 0 && (
                     <div>
                       Hinta{' '}
                       {item.price.toLocaleString('fi', {
@@ -101,9 +87,20 @@ export function RentalItemsTable({
                   )}
                   {item.description && (
                     <div
-                      className="rental-item-small-text"
+                      className="small-text"
                       dangerouslySetInnerHTML={{ __html: item.description }}
                     />
+                  )}
+                  {item.inspiration && (
+                    <div>
+                      <a
+                        className="item link underlined"
+                        href={item.inspiration}
+                        target="_blank"
+                      >
+                        Katso vinkki!
+                      </a>
+                    </div>
                   )}
                 </td>
                 <td>
@@ -111,12 +108,10 @@ export function RentalItemsTable({
                     <span
                       className="rental-item-image"
                       onClick={() => {
-                        if (trackZoom) {
-                          trackEvent('zoom', {
-                            group,
-                            name: humanReadableName(item.name)
-                          })
-                        }
+                        trackEvent('zoom', {
+                          group,
+                          name: humanReadableName(item.name)
+                        })
                         setShowItem(item)
                       }}
                     >

@@ -1,3 +1,5 @@
+import { useEffect } from 'react'
+
 export const basicInfo = {
   businessName: 'Pramiat vadit',
   baseUrl: 'https://pramiatvadit.fi',
@@ -22,4 +24,19 @@ export function trackEvent(event: string, params?: Record<string, unknown>) {
   if (window.gtag) {
     window.gtag('event', event, params)
   }
+}
+
+export function useEscKey(escAction: () => void) {
+  useEffect(() => {
+    function handleEscapeKey(e: KeyboardEvent) {
+      if (e.key === 'Escape') {
+        escAction()
+      }
+    }
+
+    addEventListener('keydown', handleEscapeKey)
+    return () => {
+      removeEventListener('keydown', handleEscapeKey)
+    }
+  }, [escAction])
 }

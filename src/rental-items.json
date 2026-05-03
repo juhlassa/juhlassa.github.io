@@ -242,7 +242,8 @@
       "name": "Kapea kerros&shy;tarjotin, 3&nbsp;kerrosta",
       "height": 44,
       "pcs": 1,
-      "image": "/kuvat/tarjoilu/pieni_kerrosvati_3.jpg",
+      "image": "/kuvat/tarjoilu/kapea_kerrostarjotin_3.jpg",
+      "inspiration": "/inspiraatio/kerrostarjotin/",
       "price": 7
     },
     {
@@ -266,6 +267,7 @@
       "height": 32,
       "pcs": 1,
       "image": "/kuvat/tarjoilu/kerrostarjotin_2.jpg",
+      "inspiration": "/inspiraatio/pieni-kerrostarjotin/",
       "price": 5
     },
     {
@@ -275,6 +277,7 @@
       "diameter": 16,
       "pcs": 1,
       "image": "/kuvat/tarjoilu/kerrostarjotin_pieni_2.jpg",
+      "inspiration": "/inspiraatio/minikerrostarjotin/",
       "price": 5
     },
     {
@@ -324,6 +327,7 @@
       "length": 45,
       "pcs": 2,
       "image": "/kuvat/tarjoilu/tarjotin.jpg",
+      "inspiration": "/inspiraatio/tarjotin/",
       "price": 7
     },
     {
@@ -377,7 +381,7 @@
       "volume": 5.5,
       "height": 62,
       "image": "/kuvat/tarjoilu/juoma-astia_5.5.jpg",
-      "description": "Juoma-astiassa on irrallinen osa, jonka sisään voi laittaa esimerkiksi jääpaloja, kukkia tai pattereilla toimivat valot. Sisäastian tilavuus on 1.5 l.",
+      "inspiration": "/inspiraatio/juoma-astia/",
       "pcs": 1,
       "price": 10
     },
@@ -419,6 +423,7 @@
       "pcs": 1,
       "description": "Kyljessä teksti \"QUALITY ~ Refreshing Ice Cold Drink\".",
       "image": "/kuvat/tarjoilu/juoma-astia_3.8.jpg",
+      "inspiration": "/inspiraatio/juoma-astia-pieni/",
       "price": 4
     },
     {
@@ -659,12 +664,13 @@
       "price": 5
     },
     {
-      "name": "Kynttiläastia, sydän",
+      "name": "Sydänsomiste",
       "brand": "Partylite",
       "width": 8,
       "height": 7,
       "pcs": 17,
-      "image": "/kuvat/koristelu/sydantuikku.jpg",
+      "image": "/kuvat/koristelu/sydansomiste.jpg",
+      "inspiration": "/inspiraatio/sydansomiste/",
       "price": 0.8
     },
     {
@@ -810,6 +816,16 @@
   ],
   "Muut": [
     {
+      "name": "Valo&shy;kuvaus&shy;seinä / Hää&shy;kaari",
+      "pcs": 1,
+      "width": 240,
+      "height": 240,
+      "description": "Sisältää läpikuultavat verhot.",
+      "image": "/kuvat/muut/valokuvausseina.jpg",
+      "inspiration": "/inspiraatio/valokuvausseina/",
+      "price": 60
+    },
+    {
       "name": "Donitsibaari",
       "pcs": 1,
       "unit": "setti",
@@ -818,10 +834,8 @@
     },
     {
       "name": "Karkkibuffet",
-      "pcs": 0,
       "description": "Näyttävä karkkibuffet syntyy esimerkiksi <a class=\"link underlined\" href=\"/astiastot/vanilja/\">Vanilja</a>-sarjan kulhoista. Voit koota niin laajan kokonaisuuden kuin haluat.",
-      "image": "/kuvat/muut/karkkibuffet.jpg",
-      "price": 0
+      "image": "/kuvat/muut/karkkibuffet.jpg"
     },
     {
       "id": 3,
@@ -831,6 +845,7 @@
       "pcs": 10,
       "material": "polyesteri",
       "image": "/kuvat/muut/poytaliina.jpg",
+      "inspiration": "/inspiraatio/poytaliinat/",
       "price": 4
     },
     {
@@ -850,6 +865,7 @@
       "length": 29,
       "pcs": 2,
       "image": "/kuvat/muut/kakkukupu.jpg",
+      "inspiration": "/inspiraatio/kakkukupu/",
       "price": 7
     },
     {
@@ -869,15 +885,6 @@
       "description": "Sopii koristeeksi esimerkiksi pöydälle, valokuvaseinään tai hääkaareen.",
       "image": "/kuvat/muut/ruusukoynnos.jpg",
       "price": 1
-    },
-    {
-      "name": "Valo&shy;kuvaus&shy;seinä / Hää&shy;kaari",
-      "pcs": 1,
-      "width": 240,
-      "height": 240,
-      "description": "Sisältää läpikuultavat verhot. Teline menee pieneen tilaan ja on helppo koota. Työkaluja ei tarvita - osat kiinnitetään siipiruuveilla. Osista voi koota myös matalamman ja kapeamman version.",
-      "image": "/kuvat/muut/valokuvausseina.jpg",
-      "price": 60
     },
     {
       "name": "<a class=\"link\" href=\"https://www.paljussa.fi/\" target=\"_blank\">Perä&shy;kärry&shy;palju</a>",
