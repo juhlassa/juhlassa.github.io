@@ -336,6 +336,7 @@
       "image": "/kuvat/tarjoilu/voileipakakkutarjotin.jpg",
       "price": 10
     },
+    { "linked": 3 },
     {
       "name": "Iso juomacooleri",
       "brand": "Orrefors",
@@ -807,17 +808,6 @@
       "price": 5
     }
   ],
-  "Pöytäliinat": [
-    {
-      "name": "Pöytäliina, valkoinen",
-      "width": 145,
-      "length": 240,
-      "pcs": 10,
-      "material": "polyesteri",
-      "image": "/kuvat/poytaliinat/poytaliina.jpg",
-      "price": 4
-    }
-  ],
   "Muut": [
     {
       "name": "Donitsibaari",
@@ -832,6 +822,16 @@
       "description": "Näyttävä karkkibuffet syntyy esimerkiksi <a class=\"link underlined\" href=\"/astiastot/vanilja/\">Vanilja</a>-sarjan kulhoista. Voit koota niin laajan kokonaisuuden kuin haluat.",
       "image": "/kuvat/muut/karkkibuffet.jpg",
       "price": 0
+    },
+    {
+      "id": 3,
+      "name": "Pöytäliina, valkoinen",
+      "width": 145,
+      "length": 240,
+      "pcs": 10,
+      "material": "polyesteri",
+      "image": "/kuvat/muut/poytaliina.jpg",
+      "price": 4
     },
     {
       "name": "Pyöreä kakkukupu",

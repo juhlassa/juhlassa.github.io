@@ -19,7 +19,6 @@ export const Groups = [
   'Green Gate',
   'Tarjoilu',
   'Lasit',
-  'Pöytäliinat',
   'Koristelu',
   'Muut'
 ] as const

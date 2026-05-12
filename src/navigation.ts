@@ -28,10 +28,6 @@ export const navigation: NavigationItem[] = [
     name: 'Lasit'
   },
   {
-    route: '/poytaliinat',
-    name: 'Pöytäliinat'
-  },
-  {
     route: '/koristelu',
     name: 'Koristelu'
   },
