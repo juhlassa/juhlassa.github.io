@@ -400,6 +400,9 @@
       "price": 5
     },
     {
+      "linked": 3
+    },
+    {
       "name": "Hanallinen juoma-astia telineellä, 6.5&nbsp;l",
       "volume": 6.5,
       "diameter": 20,
@@ -885,17 +888,6 @@
       "price": 5
     }
   ],
-  "Pöytäliinat": [
-    {
-      "name": "Pöytäliina, valkoinen",
-      "width": 145,
-      "length": 240,
-      "pcs": 10,
-      "material": "polyesteri",
-      "image": "/kuvat/poytaliinat/poytaliina.jpg",
-      "price": 4
-    }
-  ],
   "Muut": [
     {
       "name": "Iso kukkaseinä",
@@ -942,6 +934,16 @@
       "name": "Karkkibuffet",
       "description": "Näyttävä karkkibuffet syntyy esimerkiksi <a class=\"link underlined\" href=\"/astiastot/vanilja/\">Vanilja</a>-sarjan kulhoista. Voit koota niin laajan kokonaisuuden kuin haluat.",
       "image": "/kuvat/muut/karkkibuffet.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Pöytäliina, valkoinen",
+      "width": 145,
+      "length": 240,
+      "pcs": 10,
+      "material": "polyesteri",
+      "image": "/kuvat/muut/poytaliina.jpg",
+      "price": 4
     },
     {
       "name": "Pyöreä kakkukupu",
