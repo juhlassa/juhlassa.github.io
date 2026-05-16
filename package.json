@@ -7,7 +7,7 @@
   "type": "module",
   "scripts": {
     "dev": "next dev -p 8765",
-    "prebuild": "eslint .",
+    "prebuild": "rm -rf dist && npm install && eslint . && node --loader ts-node/esm src/check-images.ts",
     "build": "next build",
     "postbuild": "next-sitemap --config next-sitemap.config.mjs",
     "lint": "eslint .",
@@ -30,6 +30,7 @@
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.4.0",
     "prettier": "^3.8.2",
+    "ts-node": "^10.9.2",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.58.0"
   }
