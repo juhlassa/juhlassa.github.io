@@ -218,6 +218,7 @@
       "description": "Tasojen korkeutta voi säätää portaattomasti.",
       "pcs": 1,
       "image": "/kuvat/tarjoilu/kerrostarjotin_3_lasi.jpg",
+      "inspiration": "/inspiraatio/lasikerrostarjotin/",
       "price": 20
     },
     {
@@ -252,7 +253,8 @@
       "height": 44,
       "diameter": 18,
       "pcs": 1,
-      "image": "/kuvat/tarjoilu/pieni_kerrosvati_3.jpg",
+      "image": "/kuvat/tarjoilu/kapea_kerrostarjotin_3.jpg",
+      "inspiration": "/inspiraatio/kerrostarjotin/",
       "price": 7
     },
     {
@@ -276,6 +278,7 @@
       "height": 32,
       "pcs": 1,
       "image": "/kuvat/tarjoilu/kerrostarjotin_2.jpg",
+      "inspiration": "/inspiraatio/pieni-kerrostarjotin/",
       "price": 5
     },
     {
@@ -285,6 +288,7 @@
       "diameter": 16,
       "pcs": 1,
       "image": "/kuvat/tarjoilu/kerrostarjotin_pieni_2.jpg",
+      "inspiration": "/inspiraatio/minikerrostarjotin/",
       "price": 5
     },
     {
@@ -350,6 +354,7 @@
       "length": 45,
       "pcs": 2,
       "image": "/kuvat/tarjoilu/tarjotin.jpg",
+      "inspiration": "/inspiraatio/tarjotin/",
       "price": 7
     },
     {
@@ -417,7 +422,8 @@
       "volume": 5.5,
       "height": 62,
       "image": "/kuvat/tarjoilu/juoma-astia_5.5.jpg",
-      "description": "Juoma-astiassa on irrallinen osa, jonka sisään voi laittaa esimerkiksi jääpaloja, kukkia tai pattereilla toimivat valot. Sisäastian tilavuus on 1.5 l.",
+      "inspiration": "/inspiraatio/juoma-astia/",
+      "description": "Sisäastian tilavuus on 1.5 l.",
       "pcs": 1,
       "price": 10
     },
@@ -459,6 +465,7 @@
       "pcs": 1,
       "description": "Kyljessä teksti \"QUALITY ~ Refreshing Ice Cold Drink\".",
       "image": "/kuvat/tarjoilu/juoma-astia_3.8.jpg",
+      "inspiration": "/inspiraatio/juoma-astia-pieni/",
       "price": 4
     },
     {
@@ -710,12 +717,13 @@
       "price": 5
     },
     {
-      "name": "Kynttiläastia, sydän",
+      "name": "Sydänsomiste",
       "brand": "Partylite",
       "width": 8,
       "height": 7,
       "pcs": 17,
-      "image": "/kuvat/koristelu/sydantuikku.jpg",
+      "image": "/kuvat/koristelu/sydansomiste.jpg",
+      "inspiration": "/inspiraatio/sydansomiste/",
       "price": 0.8
     },
     {
@@ -725,6 +733,7 @@
       "height": 36,
       "pcs": 1,
       "image": "/kuvat/koristelu/sydankynttilateline.jpg",
+      "inspiration": "/inspiraatio/sydankynttilateline/",
       "price": 5
     },
     {
@@ -897,6 +906,8 @@
       "material": "kangas",
       "image": "/kuvat/muut/kukkaseina.jpg",
       "description": "Sopii täydellisesti <a class=\"link underlined\" href=\"#valokuvausseinä-hääkaari\">valokuvaus&shy;seinä&shy;telineeseen</a>.",
+      "inspiration": "/inspiraatio/kukkaseina/",
+      "inspirationLinkText": "Lue lisää",
       "price": 80
     },
     {
@@ -906,6 +917,8 @@
       "height": 200,
       "material": "kangas",
       "image": "/kuvat/muut/rullattava_kukkaseina.jpg",
+      "inspiration": "/inspiraatio/rullattava_kukkaseina/",
+      "inspirationLinkText": "Lue lisää",
       "price": 70
     },
     {
@@ -915,12 +928,15 @@
       "height": 240,
       "description": "Sisältää verhot ja led-valot. Verhot voi korvata <a class=\"link underlined\" href=\"#kukkaseinä\">kukka&shy;seinä</a>llä.",
       "image": "/kuvat/muut/valokuvausseina.jpg",
+      "inspiration": "/inspiraatio/valokuvausseina/",
       "price": 60
     },
     {
       "name": "Ilma&shy;pallo&shy;pumppu",
       "pcs": 1,
       "image": "/kuvat/muut/ilmapallopumppu.jpg",
+      "inspiration": "/inspiraatio/ilmapallopumppu/",
+      "inspirationLinkText": "Lue lisää",
       "price": 9
     },
     {
@@ -943,6 +959,7 @@
       "pcs": 10,
       "material": "polyesteri",
       "image": "/kuvat/muut/poytaliina.jpg",
+      "inspiration": "/inspiraatio/poytaliinat/",
       "price": 4
     },
     {
@@ -962,6 +979,7 @@
       "length": 29,
       "pcs": 2,
       "image": "/kuvat/muut/kakkukupu.jpg",
+      "inspiration": "/inspiraatio/kakkukupu/",
       "price": 7
     },
     {

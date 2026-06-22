@@ -5,6 +5,7 @@ export type LayoutProps = {
   mediaImage?: string
   username?: string
   track: boolean
+  showHeader?: boolean
   footer?: boolean
 }
 
@@ -30,7 +31,7 @@ export type RentalItem = {
   name: string
   brand?: string
   description?: string
-  pcs: number
+  pcs?: number
   diameter?: number
   length?: number
   width?: number
@@ -40,6 +41,8 @@ export type RentalItem = {
   image?: string
   unit?: string[]
   price?: number
+  inspiration?: string
+  inspirationLinkText?: string
 }
 
 export type LinkedRentalItem = { linked: number }
