@@ -69,7 +69,6 @@ button.secondary {
     width: calc(100% - 30px);
     background-image: url("/kuvat/pramiatvadit.jpg");
     background-color: white;
-    background-size: 1000px;
     background-repeat: no-repeat;
     background-position: center;
     font-size: 75%;
@@ -308,16 +307,16 @@ button.secondary {
     }
 
     .navigation {
-        background-size: 100%;
+        background-size: auto 100%;
         top: 0;
         position: sticky;
         width: calc(100% - 100px);
         padding: 15px 50px;
-        height: 75px;
+        height: 135px;
     }
 
     .navigation-small.sticky {
-        top: 105px;
+        top: 165px;
     }
 
     .navigationContent {
