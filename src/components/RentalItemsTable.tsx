@@ -6,13 +6,15 @@ import { humanReadableName, trackEvent, useEscKey } from '../util'
 
 export function RentalItemsTable({
   group,
+  itemList,
   gapBeforeList
 }: {
-  group: Group
+  group?: Group
+  itemList?: RentalItem[]
   gapBeforeList?: boolean
 }) {
   const [showItem, setShowItem] = useState<RentalItem | null>(null)
-  const rentalItems = allRentalItemsByGroup[group]
+  const rentalItems = group ? allRentalItemsByGroup[group] : (itemList ?? [])
 
   useEscKey(() => setShowItem(null))
 

@@ -11,12 +11,12 @@ const rentalItemsByGroup = allRentalItems satisfies Record<
   RentalOrLinkedRentalItem[]
 >
 
-const rentalItems: RentalOrLinkedRentalItem[] =
+const rentalOrLinkedItems: RentalOrLinkedRentalItem[] =
   Object.values(rentalItemsByGroup).flat()
 
-function isRentalItem(item: RentalOrLinkedRentalItem): item is RentalItem {
-  return 'id' in item
-}
+export const rentalItems = rentalOrLinkedItems.filter((item) =>
+  isRentalItem(item)
+)
 
 function isLinkedItem(
   item: RentalOrLinkedRentalItem
@@ -24,8 +24,12 @@ function isLinkedItem(
   return 'linked' in item
 }
 
+function isRentalItem(item: RentalOrLinkedRentalItem): item is RentalItem {
+  return !isLinkedItem(item)
+}
+
 function findLinkedItem(item: LinkedRentalItem): RentalItem {
-  const rentalItem = rentalItems.find(
+  const rentalItem = rentalOrLinkedItems.find(
     (linkedItem) => isRentalItem(linkedItem) && linkedItem.id === item.linked
   )
   if (!rentalItem || isLinkedItem(rentalItem)) {

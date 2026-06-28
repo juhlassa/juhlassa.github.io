@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="10mm"
+        height="10mm"
+        viewBox="0 0 12 12"
+        style="fill: #4e3e2f;"
+>
+    <g transform="rotate(45)" transform-origin="-9 0">
+        <text>&#9906;</text>
+    </g>
+</svg>

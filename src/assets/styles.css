@@ -96,6 +96,18 @@ button.secondary {
     height: 35px;
 }
 
+.search {
+    width: 22px;
+    vertical-align: middle;
+}
+
+.query {
+    width: calc(100% - 12px);
+    padding: 6px;
+    border-radius: 9px;
+    border: solid black 1px;
+}
+
 .privacy-policy {
     float: right;
 }
@@ -325,6 +337,16 @@ button.secondary {
 
     .navigation h1 {
         margin: 27px;
+    }
+
+    .search {
+        position: relative;
+        top: -420px;
+        left: 160px;
+    }
+
+    .query {
+        font-size: 120%;
     }
 
     .menu {

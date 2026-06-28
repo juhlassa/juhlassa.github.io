@@ -3,13 +3,7 @@ import '@fontsource/varela-round/index.css'
 import '../assets/styles.css'
 
 function App({ Component, pageProps }: AppProps) {
-  return (
-    <html lang="fi">
-      <body>
-        <Component {...pageProps} />
-      </body>
-    </html>
-  )
+  return <Component {...pageProps} />
 }
 
 export default App

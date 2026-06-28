@@ -55,6 +55,9 @@ export function Navigation({
                   </a>
                 )
             )}
+            <a href="/etsi/">
+              <img className="search" src="/kuvat/search.svg" />
+            </a>
             <PrivacyPolicyLink />
           </div>
         </div>
