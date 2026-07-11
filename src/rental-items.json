@@ -2,12 +2,16 @@
   "Vanilja": [
     {
       "name": "Kahvikuppi, asetti ja lautanen",
+      "brand": "Vanilja",
+      "hideBrand": true,
       "pcs": 29,
       "image": "/kuvat/vanilja/kahvikuppi.jpg",
       "price": 1.5
     },
     {
       "name": "Teemuki ja lautanen",
+      "brand": "Vanilja",
+      "hideBrand": true,
       "pcs": 8,
       "diameter": 21,
       "image": "/kuvat/vanilja/teekuppi.jpg",
@@ -18,12 +22,16 @@
     },
     {
       "name": "Kermakko ja sokerikko",
+      "brand": "Vanilja",
+      "hideBrand": true,
       "pcs": 3,
       "image": "/kuvat/vanilja/sokerikkokermakko.jpg",
       "price": 3
     },
     {
       "name": "Kannu",
+      "brand": "Vanilja",
+      "hideBrand": true,
       "volume": 0.6,
       "pcs": 1,
       "image": "/kuvat/vanilja/kannu.jpg",
@@ -31,6 +39,8 @@
     },
     {
       "name": "Iso kannu",
+      "brand": "Vanilja",
+      "hideBrand": true,
       "volume": 1.8,
       "pcs": 1,
       "image": "/kuvat/vanilja/kannu_1.8.jpg",
@@ -38,6 +48,8 @@
     },
     {
       "name": "Jälki&shy;ruoka&shy;kulho",
+      "brand": "Vanilja",
+      "hideBrand": true,
       "pcs": 12,
       "diameter": 14,
       "height": 6,
@@ -46,6 +58,8 @@
     },
     {
       "name": "Syvä ruoka&shy;lautanen",
+      "brand": "Vanilja",
+      "hideBrand": true,
       "diameter": 21,
       "pcs": 10,
       "image": "/kuvat/vanilja/syvalautanen.jpg",
@@ -53,6 +67,8 @@
     },
     {
       "name": "Matala ruoka&shy;lautanen",
+      "brand": "Vanilja",
+      "hideBrand": true,
       "diameter": 28,
       "pcs": 27,
       "image": "/kuvat/vanilja/lautanen.jpg",
@@ -60,6 +76,8 @@
     },
     {
       "name": "Sydän&shy;lautanen",
+      "brand": "Vanilja",
+      "hideBrand": true,
       "diameter": 17,
       "height": 5,
       "pcs": 1,
@@ -68,6 +86,8 @@
     },
     {
       "name": "Sydän&shy;lautanen, kukka",
+      "brand": "Vanilja",
+      "hideBrand": true,
       "diameter": 17,
       "height": 5,
       "pcs": 4,
@@ -76,6 +96,8 @@
     },
     {
       "name": "Jalallinen tarjoilu&shy;kulho",
+      "brand": "Vanilja",
+      "hideBrand": true,
       "diameter": 20,
       "height": 20,
       "pcs": 8,
@@ -84,6 +106,8 @@
     },
     {
       "name": "Pieni tarjoilu&shy;kulho",
+      "brand": "Vanilja",
+      "hideBrand": true,
       "diameter": 21,
       "height": 11,
       "pcs": 2,
@@ -92,6 +116,8 @@
     },
     {
       "name": "Iso tarjoilu&shy;kulho",
+      "brand": "Vanilja",
+      "hideBrand": true,
       "diameter": 27,
       "height": 13,
       "pcs": 1,
@@ -100,6 +126,8 @@
     },
     {
       "name": "Laakea tarjoiluvati",
+      "brand": "Vanilja",
+      "hideBrand": true,
       "diameter": 30,
       "height": 7,
       "pcs": 3,
@@ -108,6 +136,8 @@
     },
     {
       "name": "Pieni piirakkavuoka / tarjoiluvati",
+      "brand": "Vanilja",
+      "hideBrand": true,
       "diameter": 22,
       "height": 6,
       "pcs": 1,
@@ -116,6 +146,8 @@
     },
     {
       "name": "Piirakkavuoka / tarjoiluvati",
+      "brand": "Vanilja",
+      "hideBrand": true,
       "diameter": 30,
       "pcs": 2,
       "image": "/kuvat/vanilja/isopiirakkavuoka.jpg",
@@ -123,6 +155,8 @@
     },
     {
       "name": "Korkea kulho",
+      "brand": "Vanilja",
+      "hideBrand": true,
       "diameter": 30,
       "pcs": 3,
       "image": "/kuvat/vanilja/korkeakulho.jpg",
@@ -130,6 +164,8 @@
     },
     {
       "name": "Maljakko, sopii myös tarjoiluun",
+      "brand": "Vanilja",
+      "hideBrand": true,
       "diameter": 20,
       "height": 19,
       "pcs": 4,
@@ -138,6 +174,8 @@
     },
     {
       "name": "Kakkutarjotin",
+      "brand": "Vanilja",
+      "hideBrand": true,
       "diameter": 28,
       "height": 20,
       "pcs": 1,
@@ -146,15 +184,19 @@
     },
     {
       "name": "Kynttilänjalka",
+      "brand": "Vanilja",
+      "hideBrand": true,
       "pcs": 2,
       "height": 10,
       "image": "/kuvat/vanilja/kynttilajalka.jpg",
       "price": 1.5
     }
   ],
-  "Green Gate": [
+  "GreenGate": [
     {
       "name": "Lattemuki",
+      "brand": "GreenGate",
+      "hideBrand": true,
       "pcs": 40,
       "volume": 0.3,
       "description": "Kuosit vaihtelevat.",
@@ -166,6 +208,8 @@
     },
     {
       "name": "Lautanen",
+      "brand": "GreenGate",
+      "hideBrand": true,
       "pcs": 40,
       "diameter": 20,
       "description": "Kuosit vaihtelevat.",
@@ -174,6 +218,8 @@
     },
     {
       "name": "Kermakko ja sokerikko",
+      "brand": "GreenGate",
+      "hideBrand": true,
       "pcs": 1,
       "volume": 0.5,
       "image": "/kuvat/greengate/kermakkosokerikko.jpg",
@@ -181,6 +227,8 @@
     },
     {
       "name": "Kapea tarjoiluvati",
+      "brand": "GreenGate",
+      "hideBrand": true,
       "width": 15,
       "length": 32,
       "pcs": 1,
@@ -189,6 +237,8 @@
     },
     {
       "name": "Sydänvadit",
+      "brand": "GreenGate",
+      "hideBrand": true,
       "diameter": 27,
       "pcs": 1,
       "image": "/kuvat/greengate/sydanvadit.jpg",
@@ -196,6 +246,8 @@
     },
     {
       "name": "Teepannu",
+      "brand": "GreenGate",
+      "hideBrand": true,
       "pcs": 1,
       "image": "/kuvat/greengate/teepannu.jpg",
       "price": 3

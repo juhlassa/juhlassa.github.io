@@ -17,7 +17,7 @@ export type NavigationItem = {
 
 export const Groups = [
   'Vanilja',
-  'Green Gate',
+  'GreenGate',
   'Tarjoilu',
   'Lasit',
   'Koristelu',
@@ -30,6 +30,7 @@ export type RentalItem = {
   id?: number // for linking only
   name: string
   brand?: string
+  hideBrand?: boolean
   description?: string
   pcs?: number
   diameter?: number
