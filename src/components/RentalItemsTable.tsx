@@ -63,7 +63,9 @@ export function RentalItemsTable({
                         : undefined
                     }
                   />
-                  {item.brand && <div className="small-text">{item.brand}</div>}
+                  {item.brand && !item.hideBrand && (
+                    <div className="small-text">{item.brand}</div>
+                  )}
                   {item.pcs !== undefined && item.pcs > 0 && (
                     <div>
                       Saatavana {item.pcs}{' '}

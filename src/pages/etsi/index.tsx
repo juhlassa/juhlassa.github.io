@@ -8,6 +8,7 @@ import { useState } from 'react'
 const searchableItems = rentalItems.map((item) => ({
   ...item,
   searchableName: humanReadableName(item.name)?.toLowerCase(),
+  searchableBrand: humanReadableName(item.brand)?.toLowerCase(),
   searchableDescription: humanReadableName(item.description)?.toLowerCase()
 }))
 
@@ -31,13 +32,17 @@ const Index = () => {
     function match(
       item: RentalItem & {
         searchableName: string | undefined
+        searchableBrand: string | undefined
         searchableDescription: string | undefined
       }
     ) {
       if (fromDescription && item.searchableDescription?.includes(query)) {
         return true
       }
-      return item.searchableName?.includes(query)
+      return (
+        item.searchableName?.includes(query) ||
+        item.searchableBrand?.includes(query)
+      )
     }
   }
 

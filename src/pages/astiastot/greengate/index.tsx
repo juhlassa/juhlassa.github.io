@@ -3,13 +3,13 @@ import { TablesetsNavigation } from '../../../components/TablesetsNavigation'
 import { RentalItemsTable } from '../../../components/RentalItemsTable'
 import { LeftContentImage } from '../../../components/ContentImage'
 
-const group = 'Green Gate'
+const group = 'GreenGate'
 
 const Index = () => {
   return (
     <Layout
       pageTitle={group}
-      description="Green Gate -astiat tuovat kattaukseen romanttista tunnelmaa yhdistettynä moderniin käytännöllisyyteen. Kauniit kukkakuosit, pehmeät sävyt ja yhdisteltävät designit tekevät sarjasta erityisesti nuorempien suosikin – täydellinen valinta näyttävään ja persoonalliseen kattaukseen."
+      description="GreenGate -astiat tuovat kattaukseen romanttista tunnelmaa yhdistettynä moderniin käytännöllisyyteen. Kauniit kukkakuosit, pehmeät sävyt ja yhdisteltävät designit tekevät sarjasta erityisesti nuorempien suosikin – täydellinen valinta näyttävään ja persoonalliseen kattaukseen."
       mediaImage="/kuvat/greengate.jpg"
       track={true}
       content={
@@ -19,10 +19,10 @@ const Index = () => {
             <LeftContentImage
               className="size-m"
               url={'/kuvat/greengate.jpg'}
-              alt={'Green Gate -astiastoa'}
+              alt={'GreenGate -astiastoa'}
             />
             <p>
-              Green Gate -astiat luovat kattaukseen ainutlaatuista tunnelmaa,
+              GreenGate -astiat luovat kattaukseen ainutlaatuista tunnelmaa,
               jossa yhdistyvät romanttinen vintage-tyyli ja moderni
               käytännöllisyys.
             </p>
@@ -38,8 +38,8 @@ const Index = () => {
               reilun kokoinen eikä sitä tarvitse olla koko ajan täyttämässä.
             </p>
             <p>
-              Kun katat pöydän suloisilla Green Gate -astioilla, vieraiden
-              huomio on taattu. Tätä sarjaa et helposti muualta löydä.
+              Kun katat pöydän suloisilla GreenGate -astioilla, vieraiden huomio
+              on taattu. Tätä sarjaa et helposti muualta löydä.
             </p>
             <p>Astiat voi pestä tiskikoneessa.</p>
           </div>

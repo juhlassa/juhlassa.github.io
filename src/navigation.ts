@@ -16,7 +16,7 @@ export const navigation: NavigationItem[] = [
   },
   {
     route: '/astiastot/greengate/',
-    name: 'Green Gate',
+    name: 'GreenGate',
     tableset: true
   },
   {
