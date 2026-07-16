@@ -14,6 +14,8 @@ dist-ssr
 original-images
 .next
 sitemap*.xml
+playwright-report
+test-results
 
 # Editor directories and files
 .vscode/*
