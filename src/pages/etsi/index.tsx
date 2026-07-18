@@ -3,7 +3,7 @@ import { rentalItems } from '../../rentalItems'
 import { humanReadableName } from '../../util'
 import { RentalItemsTable } from '../../components/RentalItemsTable'
 import { RentalItem } from '../../types'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const searchableItems = rentalItems.map((item) => ({
   ...item,
@@ -14,6 +14,10 @@ const searchableItems = rentalItems.map((item) => ({
 
 const Index = () => {
   const [foundItems, setFoundItems] = useState<RentalItem[] | undefined>()
+
+  useEffect(() => {
+    document.querySelector<HTMLInputElement>('input.query')?.focus()
+  }, [])
 
   function search() {
     const query =
