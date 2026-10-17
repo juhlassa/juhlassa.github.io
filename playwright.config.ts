@@ -23,7 +23,8 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   webServer: {
-    command: 'npm run serve',
+    // CI has already built dist/, so serve it as is
+    command: process.env.CI ? 'npx serve -p 8888 dist' : 'npm run serve',
     url: 'http://localhost:8888',
     timeout: 120 * 1000,
     reuseExistingServer: !process.env.CI
