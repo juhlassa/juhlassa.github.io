@@ -16,6 +16,7 @@ export const basicInfo = {
   areasServed: ['Ilmajoki', 'Seinäjoki', 'Etelä-Pohjanmaa'],
   email: 'pramiatvadit@gmail.com',
   telephone: '040 524 2071',
+  instagram: 'https://www.instagram.com/pramiatvadit/',
   vatNumber: '2615399-6',
   keywords:
     'pramiatvadit astiavuokraus astiavuokraamo vuokra-astiat juhlavuokraus juhlat ilmajoki seinäjoki etelä-pohjanmaa virpi kupiainen',

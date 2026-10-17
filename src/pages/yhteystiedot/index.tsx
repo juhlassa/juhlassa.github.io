@@ -1,27 +1,38 @@
 import { Layout } from '../../components/Layout'
 import { RightContentImage } from '../../components/ContentImage'
 import { basicInfo } from '../../util'
+import { useEffect, useState } from 'react'
 
 const Index = () => {
+  const [showMap, setShowMap] = useState(false)
+
+  useEffect(() => {
+    const consent = localStorage.getItem(basicInfo.consentStateKey)
+    if (consent === 'granted') {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setShowMap(true)
+    }
+  }, [])
+
   const content = (
     <div>
       <p>
         Meidät tavoittaa parhaiten sähköpostilla osoitteesta{' '}
-        <a className="link" href="mailto:pramiatvadit@gmail.com">
-          pramiatvadit@gmail.com
+        <a className="link" href={`mailto:${basicInfo.email}`}>
+          {basicInfo.email}
         </a>{' '}
         tai puhelimella numerosta{' '}
-        <a className="link" href="tel:0405242071">
-          040{'\u00a0'}524{'\u00a0'}2071
+        <a
+          className="link"
+          href={`tel:${basicInfo.telephone.replace(/\s+/g, '')}`}
+        >
+          {basicInfo.telephone.replace(/\s+/g, '\u00a0')}
         </a>
         .
       </p>
       <p>
         Löydät meidät myös{' '}
-        <a
-          className="link underlined"
-          href="https://www.instagram.com/pramiatvadit/"
-        >
+        <a className="link underlined" href={basicInfo.instagram}>
           Instagram
         </a>
         ista.
@@ -30,13 +41,15 @@ const Index = () => {
         Tuotteet sijaitsevat Etelä-Pohjanmaalla, Ilmajoen keskustassa noin 15 km
         päässä Seinäjoelta. Kuljetus on mahdollista korvausta vastaan.
       </p>
-      <iframe
-        width="100%"
-        height="300"
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-        src={basicInfo.map}
-      ></iframe>
+      {showMap && (
+        <iframe
+          width="100%"
+          height="300"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          src={basicInfo.map}
+        ></iframe>
+      )}
       <h2>Pramiat vadit syntyi rakkaudesta astioihin ja juhlahumuun</h2>
       <p>
         Olen astiahullu. Jos säilytystilaa olisi enemmän, keräisin lukuisia
