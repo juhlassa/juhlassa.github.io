@@ -33,7 +33,8 @@ export const Layout: FC<LayoutProps> = ({
     slogan
   } = basicInfo
   const pageTitleWithSiteName = `${pageTitle} | ${businessName} / Seinäjoen seutu`
-  const url = `${baseUrl}${router.pathname}${router.pathname.at(-1) === '/' ? '' : '/'}`
+  const path = router.asPath.split(/[?#]/)[0]
+  const url = `${baseUrl}${path}${path.at(-1) === '/' ? '' : '/'}`
 
   useEffect(() => {
     if (!window.location.hash) {

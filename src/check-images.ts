@@ -2,6 +2,7 @@ import { existsSync, statSync } from 'node:fs'
 import { Group, RentalOrLinkedRentalItem } from './types'
 import allRentalItems from './rental-items.json' with { type: 'json' }
 import allInspirationItems from './inspiration-items.json' with { type: 'json' }
+import { inspirationPages } from './inspirationPages.js'
 
 function imageCheck(
   title: string,
@@ -31,4 +32,13 @@ function imageCheck(
 
 const p1 = imageCheck('rental', allRentalItems)
 const p2 = imageCheck('inspiration', allInspirationItems)
-process.exit(p1 + p2 > 0 ? 1 : 0)
+const p3 = imageCheck(
+  'inspiration pages',
+  Object.fromEntries(
+    Object.entries(inspirationPages).map(([slug, page]) => [
+      slug,
+      [{ image: page.mediaImage } as RentalOrLinkedRentalItem]
+    ])
+  )
+)
+process.exit(p1 + p2 + p3 > 0 ? 1 : 0)
