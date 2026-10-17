@@ -3,7 +3,7 @@ import { rentalItems } from '../../rentalItems'
 import { humanReadableName } from '../../util'
 import { RentalItemsTable } from '../../components/RentalItemsTable'
 import { RentalItem } from '../../types'
-import { useEffect, useState } from 'react'
+import { useRef, useState } from 'react'
 
 const searchableItems = rentalItems.map((item) => ({
   ...item,
@@ -13,24 +13,16 @@ const searchableItems = rentalItems.map((item) => ({
 }))
 
 const Index = () => {
+  const queryField = useRef<HTMLInputElement>(null)
+  const fromDescriptionCheckbox = useRef<HTMLInputElement>(null)
   const [foundItems, setFoundItems] = useState<RentalItem[] | undefined>()
 
-  useEffect(() => {
-    document.querySelector<HTMLInputElement>('input.query')?.focus()
-  }, [])
-
   function search() {
-    const query =
-      document
-        .querySelector<HTMLInputElement>('input.query')
-        ?.value.trim()
-        .toLowerCase() ?? ''
+    const query = queryField.current?.value.trim().toLowerCase() ?? ''
     if (query.length < 3) {
       return setFoundItems(undefined)
     }
-    const fromDescription =
-      document.querySelector<HTMLInputElement>('input.fromDescription')
-        ?.checked ?? false
+    const fromDescription = fromDescriptionCheckbox.current?.checked ?? false
     setFoundItems(searchableItems.filter((item) => match(item)))
 
     function match(
@@ -59,12 +51,15 @@ const Index = () => {
       content={
         <div>
           <input
+            ref={queryField}
             className="query"
+            autoFocus={true}
             placeholder="Kirjoita Hakusana tähän (väh. 3 kirjainta)"
             onInput={() => search()}
           />
           <label>
             <input
+              ref={fromDescriptionCheckbox}
               type="checkbox"
               className="fromDescription"
               onClick={() => search()}
