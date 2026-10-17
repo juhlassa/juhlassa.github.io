@@ -264,7 +264,7 @@
       "price": 20
     },
     {
-      "name": "Kerros&shy;tarjotin, 3&nbsp;kerrosta",
+      "name": "Kerros&shy;tarjotin, 3&nbsp;kerrosta (lasitasot)",
       "height": 82,
       "diameter": 40,
       "description": "Tasojen korkeutta voi säätää portaattomasti.",
@@ -274,7 +274,7 @@
       "price": 20
     },
     {
-      "name": "Kerros&shy;tarjotin, 3&nbsp;kerrosta (lasitasot)",
+      "name": "Kerros&shy;tarjotin, 3&nbsp;kerrosta (lasitasot metalli&shy;kehyksillä)",
       "brand": "Riviera Maison",
       "height": 72,
       "diameter": 36,
@@ -626,16 +626,16 @@
     },
     {
       "name": "Paikka- tai tarjoilu&shy;info&shy;pidike",
-      "height": 5,
-      "pcs": 35,
-      "image": "/kuvat/tarjoilu/kylttipidike2.jpg",
-      "price": 0.5
-    },
-    {
-      "name": "Paikka- tai tarjoilu&shy;info&shy;pidike",
       "height": 12,
       "pcs": 12,
       "image": "/kuvat/tarjoilu/kylttipidike.jpg",
+      "price": 0.5
+    },
+    {
+      "name": "Paikka- tai tarjoilu&shy;info&shy;pidike (matala)",
+      "height": 5,
+      "pcs": 35,
+      "image": "/kuvat/tarjoilu/kylttipidike2.jpg",
       "price": 0.5
     },
     {
@@ -733,7 +733,7 @@
       "price": 3
     },
     {
-      "name": "Vaaleanpunaiset kynttilämansetit",
+      "name": "Vaalean&shy;punaiset helmi&shy;koristeiset kynttilä&shy;mansetit",
       "pcs": 1,
       "unit": ["setti", "settiä"],
       "description": "Neljä kynttilämansettia ja yksi iso.",
@@ -835,14 +835,14 @@
       "price": 3
     },
     {
-      "name": "Pallovalot",
+      "name": "Vaalean&shy;punaiset Pallovalot",
       "pcs": 1,
       "description": "Toimii verkkovirralla.",
       "image": "/kuvat/koristelu/pallovalot_vaaleanpunainen.jpg",
       "price": 3
     },
     {
-      "name": "Pallovalot",
+      "name": "Valkoiset pallovalot",
       "pcs": 1,
       "description": "Toimii verkkovirralla.",
       "image": "/kuvat/koristelu/pallovalot_valkoinen.jpg",
