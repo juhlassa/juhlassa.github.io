@@ -3,6 +3,7 @@ import { Group, RentalOrLinkedRentalItem } from './types'
 import allRentalItems from './rental-items.json' with { type: 'json' }
 import allInspirationItems from './inspiration-items.json' with { type: 'json' }
 import { inspirationPages } from './inspirationPages.js'
+import { categoryPages } from './categoryPages.js'
 
 function imageCheck(
   title: string,
@@ -32,13 +33,13 @@ function imageCheck(
 
 const p1 = imageCheck('rental', allRentalItems)
 const p2 = imageCheck('inspiration', allInspirationItems)
-const p3 = imageCheck(
-  'inspiration pages',
+const mediaImages = (pages: Record<string, { mediaImage: string }>) =>
   Object.fromEntries(
-    Object.entries(inspirationPages).map(([slug, page]) => [
+    Object.entries(pages).map(([slug, page]) => [
       slug,
       [{ image: page.mediaImage } as RentalOrLinkedRentalItem]
     ])
   )
-)
-process.exit(p1 + p2 + p3 > 0 ? 1 : 0)
+const p3 = imageCheck('inspiration pages', mediaImages(inspirationPages))
+const p4 = imageCheck('category pages', mediaImages(categoryPages))
+process.exit(p1 + p2 + p3 + p4 > 0 ? 1 : 0)

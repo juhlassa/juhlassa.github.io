@@ -11,6 +11,7 @@ export function Navigation({
   setMenuOpened: (opened: boolean) => void
 }) {
   const router = useRouter()
+  const path = router.asPath.split(/[?#]/)[0]
 
   return (
     <>
@@ -46,7 +47,7 @@ export function Navigation({
                     key={item.route}
                     href={item.route}
                     className={
-                      item.route.includes(router.route) && router.route !== '/'
+                      item.route.includes(path) && path !== '/'
                         ? 'item link selected'
                         : 'item link'
                     }
