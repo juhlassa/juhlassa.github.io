@@ -19,19 +19,7 @@ export const Layout: FC<LayoutProps> = ({
 }) => {
   const [menuOpened, setMenuOpened] = React.useState(false)
   const router = useRouter()
-  const {
-    businessName,
-    baseUrl,
-    logo,
-    address,
-    areasServed,
-    map,
-    email,
-    telephone,
-    vatNumber,
-    keywords,
-    slogan
-  } = basicInfo
+  const { businessName, baseUrl, keywords } = basicInfo
   const pageTitleWithSiteName = `${pageTitle} | ${businessName} / Seinäjoen seutu`
   const path = router.asPath.split(/[?#]/)[0]
   const url = `${baseUrl}${path}${path.at(-1) === '/' ? '' : '/'}`
@@ -57,6 +45,12 @@ export const Layout: FC<LayoutProps> = ({
         <link rel="canonical" href={url} />
         <MetaTags />
         <Icons />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(storeJsonLd()).replace(/</g, '\\u003c')
+          }}
+        />
       </Head>
       {track && <CookieBanner />}
       {showHeader && (
@@ -104,32 +98,9 @@ export const Layout: FC<LayoutProps> = ({
 
   function Scripts() {
     const { gtagId, consentStateKey } = basicInfo
-    const jsonLd = {
-      '@context': 'https://schema.org',
-      '@type': 'Store',
-      name: pageTitleWithSiteName,
-      url,
-      logo,
-      image: mediaImage,
-      description,
-      areaServed: areasServed.join(', '),
-      map,
-      address,
-      email,
-      telephone,
-      keywords,
-      slogan,
-      vatID: `FI${vatNumber.split('-')[0]}`
-    }
 
     return (
       <>
-        <Script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c')
-          }}
-        />
         <Script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${gtagId}`}
@@ -153,5 +124,42 @@ export const Layout: FC<LayoutProps> = ({
         />
       </>
     )
+  }
+}
+
+function storeJsonLd() {
+  const {
+    businessName,
+    baseUrl,
+    description,
+    logo,
+    address,
+    areasServed,
+    email,
+    telephone,
+    vatNumber,
+    keywords,
+    slogan
+  } = basicInfo
+  const { streetAddress, postalCode, addressLocality } = address
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Store',
+    '@id': `${baseUrl}/#store`,
+    name: businessName,
+    url: `${baseUrl}/`,
+    description,
+    logo: `${baseUrl}${logo}`,
+    image: `${baseUrl}/kuvat/juhlapoyta.jpg`,
+    address: { '@type': 'PostalAddress', ...address },
+    hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+      `${streetAddress}, ${postalCode} ${addressLocality}`
+    )}`,
+    areaServed: areasServed,
+    email,
+    telephone: `+358${telephone.replace(/\s/g, '').replace(/^0/, '')}`,
+    keywords,
+    slogan,
+    vatID: `FI${vatNumber.replace('-', '')}`
   }
 }

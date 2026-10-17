@@ -7,7 +7,7 @@ const Index = () => {
     <Layout
       pageTitle={basicInfo.slogan}
       track={true}
-      description="Astiavuokrausta Seinäjoen seudulla. Vuokraa astiat, kattaustarvikkeet ja koristeet helposti."
+      description={basicInfo.description}
       mediaImage="/kuvat/juhlapoyta.jpg"
       content={
         <div>
