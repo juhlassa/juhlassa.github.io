@@ -15,29 +15,39 @@ export function Navigation({
 
   return (
     <>
-      <div
+      <a
         className="navigation"
-        onClick={() =>
-          menuOpened ? setMenuOpened(false) : window.location.assign('/')
-        }
+        href="/"
+        aria-label="Pramiat vadit – etusivu"
+        onClick={(e) => {
+          if (menuOpened) {
+            e.preventDefault()
+            setMenuOpened(false)
+          }
+        }}
       >
         <div className="navigationContent"></div>
-      </div>
+      </a>
       <div
         className="navigation-small sticky"
         onClick={() => setMenuOpened(false)}
       >
         <div className="navigationContent">
-          <div
+          <button
+            type="button"
             className="menu"
+            aria-label="Valikko"
+            aria-expanded={menuOpened}
+            aria-controls="menu-items"
             onClick={(e) => {
               setMenuOpened(!menuOpened)
               e.stopPropagation()
             }}
           >
             &#9776;
-          </div>
+          </button>
           <div
+            id="menu-items"
             className={`menuItems ${menuOpened ? 'menuOpen' : 'menuClosed'}`}
           >
             {navigation.map(

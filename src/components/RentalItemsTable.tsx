@@ -1,4 +1,5 @@
 import { RightContentImage } from './ContentImage'
+import { ZoomedImage } from './ZoomedImage'
 import { Group, type RentalItem } from '../types'
 import { useState } from 'react'
 import { allRentalItemsByGroup } from '../rentalItems'
@@ -21,13 +22,11 @@ export function RentalItemsTable({
   return (
     <>
       {showItem && (
-        <div className="overlay" onClick={() => setShowItem(null)}>
-          <img
-            className="popup popup-image"
-            alt={showItem.name}
-            src={showItem.image}
-          />
-        </div>
+        <ZoomedImage
+          name={showItem.name}
+          image={showItem.image}
+          onClose={() => setShowItem(null)}
+        />
       )}
 
       <table className={`rental-items ${gapBeforeList ? 'gap-before' : ''}`}>
@@ -53,16 +52,16 @@ export function RentalItemsTable({
             return (
               <tr key={index}>
                 <td>
-                  <div
-                    className="anchor"
-                    id={itemNameHash}
-                    dangerouslySetInnerHTML={{ __html: item.name }}
-                    onClick={() =>
-                      itemNameHash
-                        ? (window.location.hash = itemNameHash)
-                        : undefined
-                    }
-                  />
+                  <div className="anchor" id={itemNameHash}>
+                    {itemNameHash ? (
+                      <a
+                        href={`#${itemNameHash}`}
+                        dangerouslySetInnerHTML={{ __html: item.name }}
+                      />
+                    ) : (
+                      <span dangerouslySetInnerHTML={{ __html: item.name }} />
+                    )}
+                  </div>
                   {item.brand && !item.hideBrand && (
                     <div className="small-text">{item.brand}</div>
                   )}
@@ -114,21 +113,19 @@ export function RentalItemsTable({
                 </td>
                 <td>
                   {item.image && (
-                    <span
-                      className="rental-item-image"
-                      onClick={() => {
-                        trackEvent('zoom', {
-                          group,
-                          name: humanReadableName(item.name)
-                        })
-                        setShowItem(item)
-                      }}
-                    >
+                    <span className="rental-item-image">
                       <RightContentImage
                         className="rental-item-image"
                         url={item.image}
                         alt={item.name}
                         loading="lazy"
+                        onActivate={() => {
+                          trackEvent('zoom', {
+                            group,
+                            name: humanReadableName(item.name)
+                          })
+                          setShowItem(item)
+                        }}
                       />
                     </span>
                   )}

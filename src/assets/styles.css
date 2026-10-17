@@ -66,6 +66,7 @@ button.secondary {
 }
 
 .navigation {
+    display: block;
     width: calc(100% - 30px);
     background-image: url("/kuvat/pramiatvadit.jpg");
     background-color: white;
@@ -129,6 +130,11 @@ button.secondary {
 
 .menu {
     display: none;
+    background: none;
+    border-radius: 0;
+    padding: 0;
+    color: inherit;
+    font: inherit;
 }
 
 .item {
@@ -255,6 +261,11 @@ button.secondary {
     margin-top: -36px;
 }
 
+.anchor a {
+    color: inherit;
+    text-decoration: none;
+}
+
 .rental-items {
     width: 100%;
 }
@@ -265,6 +276,10 @@ button.secondary {
 
 .rental-item-image {
     cursor: pointer;
+}
+
+.overlay:focus {
+    outline: none;
 }
 
 .gap-before {

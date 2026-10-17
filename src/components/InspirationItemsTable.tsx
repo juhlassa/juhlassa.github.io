@@ -1,4 +1,5 @@
 import { RightContentImage } from './ContentImage'
+import { ZoomedImage } from './ZoomedImage'
 import { allInspirationItemsByGroup } from '../inspirationItems'
 import { useState } from 'react'
 import type { RentalItem } from '../types'
@@ -18,13 +19,11 @@ export function InspirationItemsTable({
   return (
     <>
       {showItem && (
-        <div className="overlay" onClick={() => setShowItem(null)}>
-          <img
-            className="popup popup-image"
-            alt={showItem.name}
-            src={showItem.image}
-          />
-        </div>
+        <ZoomedImage
+          name={showItem.name}
+          image={showItem.image}
+          onClose={() => setShowItem(null)}
+        />
       )}
       <div className="inspiration-close">
         <a className="link underlined" href="#" onClick={() => window.close()}>
@@ -36,17 +35,19 @@ export function InspirationItemsTable({
           <div key={item.name || index} className="inspiration-item">
             <h2>{item.name}</h2>
             {item.image && (
-              <span
-                className="rental-item-image"
-                onClick={() => {
-                  trackEvent('zoom', {
-                    group,
-                    name: humanReadableName(item.name)
-                  })
-                  setShowItem(item)
-                }}
-              >
-                <RightContentImage className="size-xl" url={item.image} />
+              <span className="rental-item-image">
+                <RightContentImage
+                  className="size-xl"
+                  url={item.image}
+                  alt={item.name}
+                  onActivate={() => {
+                    trackEvent('zoom', {
+                      group,
+                      name: humanReadableName(item.name)
+                    })
+                    setShowItem(item)
+                  }}
+                />
               </span>
             )}
             {item.inspiration && (

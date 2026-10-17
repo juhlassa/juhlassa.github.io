@@ -2,7 +2,7 @@ import React, { useEffect, type FC } from 'react'
 import { LayoutProps } from '../types'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import { basicInfo } from '../util'
+import { basicInfo, useEscKey } from '../util'
 import { CookieBanner } from './CookieBanner'
 import { Navigation } from './Navigation'
 import { Footer } from './Footer'
@@ -18,6 +18,7 @@ export const Layout: FC<LayoutProps> = ({
   track
 }) => {
   const [menuOpened, setMenuOpened] = React.useState(false)
+  useEscKey(() => setMenuOpened(false))
   const router = useRouter()
   const { businessName, baseUrl, keywords } = basicInfo
   const pageTitleWithSiteName = `${pageTitle} | ${businessName} / Seinäjoen seutu`
