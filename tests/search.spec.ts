@@ -33,10 +33,9 @@ test.describe('Search page', () => {
     await expect(
       page.getByText('Löytyi 10 osumaa', { exact: false })
     ).toBeVisible()
-
   })
 
-    test('should find items also querying text from description', async ({
+  test('should find items also querying text from description', async ({
     page
   }) => {
     const input = page.locator('input.query')
@@ -47,5 +46,32 @@ test.describe('Search page', () => {
     await expect(
       page.getByText('Löytyi 1 osumaa.', { exact: false })
     ).toBeVisible()
+  })
+
+  test('keeps the search in the URL', async ({ page }) => {
+    await page.locator('input.query').fill('kerrostarjotin')
+    await expect(page).toHaveURL(/\/etsi\/\?q=kerrostarjotin$/)
+
+    await page.locator('input.fromDescription').check()
+    await expect(page).toHaveURL(/\/etsi\/\?q=kerrostarjotin&d=1$/)
+  })
+
+  test('restores the search from a shared link', async ({ page }) => {
+    await page.goto('/etsi/?q=kerrostarjotin&d=1')
+
+    await expect(page.locator('input.query')).toHaveValue('kerrostarjotin')
+    await expect(page.locator('input.fromDescription')).toBeChecked()
+    await expect(
+      page.getByText('Löytyi 10 osumaa', { exact: false })
+    ).toBeVisible()
+  })
+
+  test('item names are not links in search results', async ({ page }) => {
+    await page.locator('input.query').fill('kerrostarjotin')
+    await expect(
+      page.getByText('Löytyi 10 osumaa', { exact: false })
+    ).toBeVisible()
+
+    await expect(page.locator('.anchor a')).toHaveCount(0)
   })
 })

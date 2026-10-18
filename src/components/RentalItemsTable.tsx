@@ -32,13 +32,15 @@ export function RentalItemsTable({
       <table className={`rental-items ${gapBeforeList ? 'gap-before' : ''}`}>
         <tbody>
           {rentalItems.map((item, index) => {
-            const itemNameHash = item.name.match(/<[^<]+>/)
-              ? undefined
-              : item.name
-                  .replace(/([,/()]|&shy;|)/g, '')
-                  .replace(/&nbsp;/g, ' ')
-                  .replace(/[\s-]+/g, '-')
-                  .toLowerCase()
+            // Linkable names only on group pages - not available in search results
+            const itemNameHash =
+              !group || item.name.match(/<[^<]+>/)
+                ? undefined
+                : item.name
+                    .replace(/([,/()]|&shy;|)/g, '')
+                    .replace(/&nbsp;/g, ' ')
+                    .replace(/[\s-]+/g, '-')
+                    .toLowerCase()
             const itemDetails = [
               details('materiaali', item.material),
               details('leveys', item.width, 'cm'),

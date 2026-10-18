@@ -3,7 +3,8 @@ import { rentalItems } from '../../rentalItems'
 import { humanReadableName } from '../../util'
 import { RentalItemsTable } from '../../components/RentalItemsTable'
 import { RentalItem } from '../../types'
-import { useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
+import { useRouter } from 'next/router'
 
 const searchableItems = rentalItems.map((item) => ({
   ...item,
@@ -12,34 +13,60 @@ const searchableItems = rentalItems.map((item) => ({
   searchableDescription: humanReadableName(item.description)?.toLowerCase()
 }))
 
+function findItems(
+  rawQuery: string,
+  fromDescription: boolean
+): RentalItem[] | undefined {
+  const query = rawQuery.trim().toLowerCase()
+  if (query.length < 3) {
+    return undefined
+  }
+  return searchableItems.filter(
+    (item) =>
+      (fromDescription && item.searchableDescription?.includes(query)) ||
+      item.searchableName?.includes(query) ||
+      item.searchableBrand?.includes(query)
+  )
+}
+
 const Index = () => {
+  const router = useRouter()
   const queryField = useRef<HTMLInputElement>(null)
   const fromDescriptionCheckbox = useRef<HTMLInputElement>(null)
-  const [foundItems, setFoundItems] = useState<RentalItem[] | undefined>()
+
+  // The URL holds the search, so that shared links work
+  const query = typeof router.query.q === 'string' ? router.query.q : ''
+  const fromDescription = router.query.d === '1'
+  const foundItems = findItems(query, fromDescription)
+
+  // Fill the fields from a shared link (the query is known after hydration)
+  useEffect(() => {
+    if (
+      router.isReady &&
+      queryField.current &&
+      fromDescriptionCheckbox.current
+    ) {
+      queryField.current.value = query
+      fromDescriptionCheckbox.current.checked = fromDescription
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [router.isReady])
 
   function search() {
-    const query = queryField.current?.value.trim().toLowerCase() ?? ''
-    if (query.length < 3) {
-      return setFoundItems(undefined)
-    }
+    const query = queryField.current?.value.trim() ?? ''
     const fromDescription = fromDescriptionCheckbox.current?.checked ?? false
-    setFoundItems(searchableItems.filter((item) => match(item)))
-
-    function match(
-      item: RentalItem & {
-        searchableName: string | undefined
-        searchableBrand: string | undefined
-        searchableDescription: string | undefined
+    const params = new URLSearchParams()
+    if (query.length >= 3) {
+      params.set('q', query)
+      if (fromDescription) {
+        params.set('d', '1')
       }
-    ) {
-      if (fromDescription && item.searchableDescription?.includes(query)) {
-        return true
-      }
-      return (
-        item.searchableName?.includes(query) ||
-        item.searchableBrand?.includes(query)
-      )
     }
+    const queryString = params.toString()
+    router.replace(`/etsi/${queryString ? `?${queryString}` : ''}`, undefined, {
+      shallow: true,
+      scroll: false
+    })
   }
 
   return (
