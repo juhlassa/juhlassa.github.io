@@ -46,6 +46,9 @@ export type RentalItem = {
   inspirationLinkText?: string
 }
 
+// An item together with the group whose page it belongs to
+export type GroupedRentalItem = RentalItem & { group: Group }
+
 export type LinkedRentalItem = { linked: number }
 
 export type RentalOrLinkedRentalItem = RentalItem | LinkedRentalItem

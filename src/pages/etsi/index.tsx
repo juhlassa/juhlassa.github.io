@@ -2,7 +2,7 @@ import { Layout } from '../../components/Layout'
 import { rentalItems } from '../../rentalItems'
 import { humanReadableName } from '../../util'
 import { RentalItemsTable } from '../../components/RentalItemsTable'
-import { RentalItem } from '../../types'
+import { GroupedRentalItem } from '../../types'
 import { useEffect, useRef } from 'react'
 import { useRouter } from 'next/router'
 
@@ -16,7 +16,7 @@ const searchableItems = rentalItems.map((item) => ({
 function findItems(
   rawQuery: string,
   fromDescription: boolean
-): RentalItem[] | undefined {
+): GroupedRentalItem[] | undefined {
   const query = rawQuery.trim().toLowerCase()
   if (query.length < 3) {
     return undefined

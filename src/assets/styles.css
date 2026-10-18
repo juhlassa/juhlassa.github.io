@@ -187,6 +187,8 @@ button.secondary {
     border-radius: 10px;
     margin: 30px;
     width: calc(100% - 60px);
+    /* Keeps the aspect ratio from the width and height attributes */
+    height: auto;
 }
 
 .float-left {
@@ -257,8 +259,8 @@ button.secondary {
 .anchor {
     font-size: 120%;
     font-weight: bold;
-    padding-top: 36px;
-    margin-top: -36px;
+    /* Keep the name below the sticky menu bar when linked to */
+    scroll-margin-top: 56px;
 }
 
 .anchor a {
@@ -418,8 +420,8 @@ button.secondary {
     }
 
     .anchor {
-        padding-top: 141px;
-        margin-top: -141px;
+        /* Logo bar + menu bar */
+        scroll-margin-top: 211px;
     }
 
     .menuItems .privacy-policy {

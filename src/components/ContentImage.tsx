@@ -1,5 +1,6 @@
 import type { KeyboardEvent } from 'react'
 import { humanReadableName } from '../util'
+import imageSizes from '../image-sizes.json'
 
 type ContentImageProps = {
   url: string
@@ -8,6 +9,11 @@ type ContentImageProps = {
   className?: string
   // Makes the image act as a button (click, Enter or Space)
   onActivate?: () => void
+}
+
+// Width and height let the browser reserve space before the image loads
+function sizeProps(url: string) {
+  return (imageSizes as Record<string, { width: number; height: number }>)[url]
 }
 
 function activateProps(alt: string, onActivate?: () => void) {
@@ -42,6 +48,7 @@ export const LeftContentImage = ({
       src={url}
       alt={altText}
       loading={loading}
+      {...sizeProps(url)}
       {...activateProps(altText, onActivate)}
     />
   )
@@ -61,6 +68,7 @@ export const RightContentImage = ({
       src={url}
       alt={altText}
       loading={loading}
+      {...sizeProps(url)}
       {...activateProps(altText, onActivate)}
     />
   )

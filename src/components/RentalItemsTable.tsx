@@ -1,8 +1,9 @@
 import { RightContentImage } from './ContentImage'
 import { ZoomedImage } from './ZoomedImage'
-import { Group, type RentalItem } from '../types'
+import { Group, type GroupedRentalItem, type RentalItem } from '../types'
 import { useState } from 'react'
-import { allRentalItemsByGroup } from '../rentalItems'
+import { allRentalItemsByGroup, itemAnchor } from '../rentalItems'
+import { groupPages } from '../navigation'
 import { humanReadableName, trackEvent, useEscKey } from '../util'
 
 export function RentalItemsTable({
@@ -11,11 +12,13 @@ export function RentalItemsTable({
   gapBeforeList
 }: {
   group?: Group
-  itemList?: RentalItem[]
+  itemList?: GroupedRentalItem[]
   gapBeforeList?: boolean
 }) {
   const [showItem, setShowItem] = useState<RentalItem | null>(null)
-  const rentalItems = group ? allRentalItemsByGroup[group] : (itemList ?? [])
+  const rentalItems: (RentalItem | GroupedRentalItem)[] = group
+    ? allRentalItemsByGroup[group]
+    : (itemList ?? [])
 
   useEscKey(() => setShowItem(null))
 
@@ -32,15 +35,16 @@ export function RentalItemsTable({
       <table className={`rental-items ${gapBeforeList ? 'gap-before' : ''}`}>
         <tbody>
           {rentalItems.map((item, index) => {
-            // Linkable names only on group pages - not available in search results
-            const itemNameHash =
-              !group || item.name.match(/<[^<]+>/)
-                ? undefined
-                : item.name
-                    .replace(/([,/()]|&shy;|)/g, '')
-                    .replace(/&nbsp;/g, ' ')
-                    .replace(/[\s-]+/g, '-')
-                    .toLowerCase()
+            // On a group page the name links to itself; in search results
+            // it links to the item on its group page
+            const anchor = itemAnchor(item.name)
+            const itemLink = !anchor
+              ? undefined
+              : group
+                ? `#${anchor}`
+                : 'group' in item
+                  ? `${groupPages[item.group]}#${anchor}`
+                  : undefined
             const itemDetails = [
               details('materiaali', item.material),
               details('leveys', item.width, 'cm'),
@@ -54,10 +58,10 @@ export function RentalItemsTable({
             return (
               <tr key={index}>
                 <td>
-                  <div className="anchor" id={itemNameHash}>
-                    {itemNameHash ? (
+                  <div className="anchor" id={group ? anchor : undefined}>
+                    {itemLink ? (
                       <a
-                        href={`#${itemNameHash}`}
+                        href={itemLink}
                         dangerouslySetInnerHTML={{ __html: item.name }}
                       />
                     ) : (

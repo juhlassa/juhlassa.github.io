@@ -1,6 +1,7 @@
-import allRentalItems from './rental-items.json'
+import allRentalItems from './rental-items.json' with { type: 'json' }
 import {
   Group,
+  GroupedRentalItem,
   LinkedRentalItem,
   RentalItem,
   RentalOrLinkedRentalItem
@@ -14,9 +15,23 @@ const rentalItemsByGroup = allRentalItems satisfies Record<
 const rentalOrLinkedItems: RentalOrLinkedRentalItem[] =
   Object.values(rentalItemsByGroup).flat()
 
-export const rentalItems = rentalOrLinkedItems.filter((item) =>
-  isRentalItem(item)
+// Linked items are left out, so each item appears once, with its own group
+export const rentalItems: GroupedRentalItem[] = Object.entries(
+  rentalItemsByGroup as Record<Group, RentalOrLinkedRentalItem[]>
+).flatMap(([group, items]) =>
+  items.filter(isRentalItem).map((item) => ({ ...item, group: group as Group }))
 )
+
+// Anchor of the item on its group page, or undefined if the name contains HTML
+export function itemAnchor(name: string): string | undefined {
+  return name.match(/<[^<]+>/)
+    ? undefined
+    : name
+        .replace(/([,/()"“”]|&shy;|)/g, '')
+        .replace(/&nbsp;/g, ' ')
+        .replace(/[\s-]+/g, '-')
+        .toLowerCase()
+}
 
 function isLinkedItem(
   item: RentalOrLinkedRentalItem

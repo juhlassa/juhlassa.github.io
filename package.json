@@ -6,13 +6,14 @@
   "repository": "https://pramiatvadit.fi/",
   "type": "module",
   "scripts": {
+    "predev": "node src/image-sizes.ts",
     "dev": "next dev -p 8765",
-    "prebuild": "rm -rf dist && eslint . && node src/check-images.ts",
+    "prebuild": "rm -rf dist && eslint . && node src/check-images.ts && node src/image-sizes.ts",
     "build": "next build",
     "postbuild": "next-sitemap --config next-sitemap.config.mjs",
     "lint": "eslint .",
     "start": "next start -p 8888",
-    "serve": "next build && serve -p 8888 dist",
+    "serve": "npm run build && serve -p 8888 dist",
     "test": "playwright test"
   },
   "dependencies": {
@@ -32,6 +33,7 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.7.0",
+    "image-size": "^2.0.4",
     "prettier": "^3.9.5",
     "serve": "^14.2.4",
     "typescript": "~6.0.2",

@@ -1,4 +1,13 @@
-import { NavigationItem } from './types'
+import { Group, NavigationItem } from './types'
+
+export const groupPages: Record<Group, string> = {
+  Vanilja: '/astiastot/vanilja/',
+  GreenGate: '/astiastot/greengate/',
+  Tarjoilu: '/tarjoilu/',
+  Lasit: '/lasit/',
+  Koristelu: '/koristelu/',
+  Muut: '/muut/'
+}
 
 export const navigation: NavigationItem[] = [
   {

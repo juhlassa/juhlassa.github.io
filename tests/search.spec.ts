@@ -1,4 +1,6 @@
 import { test, expect } from '@playwright/test'
+import { groupPages } from '../src/navigation'
+import { itemAnchor, rentalItems } from '../src/rentalItems'
 
 test.describe('Search page', () => {
   test.beforeEach(async ({ page }) => {
@@ -66,12 +68,39 @@ test.describe('Search page', () => {
     ).toBeVisible()
   })
 
-  test('item names are not links in search results', async ({ page }) => {
-    await page.locator('input.query').fill('kerrostarjotin')
-    await expect(
-      page.getByText('Löytyi 10 osumaa', { exact: false })
-    ).toBeVisible()
+  test('item links to the item on its group page', async ({ page }) => {
+    await page.locator('input.query').fill('minikerrostarjotin')
+    const link = page.getByRole('link', {
+      name: 'Minikerrostarjotin, 2 kerrosta'
+    })
+    await expect(link).toHaveAttribute(
+      'href',
+      '/tarjoilu/#minikerrostarjotin-2-kerrosta'
+    )
 
-    await expect(page.locator('.anchor a')).toHaveCount(0)
+    await link.click()
+    await expect(page).toHaveURL(/\/tarjoilu\/#minikerrostarjotin-2-kerrosta$/)
+    await expect(
+      page.locator('#minikerrostarjotin-2-kerrosta')
+    ).toBeInViewport()
   })
+})
+
+test('every item link from search finds its item', async ({ request }) => {
+  const idsByPage = new Map<string, Set<string>>()
+  for (const page of Object.values(groupPages)) {
+    const html = await (await request.get(page)).text()
+    idsByPage.set(
+      page,
+      new Set([...html.matchAll(/ id="([^"]+)"/g)].map((match) => match[1]))
+    )
+  }
+
+  const missing = rentalItems
+    .map((item) => ({
+      page: groupPages[item.group],
+      anchor: itemAnchor(item.name)
+    }))
+    .filter(({ page, anchor }) => anchor && !idsByPage.get(page)?.has(anchor))
+  expect(missing).toEqual([])
 })
