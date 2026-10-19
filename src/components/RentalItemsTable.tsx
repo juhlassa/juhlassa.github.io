@@ -4,6 +4,8 @@ import { Group, type GroupedRentalItem, type RentalItem } from '../types'
 import { useState } from 'react'
 import { allRentalItemsByGroup, itemAnchor } from '../rentalItems'
 import { groupPages } from '../navigation'
+import { itemPagePath } from '../itemPages'
+import { ShareButton } from './ShareButton'
 import { humanReadableName, trackEvent, useEscKey } from '../util'
 
 export function RentalItemsTable({
@@ -45,6 +47,9 @@ export function RentalItemsTable({
                 : 'group' in item
                   ? `${groupPages[item.group]}#${anchor}`
                   : undefined
+            const itemGroup =
+              group ?? ('group' in item ? item.group : undefined)
+            const sharePath = itemGroup && itemPagePath(itemGroup, item.name)
             const itemDetails = [
               details('materiaali', item.material),
               details('leveys', item.width, 'cm'),
@@ -115,6 +120,12 @@ export function RentalItemsTable({
                           : 'Katso vinkki!'}
                       </a>
                     </div>
+                  )}
+                  {sharePath && (
+                    <ShareButton
+                      path={sharePath}
+                      name={humanReadableName(item.name)!}
+                    />
                   )}
                 </td>
                 <td>

@@ -29,6 +29,10 @@ export function humanReadableName(name?: string) {
   return name?.replace(/&shy;/g, '').replace(/&nbsp;/g, ' ')
 }
 
+export function plainText(description?: string) {
+  return humanReadableName(description?.replace(/<[^<]*>/g, ''))
+}
+
 export function trackEvent(event: string, params?: Record<string, unknown>) {
   if (
     window.gtag &&
