@@ -6,16 +6,20 @@ import { allRentalItemsByGroup, itemAnchor } from '../rentalItems'
 import { groupPages } from '../navigation'
 import { itemPagePath } from '../itemPages'
 import { ShareButton } from './ShareButton'
+import { FavouriteButton } from './FavouriteButton'
+import { favouritePath } from '../favourites'
 import { humanReadableName, trackEvent, useEscKey } from '../util'
 
 export function RentalItemsTable({
   group,
   itemList,
-  gapBeforeList
+  gapBeforeList,
+  shareable = true
 }: {
   group?: Group
   itemList?: GroupedRentalItem[]
   gapBeforeList?: boolean
+  shareable?: boolean
 }) {
   const [showItem, setShowItem] = useState<RentalItem | null>(null)
   const rentalItems: (RentalItem | GroupedRentalItem)[] = group
@@ -50,6 +54,7 @@ export function RentalItemsTable({
             const itemGroup =
               group ?? ('group' in item ? item.group : undefined)
             const sharePath = itemGroup && itemPagePath(itemGroup, item.name)
+            const favourite = favouritePath(item.name)
             const itemDetails = [
               details('materiaali', item.material),
               details('leveys', item.width, 'cm'),
@@ -71,6 +76,12 @@ export function RentalItemsTable({
                       />
                     ) : (
                       <span dangerouslySetInnerHTML={{ __html: item.name }} />
+                    )}
+                    {favourite && !item.image && (
+                      <FavouriteButton
+                        path={favourite}
+                        name={humanReadableName(item.name)!}
+                      />
                     )}
                   </div>
                   {item.brand && !item.hideBrand && (
@@ -121,7 +132,7 @@ export function RentalItemsTable({
                       </a>
                     </div>
                   )}
-                  {sharePath && (
+                  {shareable && sharePath && (
                     <ShareButton
                       path={sharePath}
                       name={humanReadableName(item.name)!}
@@ -144,6 +155,13 @@ export function RentalItemsTable({
                           setShowItem(item)
                         }}
                       />
+                      {/* Beside the image, not in it, so that it doesn't zoom */}
+                      {favourite && (
+                        <FavouriteButton
+                          path={favourite}
+                          name={humanReadableName(item.name)!}
+                        />
+                      )}
                     </span>
                   )}
                 </td>
