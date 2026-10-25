@@ -4,6 +4,30 @@ import { trackEvent } from '../util'
 // Shares the item's own page, whose link preview shows the item's image.
 // Uses the device's share menu when there is one, otherwise copies the link.
 export function ShareButton({ path, name }: { path: string; name: string }) {
+  return (
+    <SharingButton
+      label="Jaa"
+      share={() => {
+        const url = `${window.location.origin}${path}`
+        return { data: { title: name, url }, copyText: url, params: { path } }
+      }}
+    />
+  )
+}
+
+// Shares the content with the device's share menu when there is one,
+// otherwise copies the text
+export function SharingButton({
+  label,
+  share
+}: {
+  label: string
+  share: () => {
+    data: ShareData
+    copyText: string
+    params?: Record<string, unknown>
+  }
+}) {
   const [message, setMessage] = useState('')
 
   function showMessage(text: string) {
@@ -11,12 +35,12 @@ export function ShareButton({ path, name }: { path: string; name: string }) {
     setTimeout(() => setMessage(''), 2000)
   }
 
-  async function share() {
-    const url = `${window.location.origin}${path}`
+  async function onClick() {
+    const { data, copyText, params } = share()
     if (navigator.share) {
       try {
-        await navigator.share({ title: name, url })
-        trackEvent('share', { path })
+        await navigator.share(data)
+        trackEvent('share', params)
         showMessage('jaettu')
       } catch {
         // Closing the share menu rejects too
@@ -24,21 +48,21 @@ export function ShareButton({ path, name }: { path: string; name: string }) {
       }
       return
     }
-    await navigator.clipboard.writeText(url)
-    trackEvent('copy', { path })
-    showMessage('kopioitu')
+    await navigator.clipboard.writeText(copyText)
+    trackEvent('copy', params)
+    showMessage('kopioitu leikepöydälle')
   }
 
   return (
-    <div>
+    <div className="sharing">
       <button
         type="button"
         className="secondary small"
-        onClick={share}
+        onClick={onClick}
         aria-live="polite"
         disabled={!!message}
       >
-        Jaa
+        {label}
       </button>
       {!!message && <span className="message small-text">{message}</span>}
     </div>

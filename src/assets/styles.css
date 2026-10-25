@@ -109,6 +109,76 @@ button.small {
     vertical-align: middle;
 }
 
+.favourite {
+    background: none;
+    padding: 0 0 0 8px;
+    font-size: inherit;
+    font-weight: normal;
+    line-height: 1;
+    color: lightgray;
+    cursor: pointer;
+}
+
+.heart {
+    display: block;
+}
+
+.favourites-link .heart {
+    display: inline-block;
+    vertical-align: -0.18em;
+}
+
+.favourite.selected {
+    color: #e0201b;
+}
+
+/* On the top right corner of the image */
+.rental-item-image {
+    display: block;
+    position: relative;
+}
+
+/* The padding makes the button a 44 px touch target around the heart */
+.rental-item-image .favourite {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    padding: 8px;
+    font-size: 28px;
+}
+
+/* The message is shown below the button, so that it doesn't move or wrap
+   anything around it */
+.sharing {
+    position: relative;
+}
+
+.sharing .message {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: -4px;
+    white-space: nowrap;
+}
+
+/* Buttons side by side. Small buttons are scaled down from their left edge,
+   so the scaled-off width is taken back. */
+.buttons {
+    display: flex;
+    align-items: flex-start;
+}
+
+.buttons > * + * {
+    margin-left: -20px;
+}
+
+.favourites-link {
+    color: #4e3e2f;
+    text-decoration: none;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
 .query {
     width: calc(100% - 12px);
     padding: 6px;
@@ -398,6 +468,18 @@ button.small {
 
     .menuItems .item {
         width: 100%;
+    }
+
+    .rental-item-image .favourite {
+        top: 0;
+        right: 0;
+        padding: 12px;
+        font-size: 20px;
+    }
+
+    .menuItems .favourites-link {
+        display: block;
+        margin: 0;
     }
 
     .menuOpen {

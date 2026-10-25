@@ -2,6 +2,8 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import { PrivacyPolicyLink } from '../components/PrivacyPolicyLink'
 import { navigation } from '../navigation'
+import { useFavourites } from '../favourites'
+import { HeartIcon } from './HeartIcon'
 
 export function Navigation({
   menuOpened,
@@ -12,6 +14,7 @@ export function Navigation({
 }) {
   const router = useRouter()
   const path = router.asPath.split(/[?#]/)[0]
+  const favouriteCount = useFavourites().length
 
   return (
     <>
@@ -68,6 +71,14 @@ export function Navigation({
             )}
             <a href="/etsi/">
               <img className="search" alt="Etsi" src="/kuvat/search.svg" />
+            </a>
+            <a
+              href="/suosikit/"
+              className="favourites-link"
+              aria-label={`Suosikit (${favouriteCount})`}
+            >
+              <HeartIcon />
+              {favouriteCount > 0 && <span> {favouriteCount}</span>}
             </a>
             <PrivacyPolicyLink />
           </div>
