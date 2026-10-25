@@ -18,5 +18,6 @@ export const inspirationPages: Record<string, string> = {
   sydankynttilateline: 'Sydänkynttiläteline',
   sydansomiste: 'Sydänsomiste',
   tarjotin: 'Suorakulmainen tarjotin',
-  valokuvausseina: 'Valokuvausseinä / Hääkaari'
+  valokuvausseina: 'Valokuvausseinä / Hääkaari',
+  kynttelikko: 'Korkea kynttelikkö'
 }

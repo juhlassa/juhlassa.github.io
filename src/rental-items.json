@@ -679,6 +679,7 @@
       "diameter": 5,
       "volume": 0.16,
       "image": "/kuvat/lasit/kuohuviinilasit.jpg",
+      "inspiration": "/inspiraatio/kuohuviinilasit/",
       "price": 0.5
     },
     {
@@ -715,6 +716,7 @@
       "height": 82,
       "pcs": 1,
       "image": "/kuvat/koristelu/kynttilajalka_korkea.jpg",
+      "inspiration": "/inspiraatio/kynttelikko/",
       "price": 18
     },
     {
