@@ -80,6 +80,7 @@ button.small {
     font-size: 75%;
     padding: 15px;
     height: 248px;
+    z-index: 1;
 }
 
 .navigationContent {
@@ -100,6 +101,7 @@ button.small {
     border-bottom: 1px solid gray;
     background-color: white;
     height: 35px;
+    z-index: 1;
 }
 
 .search {
