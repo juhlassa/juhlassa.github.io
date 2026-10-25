@@ -406,7 +406,7 @@
       "brand": "Perfect Home",
       "width": 20,
       "length": 45,
-      "pcs": 2,
+      "pcs": 3,
       "image": "/kuvat/tarjoilu/tarjotin.jpg",
       "inspiration": "/inspiraatio/tarjotin/",
       "price": 7
@@ -682,6 +682,7 @@
       "price": 0.5
     },
     {
+      "id": 6,
       "name": "Sydänlasi",
       "brand": "Pentik",
       "pcs": 18,
@@ -796,6 +797,9 @@
       "price": 0.8
     },
     {
+      "linked": 6
+    },
+    {
       "name": "Sydän&shy;kynttilä&shy;teline",
       "brand": "Perfect Home",
       "width": 24,
@@ -879,6 +883,7 @@
     {
       "name": "Pyöreä valoputous",
       "pcs": 2,
+      "height": 110,
       "description": "Toimii verkkovirralla.",
       "image": "/kuvat/koristelu/valoputous_pyorea.jpg",
       "price": 10
@@ -1033,7 +1038,7 @@
       "name": "Pöytäliina, valkoinen",
       "width": 145,
       "length": 240,
-      "pcs": 10,
+      "pcs": 17,
       "material": "polyesteri",
       "image": "/kuvat/muut/poytaliina.jpg",
       "inspiration": "/inspiraatio/poytaliinat/",
