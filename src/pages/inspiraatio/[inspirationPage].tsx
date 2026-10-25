@@ -1,6 +1,9 @@
 import type { GetStaticPaths, GetStaticProps } from 'next'
 import InspirationTemplate from '../../components/InspirationTemplate'
-import { InspirationPage, inspirationPages } from '../../inspirationPages'
+import { inspirationMediaImage } from '../../inspirationItems'
+import { inspirationPages } from '../../inspirationPages.ts'
+
+type InspirationPageProps = { group: string; mediaImage?: string }
 
 export const getStaticPaths: GetStaticPaths = () => ({
   paths: Object.keys(inspirationPages).map((inspirationPage) => ({
@@ -9,12 +12,17 @@ export const getStaticPaths: GetStaticPaths = () => ({
   fallback: false
 })
 
-export const getStaticProps: GetStaticProps<InspirationPage> = ({
+export const getStaticProps: GetStaticProps<InspirationPageProps> = ({
   params
-}) => ({
-  props: inspirationPages[params!.inspirationPage as string]
-})
+}) => {
+  const group = inspirationPages[params!.inspirationPage as string]
+  const mediaImage = inspirationMediaImage(group)
+  // Page props can't contain undefined
+  return { props: { group, ...(mediaImage && { mediaImage }) } }
+}
 
-const Index = (props: InspirationPage) => <InspirationTemplate {...props} />
+const Index = (props: InspirationPageProps) => (
+  <InspirationTemplate {...props} />
+)
 
 export default Index
