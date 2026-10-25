@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
 import { basicInfo } from '../src/util'
 import { categoryPages } from '../src/categoryPages'
-import { inspirationPages } from '../src/inspirationPages'
+import { inspirationPages } from '../src/inspirationPages.ts'
 
 const paths = [
   '/',

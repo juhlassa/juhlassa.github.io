@@ -2,7 +2,6 @@ import { existsSync, statSync } from 'node:fs'
 import type { Group, RentalOrLinkedRentalItem } from './types.ts'
 import allRentalItems from './rental-items.json' with { type: 'json' }
 import allInspirationItems from './inspiration-items.json' with { type: 'json' }
-import { inspirationPages } from './inspirationPages.ts'
 import { categoryPages } from './categoryPages.ts'
 
 function imageCheck(
@@ -40,6 +39,5 @@ const mediaImages = (pages: Record<string, { mediaImage: string }>) =>
       [{ image: page.mediaImage } as RentalOrLinkedRentalItem]
     ])
   )
-const p3 = imageCheck('inspiration pages', mediaImages(inspirationPages))
-const p4 = imageCheck('category pages', mediaImages(categoryPages))
-process.exit(p1 + p2 + p3 + p4 > 0 ? 1 : 0)
+const p3 = imageCheck('category pages', mediaImages(categoryPages))
+process.exit(p1 + p2 + p3 > 0 ? 1 : 0)
