@@ -293,7 +293,7 @@
       "price": 15
     },
     {
-      "name": "Kerros&shy;tarjotin, 3&nbsp;kerrosta",
+      "name": "Kiiltävä kerros&shy;tarjotin, 3&nbsp;kerrosta",
       "brand": "Perfect Home",
       "height": 45,
       "diameter": 20,
@@ -710,10 +710,24 @@
   ],
   "Koristelu": [
     {
+      "name": "Korkea kynttelikkö",
+      "height": 82,
+      "pcs": 1,
+      "image": "/kuvat/koristelu/kynttilajalka_korkea.jpg",
+      "price": 18
+    },
+    {
       "name": "Kynttelikkö",
       "height": 42,
       "pcs": 3,
       "image": "/kuvat/koristelu/kynttilajalka.jpg",
+      "price": 10
+    },
+    {
+      "name": "Kynttelikkö 2",
+      "height": 42,
+      "pcs": 1,
+      "image": "/kuvat/koristelu/kynttilajalka2.jpg",
       "price": 10
     },
     {
@@ -861,6 +875,13 @@
       "description": "Toimii paristoilla (koko AA), paristot eivät kuulu vuokrahintaan.",
       "image": "/kuvat/koristelu/sydanvalot.jpg",
       "price": 3
+    },
+    {
+      "name": "Pyöreä valoputous",
+      "pcs": 2,
+      "description": "Toimii verkkovirralla.",
+      "image": "/kuvat/koristelu/valoputous_pyorea.jpg",
+      "price": 10
     },
     {
       "name": "Valoputous",
