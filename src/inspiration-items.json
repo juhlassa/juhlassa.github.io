@@ -203,12 +203,20 @@
   ],
   "Kuohuviinilasit": [
     {
-      "name": "TBD",
-      "inspiration": "TBD"
+      "name": "Kuplat kuuluvat juhlaan",
+      "inspiration": "<p>Kuplivaa iloa ja odotusta ilmassa. Ikimuistoiset juhlat alkavat kuohujuomalasien kilistyksellä.</p><p>Alkumalja nostetaan yleensä vasta, kun kaikki ovat saaneet lasinsa. Isommassa seurueessa maljaa ei tarvitse kilistää jokaisen vieraan kanssa, vaan lämmin katse ja hymy riittävät.</p>",
+      "image": "/kuvat/inspiraatio/lasit/kuohuviinilasit.jpg"
     },
     {
       "name": "",
-      "inspiration": "TBD"
+      "image": "/kuvat/inspiraatio/lasit/kuohuviinilasit_2.jpg"
+    }
+  ],
+  "Korkea kynttelikkö": [
+    {
+      "name": "Valoa ja tunnelmaa",
+      "inspiration": "<p>Korkea kynttelikkö, kauniit kerrostarjottimet ja erikorkuiset tarjoiluastiat luovat pöytään runsautta ja mielenkiintoa. Kuten puutarhassa, myös kattauksessa korkeammat elementit saavat nousta taustalla korkealle matalampien asettuessa etualalle. Näin jokainen herkku saa ansaitsemansa huomion.</p><p>Kynttilät ovat juhlava ja klassinen valinta. Monissa vuokratiloissa avotulen käyttö on kielletty, mutta paristokäyttöisten kynttilöiden ansiosta tunnelmasta ei tarvitse tinkiä.</p>",
+      "image": "/kuvat/inspiraatio/koristelu/kynttilajalat.jpg"
     }
   ]
 }
