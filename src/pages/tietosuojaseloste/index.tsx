@@ -27,6 +27,24 @@ function PrivacyPolicy() {
             Käytämme Google Analytics -palvelua, joka kerää tietoa sivuston
             käytöstä. Google voi käsitellä tietoja EU:n ulkopuolella.
           </p>
+          <h2>Selaimeen tallennettavat tiedot</h2>
+          <p>
+            Sivusto tallentaa selaimesi paikalliseen tallennustilaan
+            (localStorage) kaksi asiaa: valintasi analytiikan hyväksymisestä
+            sekä sydämellä merkitsemäsi tuotteet. Tiedot säilyvät vain tällä
+            laitteella ja tässä selaimessa, eikä niitä lähetetä meille.
+            Merkittyjen tuotteiden lista välittyy meille vain, jos itse jaat tai
+            lähetät sen. Voit tyhjentää merkityt tuotteet{' '}
+            <a className="link underlined" href="/suosikit/">
+              Merkityt tuotteet
+            </a>{' '}
+            -sivulla tai poistamalla sivuston tiedot selaimen asetuksista.
+          </p>
+          <p>
+            Jos olet hyväksynyt analytiikan, tieto tuotteiden merkitsemisestä,
+            merkinnän poistamisesta ja listan jakamisesta välittyy Google
+            Analyticsiin osana sivuston käytön seurantaa.
+          </p>
           <h2>Oikeusperuste</h2>
           <p>
             Tietojen käsittely perustuu käyttäjän antamaan suostumukseen.
