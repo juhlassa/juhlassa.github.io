@@ -1,5 +1,7 @@
 # Pramiat vadit website builder
 
+[![Test status](https://img.shields.io/github/actions/workflow/status/juhlassa/juhlassa.github.io/deploy.yml?label=Test%20status)](https://github.com/juhlassa/juhlassa.github.io/actions/workflows/deploy.yml)
+
 Website builder powered by [Next.js](https://nextjs.org/).
 
 Production site available at https://pramiatvadit.fi/ (points to http://juhlassa.github.io/).
