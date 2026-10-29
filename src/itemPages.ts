@@ -7,6 +7,7 @@ import type { Group } from './types'
 // name, and visitors are sent on to the item on its group page
 export type ItemPage = {
   name: string
+  price: number
   description?: string
   image?: string
   target: string
@@ -30,6 +31,7 @@ for (const [group, items] of Object.entries(allRentalItemsByGroup)) {
     const description = plainText(item.description)
     itemPages[path] = {
       name: humanReadableName(item.name)!,
+      price: item.price ?? 0,
       // Page props can't contain undefined
       ...(description && { description }),
       ...(item.image && { image: item.image }),

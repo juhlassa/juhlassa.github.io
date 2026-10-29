@@ -6,7 +6,13 @@ import { plainText } from '../util.ts'
 
 // Link previews read this page's tags without running scripts, while
 // visitors are sent straight on to the item on its group page
-const ItemPageTemplate = ({ name, description, image, target }: ItemPage) => {
+const ItemPageTemplate = ({
+  name,
+  price,
+  description,
+  image,
+  target
+}: ItemPage) => {
   return (
     <>
       <Head>
@@ -31,6 +37,7 @@ const ItemPageTemplate = ({ name, description, image, target }: ItemPage) => {
                 Siirry tuotteeseen
               </a>
             </p>
+            <div data-name={name} data-price={price} />
           </>
         }
       />
