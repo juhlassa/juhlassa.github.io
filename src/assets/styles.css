@@ -1,3 +1,8 @@
+:root {
+    /* Fixed header height, smaller on phones */
+    --header-height: 278px;
+}
+
 html,
 body {
     font-family: "Varela Round", Helvetica, system-ui;
@@ -79,7 +84,7 @@ button.small {
     background-position: center;
     font-size: 75%;
     padding: 15px;
-    height: 248px;
+    height: calc(var(--header-height) - 30px);
     z-index: 1;
 }
 
@@ -172,6 +177,7 @@ button.small {
     margin-left: -20px;
 }
 
+/* Quantity of a favourite */
 .quantity {
     margin: 4px 0;
 }
@@ -398,9 +404,87 @@ button.small {
     margin: 0 30px 30px;
 }
 
-@media screen and (max-width: 680px) {
+/* The menu row needs about 830 px, so below that the menu is behind the
+   menu button, while the content keeps its layout down to 550 px */
+@media screen and (max-width: 900px) {
+    .navigationContent {
+        width: calc(100% - 40px);
+    }
+
+    .search {
+        position: relative;
+    }
+
+    .menu {
+        display: block;
+        float: right;
+        /* As big as on phones, where the body font is smaller */
+        font-size: 160%;
+    }
+
+    .menuItems {
+        background-color: white;
+        border: solid lightgray 1px;
+        border-radius: 10px;
+        box-shadow: 10px 20px 30px gray;
+        font-size: 160%;
+        text-align: center;
+        position: absolute;
+        padding: 10px;
+        line-height: 1.7;
+        right: 10px;
+        top: 50px;
+        width: 230px;
+        z-index: 100;
+        white-space: wrap;
+    }
+
+    .menuItems .item {
+        width: 100%;
+    }
+
+    .menuItems .favourites-link {
+        display: block;
+        margin: 0;
+    }
+
+    .menuOpen {
+        display: block;
+    }
+
+    .menuClosed {
+        display: none;
+    }
+
+    .item {
+        display: inline-block;
+    }
+
+    .item:last-child {
+        border: none;
+    }
+
+    .menuItems .privacy-policy {
+        display: block;
+        font-size: 75%;
+    }
+
+    .footer .privacy-policy {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    :root {
+        --header-height: 165px;
+    }
+
     body {
         font-size: 80%;
+    }
+
+    .menu, .menuItems {
+        font-size: 200%;
     }
 
     td:nth-of-type(1) {
@@ -434,54 +518,22 @@ button.small {
         position: sticky;
         width: calc(100% - 100px);
         padding: 15px 50px;
-        height: 135px;
     }
 
     .navigation-small.sticky {
-        top: 165px;
-    }
-
-    .navigationContent {
-        width: calc(100% - 40px);
+        top: var(--header-height);
     }
 
     .navigation h1 {
         margin: 27px;
     }
 
-    .search {
-        position: relative;
-    }
-
     .query {
         font-size: 120%;
     }
 
-    .menu {
-        display: block;
-        float: right;
-        font-size: 200%;
-    }
-
-    .menuItems {
-        background-color: white;
-        border: solid lightgray 1px;
-        border-radius: 10px;
-        box-shadow: 10px 20px 30px gray;
-        font-size: 200%;
-        text-align: center;
-        position: absolute;
-        padding: 10px;
-        line-height: 1.7;
-        right: 10px;
-        top: 50px;
-        width: 230px;
-        z-index: 100;
-        white-space: wrap;
-    }
-
-    .menuItems .item {
-        width: 100%;
+    .quantity input {
+        width: 2.5em;
     }
 
     .rental-item-image .favourite {
@@ -489,27 +541,6 @@ button.small {
         right: 0;
         padding: 12px;
         font-size: 20px;
-    }
-
-    .menuItems .favourites-link {
-        display: block;
-        margin: 0;
-    }
-
-    .menuOpen {
-        display: block;
-    }
-
-    .menuClosed {
-        display: none;
-    }
-
-    .item {
-        display: inline-block;
-    }
-
-    .item:last-child {
-        border: none;
     }
 
     .content {
@@ -524,16 +555,7 @@ button.small {
 
     .anchor {
         /* Logo bar + menu bar */
-        scroll-margin-top: 211px;
-    }
-
-    .menuItems .privacy-policy {
-        display: block;
-        font-size: 75%;
-    }
-
-    .footer .privacy-policy {
-        display: none;
+        scroll-margin-top: calc(var(--header-height) + 46px);
     }
 
     .inspiration-close {
