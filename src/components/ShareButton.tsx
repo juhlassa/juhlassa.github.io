@@ -16,7 +16,7 @@ export function ShareButton({ path, name }: { path: string; name: string }) {
 }
 
 // Shares the content with the device's share menu when there is one,
-// otherwise copies the text
+// otherwise, or when only copying, copies the text
 export function SharingButton({
   label,
   share

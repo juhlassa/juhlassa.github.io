@@ -172,6 +172,22 @@ button.small {
     margin-left: -20px;
 }
 
+.quantity {
+    margin: 4px 0;
+}
+
+.quantity label {
+    white-space: nowrap;
+}
+
+.quantity input {
+    width: 3.5em;
+    padding: 4px;
+    font: inherit;
+    border: solid #4e3e2f 1px;
+    border-radius: 6px;
+}
+
 .favourites-link {
     color: #4e3e2f;
     text-decoration: none;

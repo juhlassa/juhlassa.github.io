@@ -9,7 +9,7 @@ export function FavouriteButton({
   path: string
   name: string
 }) {
-  const favourite = useFavourites().includes(path)
+  const favourite = useFavourites().some((favourite) => favourite.path === path)
 
   return (
     <button

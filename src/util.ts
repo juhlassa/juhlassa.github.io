@@ -29,6 +29,17 @@ export function humanReadableName(name?: string) {
   return name?.replace(/&shy;/g, '').replace(/&nbsp;/g, ' ')
 }
 
+export function formatPrice(price: number) {
+  return price.toLocaleString('fi', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+  })
+}
+
+export function unitName(unit: string[] | undefined, count: number) {
+  return !unit ? 'kpl' : count === 1 ? unit[0] : (unit[1] ?? unit[0])
+}
+
 export function plainText(description?: string) {
   return humanReadableName(description?.replace(/<[^<]*>/g, ''))
 }

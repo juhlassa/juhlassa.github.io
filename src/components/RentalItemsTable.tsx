@@ -7,19 +7,30 @@ import { groupPages } from '../navigation'
 import { itemPagePath } from '../itemPages'
 import { ShareButton } from './ShareButton'
 import { FavouriteButton } from './FavouriteButton'
+import { QuantityInput } from './QuantityInput'
 import { favouritePath } from '../favourites'
-import { humanReadableName, trackEvent, useEscKey } from '../util'
+import {
+  formatPrice,
+  humanReadableName,
+  trackEvent,
+  unitName,
+  useEscKey
+} from '../util'
 
 export function RentalItemsTable({
   group,
   itemList,
   gapBeforeList,
-  shareable = true
+  shareable = true,
+  quantities = false,
+  fixedQuantities
 }: {
   group?: Group
   itemList?: GroupedRentalItem[]
   gapBeforeList?: boolean
   shareable?: boolean
+  quantities?: boolean
+  fixedQuantities?: Record<string, number>
 }) {
   const [showItem, setShowItem] = useState<RentalItem | null>(null)
   const rentalItems: (RentalItem | GroupedRentalItem)[] = group
@@ -89,23 +100,21 @@ export function RentalItemsTable({
                   )}
                   {item.pcs !== undefined && item.pcs > 0 && (
                     <div>
-                      Saatavana {item.pcs}{' '}
-                      {!item.unit
-                        ? 'kpl'
-                        : item.pcs === 1
-                          ? item.unit[0]
-                          : item.unit[1]}
+                      Saatavana {item.pcs} {unitName(item.unit, item.pcs)}
                     </div>
                   )}
                   {item.price !== undefined && item.price > 0 && (
                     <div>
-                      Hinta{' '}
-                      {item.price.toLocaleString('fi', {
-                        minimumFractionDigits: 2,
-                        maximumFractionDigits: 2
-                      })}{' '}
-                      € / {!item.unit ? 'kpl' : (item.unit[0] ?? 'kpl')}
+                      Hinta {formatPrice(item.price)} € /{' '}
+                      {unitName(item.unit, 1)}
                     </div>
+                  )}
+                  {(quantities || fixedQuantities) && favourite && (
+                    <QuantityInput
+                      path={favourite}
+                      item={item}
+                      fixedQuantity={fixedQuantities?.[favourite]}
+                    />
                   )}
                   {itemDetails && (
                     <div
