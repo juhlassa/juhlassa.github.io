@@ -1,18 +1,14 @@
 import { Layout } from '../../components/Layout'
 import { RightContentImage } from '../../components/ContentImage'
 import { basicInfo } from '../../util'
-import { useEffect, useState } from 'react'
 
 const Index = () => {
-  const [showMap, setShowMap] = useState(false)
-
-  useEffect(() => {
-    const consent = localStorage.getItem(basicInfo.consentStateKey)
-    if (consent === 'granted') {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setShowMap(true)
-    }
-  }, [])
+  const consent =
+    typeof localStorage !== 'undefined' &&
+    typeof localStorage.getItem === 'function'
+      ? localStorage.getItem(basicInfo.consentStateKey)
+      : ''
+  const showMap = consent == 'granted'
 
   const content = (
     <div>

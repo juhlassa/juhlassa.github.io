@@ -1,17 +1,22 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState, useSyncExternalStore } from 'react'
 import { basicInfo } from '../util'
 
-export function CookieBanner() {
-  const [visible, setVisible] = useState(false)
+const subscribe = () => () => {}
+const hasStoredConsent = () =>
+  localStorage.getItem(basicInfo.consentStateKey) !== null
+// On the server and during hydration the banner is hidden
+const hasStoredConsentOnServer = () => true
 
-  useEffect(() => {
-    const consent = localStorage.getItem(basicInfo.consentStateKey)
-    if (!consent) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      setVisible(true)
-    }
-  }, [])
+export function CookieBanner() {
+  const [accepted, setAccepted] = useState(false)
+  const storedConsent = useSyncExternalStore(
+    subscribe,
+    hasStoredConsent,
+    hasStoredConsentOnServer
+  )
+
+  if (storedConsent || accepted) return null
 
   const accept = () => {
     localStorage.setItem(basicInfo.consentStateKey, 'granted')
@@ -19,10 +24,8 @@ export function CookieBanner() {
     window.gtag('consent', 'update', {
       analytics_storage: 'granted'
     })
-    setVisible(false)
+    setAccepted(true)
   }
-
-  if (!visible) return null
 
   return (
     <div className="overlay">

@@ -3,7 +3,7 @@ import { rentalItems } from '../../rentalItems'
 import { humanReadableName } from '../../util'
 import { RentalItemsTable } from '../../components/RentalItemsTable'
 import { GroupedRentalItem } from '../../types'
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import { useRouter } from 'next/router'
 
 const searchableItems = rentalItems.map((item) => ({
@@ -39,19 +39,6 @@ const Index = () => {
   const fromDescription = router.query.d === '1'
   const foundItems = findItems(query, fromDescription)
 
-  // Fill the fields from a shared link (the query is known after hydration)
-  useEffect(() => {
-    if (
-      router.isReady &&
-      queryField.current &&
-      fromDescriptionCheckbox.current
-    ) {
-      queryField.current.value = query
-      fromDescriptionCheckbox.current.checked = fromDescription
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [router.isReady])
-
   function search() {
     const query = queryField.current?.value.trim() ?? ''
     const fromDescription = fromDescriptionCheckbox.current?.checked ?? false
@@ -78,7 +65,9 @@ const Index = () => {
       content={
         <div>
           <input
+            key={String(router.isReady)}
             ref={queryField}
+            defaultValue={query}
             className="query"
             autoFocus={true}
             placeholder="Kirjoita Hakusana tähän (väh. 3 kirjainta)"
@@ -86,7 +75,9 @@ const Index = () => {
           />
           <label>
             <input
+              key={String(router.isReady)}
               ref={fromDescriptionCheckbox}
+              defaultChecked={fromDescription}
               type="checkbox"
               className="fromDescription"
               onClick={() => search()}
