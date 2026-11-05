@@ -30,20 +30,21 @@ function PrivacyPolicy() {
           <h2>Selaimeen tallennettavat tiedot</h2>
           <p>
             Sivusto tallentaa selaimesi paikalliseen tallennustilaan
-            (localStorage) kaksi asiaa: valintasi analytiikan hyväksymisestä
-            sekä sydämellä merkitsemäsi tuotteet. Tiedot säilyvät vain tällä
-            laitteella ja tässä selaimessa, eikä niitä lähetetä meille.
-            Merkittyjen tuotteiden lista välittyy meille vain, jos itse jaat tai
-            lähetät sen. Voit tyhjentää merkityt tuotteet{' '}
+            (localStorage) valintasi analytiikan hyväksymisestä, keräilykoriin
+            lisäämäsi tuotteet sekä tiedon, jos olet piilottanut tuotesivujen
+            ohjeen keräilykorin käytöstä. Tiedot säilyvät vain tällä laitteella
+            ja tässä selaimessa, eikä niitä lähetetä meille. Lista keräilykorin
+            tuotteista välittyy meille vain, jos itse jaat tai lähetät sen. Voit
+            tyhjentää keräilykorin{' '}
             <a className="link underlined" href="/suosikit/">
-              Merkityt tuotteet
-            </a>{' '}
+              Keräilykori
+            </a>
             -sivulla tai poistamalla sivuston tiedot selaimen asetuksista.
           </p>
           <p>
-            Jos olet hyväksynyt analytiikan, tieto tuotteiden merkitsemisestä,
-            merkinnän poistamisesta ja listan jakamisesta välittyy Google
-            Analyticsiin osana sivuston käytön seurantaa.
+            Jos olet hyväksynyt analytiikan, tieto tuotteiden keräilykoriin
+            lisäämisestä ja poistamisesta sekä keräilykorin jakamisesta välittyy
+            Google Analyticsiin osana sivuston käytön seurantaa.
           </p>
           <h2>Oikeusperuste</h2>
           <p>

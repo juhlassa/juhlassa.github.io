@@ -69,13 +69,14 @@ export function Navigation({
                   </a>
                 )
             )}
-            <a href="/etsi/">
-              <img className="search" alt="Etsi" src="/kuvat/search.svg" />
+            <a href="/etsi/" title="Tuotehaku">
+              <img className="search" alt="Tuotehaku" src="/kuvat/search.svg" />
             </a>
             <a
               href="/suosikit/"
               className="favourites-link"
-              aria-label={`Suosikit (${favouriteCount})`}
+              aria-label={`Keräilykori (${favouriteCount})`}
+              title="Keräilykori"
             >
               <HeartIcon />
               {favouriteCount > 0 && <span> {favouriteCount}</span>}

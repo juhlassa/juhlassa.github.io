@@ -15,9 +15,13 @@ export function FavouriteButton({
     <button
       type="button"
       className={`favourite ${favourite ? 'selected' : ''}`}
-      aria-label={`Suosikki: ${name}`}
+      aria-label={
+        favourite
+          ? `Poista keräilykorista: ${name}`
+          : `Lisää keräilykoriin: ${name}`
+      }
       aria-pressed={favourite}
-      title={favourite ? 'Poista merkityistä' : 'Merkitse tuote'}
+      title={favourite ? 'Poista keräilykorista' : 'Lisää keräilykoriin'}
       onClick={() => {
         trackEvent(favourite ? 'unfavourite' : 'favourite', { path })
         toggleFavourite(path)

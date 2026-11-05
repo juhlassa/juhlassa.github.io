@@ -128,6 +128,13 @@ button.small {
     display: block;
 }
 
+.hint {
+    border: 1px dashed gray;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 30px;
+}
+
 .favourites-link .heart {
     display: inline-block;
     vertical-align: -0.18em;

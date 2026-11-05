@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { setFavouriteQuantity, useFavourites } from '../favourites'
-import { formatPrice, humanReadableName, unitName } from '../util'
+import { humanReadableName, unitName } from '../util'
 import type { RentalItem } from '../types'
 
 export function QuantityInput({
@@ -67,9 +67,6 @@ export function QuantityInput({
           {unitName(item.unit, quantity)}
         </label>
       )}
-      <div className="small-text">
-        Yhteensä {formatPrice(item.price * quantity)} €
-      </div>
     </div>
   )
 }

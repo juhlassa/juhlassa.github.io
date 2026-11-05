@@ -43,7 +43,10 @@ function PriceTotal({ favourites }: { favourites: Favourite[] }) {
   const itemsWithoutPrice = itemsOf(favourites).filter((item) => !item.price)
   return (
     <p>
-      <b>Hinta yhteensä {formatPrice(totalPrice(favourites))} €.</b>
+      <b>
+        Keräilykorin vuokrahinta on yhteensä{' '}
+        {formatPrice(totalPrice(favourites))} €.
+      </b>
       {itemsWithoutPrice.length > 0 && (
         <>
           <br />
@@ -68,6 +71,10 @@ const Index = () => {
   // Also a bare ?json, whose value is empty
   const shared =
     typeof list === 'string' ? parseFavouritesList(list) : undefined
+  const canShare =
+    typeof navigator !== 'undefined' &&
+    typeof navigator.canShare === 'function' &&
+    navigator.canShare({ text: '' })
 
   if (shared) {
     return <SharedList shared={shared} ownCount={favourites.length} />
@@ -75,7 +82,7 @@ const Index = () => {
 
   return (
     <Layout
-      pageTitle="Merkityt tuotteet"
+      pageTitle="Keräilykori"
       track={true}
       description="Merkitsemäsi tuotteet."
       mediaImage="/kuvat/juhlapoyta.jpg"
@@ -83,39 +90,42 @@ const Index = () => {
         <div>
           {items.length === 0 ? (
             <>
+              <p>Keräilykorissasi ei ole vielä yhtään tuotetta.</p>
               <p>
-                Voit merkitä vuokrattavaksi aiotut tuotteet helposti
-                tuotesivuilta tuotekuvan päällä olevalla sydämellä. Samasta
-                sydämestä voit myös poistaa merkinnän.
+                Voit lisätä vuokrattavaksi aikomasi tuotteet keräilykoriin
+                helposti tuotesivuilta tuotekuvan päällä olevalla sydämellä.
+                Samasta sydämestä voit myös poistaa tuotteen keräilykorista.
+                Voit kokeilla rauhassa eri vaihtoehtoja. Pramiat Vadit ei saa
+                tietää keräilykorin sisällöstä, jos et lähetä sitä meille.
               </p>
               <p>
-                Kun olet valmis, palaa tälle sivulle ja näet valittujen
-                tuotteiden listan. Voit lähettää sen meille esimerkiksi
-                sähköpostilla, niin saat varmasti ne tuotteet, joita tarvitset
-                juhlissasi.
+                Kun olet valmis, palaa tälle sivulle ja näet keräilykoriin
+                valittujen tuotteiden listan. Voit lähettää sen meille
+                esimerkiksi sähköpostilla, niin saat varmasti ne tuotteet, joita
+                tarvitset juhlissasi.
               </p>
             </>
           ) : (
             <>
-              <p>
-                Voit jakaa tai kopioida merkityt tuotteet leikepöydälle alla
-                olevalla painikkeella. Pramiat Vadit saa tietää listan
-                sisällöstä vain, jos lähetät sen meille.
-              </p>
+              {canShare ? (
+                <p>
+                  Voit lähettää keräilykorin tuotteet meille esimerkiksi
+                  sähköpostilla.
+                </p>
+              ) : (
+                <p>
+                  Voit kopioida keräilykorin tuotteet leikepöydälle ja liittää
+                  ne sieltä esimerkiksi sähköpostiviestiin lähetettäväksi.
+                </p>
+              )}
               <PriceTotal favourites={favourites} />
-              <p>
-                Tuotteiden lukumäärän voit valita tuotteen kohdalta, jos niitä
-                on saatavilla useampia. Tällä tavalla kokonaissumma lasketaan
-                oikein.
-              </p>
-              <p className="warning small-text">
-                Huom! Merkitsemäsi tuotteet ovat tallentuneet vain tähän
-                selaimeen. Et voi jatkaa listan täydentämistä toisella koneella
-                tai eri selaimella.
-              </p>
               <div className="buttons">
                 <SharingButton
-                  label="Jaa merkityt tuotteet"
+                  label={
+                    canShare
+                      ? 'Lähetä keräilykori...'
+                      : 'Kopioi keräilykori leikepöydälle'
+                  }
                   share={() => {
                     const text = shareText(favourites)
                     return {
@@ -133,9 +143,7 @@ const Index = () => {
                   className="secondary small"
                   onClick={() => {
                     // Emptying can't be undone
-                    if (
-                      confirm('Tyhjennetäänkö merkittyjen tuotteiden lista?')
-                    ) {
+                    if (confirm('Tyhjennetäänkö keräilykori?')) {
                       trackEvent('clear_favourites', {
                         favourites: favourites.length
                       })
@@ -143,10 +151,19 @@ const Index = () => {
                     }
                   }}
                 >
-                  Tyhjennä lista
+                  Tyhjennä keräilykori
                 </button>
               </div>
-              <h2>Vuokrattavaksi merkityt tuotteet</h2>
+              <h2>Keräilykorissa olevat tuotteet</h2>
+              <p>
+                Tuotteiden lukumäärää voit muuttaa tuotteen kohdalta, jos niitä
+                on saatavilla useampia. Tällä tavalla saat oikean kokonaissumman
+                vuokraamistasi tuotteista.
+              </p>
+              <p className="warning small-text">
+                Huom! Merkitsemäsi tuotteet ovat tallentuneet vain tähän
+                selaimeen.
+              </p>
               <RentalItemsTable
                 itemList={items}
                 shareable={false}
@@ -170,15 +187,15 @@ function SharedList({
   const router = useRouter()
   return (
     <Layout
-      pageTitle="Jaettu lista"
+      pageTitle="Keräilykori (jaettu sinulle)"
       track={true}
-      description="Sinulle jaettu lista vuokrattavista tuotteista."
+      description="Sinulle jaettu keräilykori vuokrattavista tuotteista."
       mediaImage="/kuvat/juhlapoyta.jpg"
       content={
         <div>
           <p>
-            Tämä lista merkityistä tuotteista on jaettu sinulle. Voit tallentaa
-            sen omaksi listaksesi ja jatkaa sen muokkaamista.
+            Tämä keräilykori on jaettu sinulle. Voit tallentaa sen omaksi
+            keräilykoriksesi ja jatkaa sen muokkaamista.
           </p>
           <PriceTotal favourites={shared} />
           <div className="buttons">
@@ -188,7 +205,9 @@ function SharedList({
               onClick={() => {
                 if (
                   ownCount === 0 ||
-                  confirm('Korvataanko oma listasi tällä listalla?')
+                  confirm(
+                    'Korvataanko oma keräilyukorisi sinulle jaetulla keräilykorilla?'
+                  )
                 ) {
                   trackEvent('save_shared_favourites', {
                     favourites: shared.length
@@ -198,10 +217,10 @@ function SharedList({
                 }
               }}
             >
-              Tallenna omaksi listaksi
+              Tallenna omaksi keräilykoriksi
             </button>
           </div>
-          <h2>Vuokrattavaksi merkityt tuotteet</h2>
+          <h2>Keräilykorissa olevat tuotteet</h2>
           <RentalItemsTable
             itemList={itemsOf(shared)}
             shareable={false}

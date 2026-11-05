@@ -8,6 +8,7 @@ import { itemPagePath } from '../itemPages'
 import { ShareButton } from './ShareButton'
 import { FavouriteButton } from './FavouriteButton'
 import { QuantityInput } from './QuantityInput'
+import { FavouritesHint } from './FavouritesHint'
 import { favouritePath } from '../favourites'
 import {
   formatPrice,
@@ -48,6 +49,8 @@ export function RentalItemsTable({
           onClose={() => setShowItem(null)}
         />
       )}
+
+      {group && <FavouritesHint />}
 
       <table className={`rental-items ${gapBeforeList ? 'gap-before' : ''}`}>
         <tbody>
@@ -109,13 +112,6 @@ export function RentalItemsTable({
                       {unitName(item.unit, 1)}
                     </div>
                   )}
-                  {(quantities || fixedQuantities) && favourite && (
-                    <QuantityInput
-                      path={favourite}
-                      item={item}
-                      fixedQuantity={fixedQuantities?.[favourite]}
-                    />
-                  )}
                   {itemDetails && (
                     <div
                       className="small-text"
@@ -140,6 +136,13 @@ export function RentalItemsTable({
                           : 'Katso vinkki!'}
                       </a>
                     </div>
+                  )}
+                  {(quantities || fixedQuantities) && favourite && (
+                    <QuantityInput
+                      path={favourite}
+                      item={item}
+                      fixedQuantity={fixedQuantities?.[favourite]}
+                    />
                   )}
                   {shareable && sharePath && (
                     <ShareButton

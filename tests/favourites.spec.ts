@@ -5,7 +5,20 @@ const name = 'Kapea kerrostarjotin, 3 kerrosta'
 const path = '/tarjoilu/kapea-kerrostarjotin-3-kerrosta/'
 
 function heart(page: Page) {
-  return page.getByRole('button', { name: `Suosikki: ${name}`, exact: true })
+  return page.getByRole('button', {
+    name: new RegExp(`(Lisää keräilykoriin|Poista keräilykorista): ${name}`),
+    exact: true
+  })
+}
+
+export function isShareable(page: Page) {
+  return page.evaluate(() => {
+    return (
+      typeof navigator !== 'undefined' &&
+      typeof navigator.canShare === 'function' &&
+      navigator.canShare({ text: '' })
+    )
+  })
 }
 
 test.describe('Favourites', () => {
@@ -30,8 +43,36 @@ test.describe('Favourites', () => {
 
     await heart(page).click()
     await expect(
-      page.getByText('Voit merkitä vuokrattavaksi aiotut tuotteet')
+      page.getByText(
+        'Voit lisätä vuokrattavaksi aikomasi tuotteet keräilykoriin'
+      )
     ).toBeVisible()
+  })
+
+  test('product pages show the instructions until they are hidden', async ({
+    page
+  }) => {
+    const instructions = page.getByText(
+      'Voit lisätä tuotteen keräilykoriin tai poistaa sen sieltä klikkaamalla tuotekuvassa olevaa sydäntä.'
+    )
+    const hide = page.getByRole('button', { name: 'Älä näytä tätä ohjetta' })
+
+    await page.goto('/tarjoilu/')
+    await expect(instructions).toBeVisible()
+    // Adding items doesn't hide it
+    await heart(page).click()
+    await expect(heart(page)).toHaveAttribute('aria-pressed', 'true')
+    await page.goto('/astiastot/vanilja/')
+    await expect(instructions).toBeVisible()
+
+    await hide.click()
+    await expect(instructions).toBeHidden()
+    await expect(hide).toBeHidden()
+
+    for (const url of ['/astiastot/vanilja/', '/lasit/']) {
+      await page.goto(url)
+      await expect(instructions).toBeHidden()
+    }
   })
 
   test('favourites are shared with links to the item pages', async ({
@@ -44,7 +85,15 @@ test.describe('Favourites', () => {
       }
     }, path)
     await page.goto('/suosikit/')
-    await page.getByRole('button', { name: 'Jaa merkityt tuotteet' }).click()
+
+    const canShare = await isShareable(page)
+    await page
+      .getByRole('button', {
+        name: canShare
+          ? 'Lähetä keräilykori...'
+          : 'Kopioi keräilykori leikepöydälle'
+      })
+      .click()
 
     const shared = await page.waitForFunction(
       () => (window as unknown as { shared?: ShareData }).shared
@@ -64,7 +113,7 @@ test.describe('Favourites', () => {
       }
     }, path)
     await page.goto('/suosikit/')
-    const clear = page.getByRole('button', { name: 'Tyhjennä lista' })
+    const clear = page.getByRole('button', { name: 'Tyhjennä keräilykori' })
 
     page.once('dialog', (dialog) => dialog.dismiss())
     await clear.click()
@@ -73,7 +122,9 @@ test.describe('Favourites', () => {
     page.once('dialog', (dialog) => dialog.accept())
     await clear.click()
     await expect(
-      page.getByText('Voit merkitä vuokrattavaksi aiotut tuotteet')
+      page.getByText(
+        'Voit lisätä vuokrattavaksi aikomasi tuotteet keräilykoriin'
+      )
     ).toBeVisible()
     await page.reload()
     await expect(page.getByRole('link', { name, exact: true })).toBeHidden()
@@ -97,7 +148,7 @@ test.describe('Favourites', () => {
     )
     await page.goto('/suosikit/')
     const quantity = page.getByLabel(`Määrä: ${bowl}`)
-    const total = page.getByText(/^Hinta yhteensä/)
+    const total = page.getByText(/^Keräilykorin vuokrahinta on yhteensä/)
 
     // Only one is available, or there is no price
     await expect(page.getByLabel(`Määrä: ${name}`)).toHaveCount(0)
@@ -106,16 +157,22 @@ test.describe('Favourites', () => {
     // 7,00 € + 3,00 €
     await expect(quantity).toHaveValue('1')
     await expect(quantity).toHaveAttribute('max', '8')
-    await expect(total).toContainText('Hinta yhteensä 10,00 €')
+    await expect(total).toContainText(
+      'Keräilykorin vuokrahinta on yhteensä 10,00 €'
+    )
 
     await quantity.fill('4')
-    await expect(total).toContainText('Hinta yhteensä 19,00 €')
+    await expect(total).toContainText(
+      'Keräilykorin vuokrahinta on yhteensä 19,00 €'
+    )
 
     // More than is available becomes what is available
     await quantity.fill('20')
     await quantity.blur()
     await expect(quantity).toHaveValue('8')
-    await expect(total).toContainText('Hinta yhteensä 31,00 €')
+    await expect(total).toContainText(
+      'Keräilykorin vuokrahinta on yhteensä 31,00 €'
+    )
 
     // Less than one becomes one
     await quantity.fill('0')
@@ -126,7 +183,14 @@ test.describe('Favourites', () => {
     await page.reload()
     await expect(quantity).toHaveValue('8')
 
-    await page.getByRole('button', { name: 'Jaa merkityt tuotteet' }).click()
+    const canShare = await isShareable(page)
+    await page
+      .getByRole('button', {
+        name: canShare
+          ? 'Lähetä keräilykori...'
+          : 'Kopioi keräilykori leikepöydälle'
+      })
+      .click()
     const shared = await page.waitForFunction(
       () => (window as unknown as { shared?: ShareData }).shared
     )
@@ -176,17 +240,19 @@ test.describe('Favourites', () => {
     )
 
     await expect(
-      page.getByRole('heading', { name: 'Jaettu lista' })
+      page.getByRole('heading', { name: 'Keräilykori (jaettu sinulle)' })
     ).toBeVisible()
     await expect(page.getByText('Määrä 3 kpl')).toBeVisible()
     await expect(page.getByLabel(`Määrä: ${bowl}`)).toHaveCount(0)
-    await expect(page.getByText(/^Hinta yhteensä/)).toContainText(
-      'Hinta yhteensä 9,00 €'
+    await expect(page.getByText(/^Keräilykorin vuokrahinta/)).toContainText(
+      'Keräilykorin vuokrahinta on yhteensä 9,00 €'
     )
     await expect(page.getByRole('link', { name: 'Karkkibuffet' })).toBeVisible()
 
     // The own list is empty, so nothing is asked
-    await page.getByRole('button', { name: 'Tallenna omaksi listaksi' }).click()
+    await page
+      .getByRole('button', { name: 'Tallenna omaksi keräilykoriksi' })
+      .click()
     await expect(page).toHaveURL(/\/suosikit\/$/)
     await expect(page.getByLabel(`Määrä: ${bowl}`)).toHaveValue('3')
     expect(
@@ -206,7 +272,9 @@ test.describe('Favourites', () => {
       `/suosikit/?${listParam}=tarjoilu/kapea-kerrostarjotin-3-kerrosta:1`
     )
     page.once('dialog', (dialog) => dialog.dismiss())
-    await page.getByRole('button', { name: 'Tallenna omaksi listaksi' }).click()
+    await page
+      .getByRole('button', { name: 'Tallenna omaksi keräilykoriksi' })
+      .click()
     await page.goto('/suosikit/')
     await expect(page.getByLabel(`Määrä: ${bowl}`)).toHaveValue('3')
   })
