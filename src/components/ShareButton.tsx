@@ -1,23 +1,9 @@
 import { useState } from 'react'
 import { trackEvent } from '../util'
 
-// Shares the item's own page, whose link preview shows the item's image.
-// Uses the device's share menu when there is one, otherwise copies the link.
-export function ShareButton({ path, name }: { path: string; name: string }) {
-  return (
-    <SharingButton
-      label="Jaa"
-      share={() => {
-        const url = `${window.location.origin}${path}`
-        return { data: { title: name, url }, copyText: url, params: { path } }
-      }}
-    />
-  )
-}
-
 // Shares the content with the device's share menu when there is one,
 // otherwise, or when only copying, copies the text
-export function SharingButton({
+export function ShareButton({
   label,
   share
 }: {

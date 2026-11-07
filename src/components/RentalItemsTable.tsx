@@ -4,8 +4,6 @@ import { Group, type GroupedRentalItem, type RentalItem } from '../types'
 import { useState } from 'react'
 import { allRentalItemsByGroup, itemAnchor } from '../rentalItems'
 import { groupPages } from '../navigation'
-import { itemPagePath } from '../itemPages'
-import { ShareButton } from './ShareButton'
 import { FavouriteButton } from './FavouriteButton'
 import { QuantityInput } from './QuantityInput'
 import { FavouritesHint } from './FavouritesHint'
@@ -22,14 +20,12 @@ export function RentalItemsTable({
   group,
   itemList,
   gapBeforeList,
-  shareable = true,
   quantities = false,
   fixedQuantities
 }: {
   group?: Group
   itemList?: GroupedRentalItem[]
   gapBeforeList?: boolean
-  shareable?: boolean
   quantities?: boolean
   fixedQuantities?: Record<string, number>
 }) {
@@ -65,9 +61,6 @@ export function RentalItemsTable({
                 : 'group' in item
                   ? `${groupPages[item.group]}#${anchor}`
                   : undefined
-            const itemGroup =
-              group ?? ('group' in item ? item.group : undefined)
-            const sharePath = itemGroup && itemPagePath(itemGroup, item.name)
             const favourite = favouritePath(item.name)
             const itemDetails = [
               details('materiaali', item.material),
@@ -142,12 +135,6 @@ export function RentalItemsTable({
                       path={favourite}
                       item={item}
                       fixedQuantity={fixedQuantities?.[favourite]}
-                    />
-                  )}
-                  {shareable && sharePath && (
-                    <ShareButton
-                      path={sharePath}
-                      name={humanReadableName(item.name)!}
                     />
                   )}
                 </td>

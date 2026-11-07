@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import { Layout } from '../../components/Layout'
 import { RentalItemsTable } from '../../components/RentalItemsTable'
-import { SharingButton } from '../../components/ShareButton'
+import { ShareButton } from '../../components/ShareButton'
 import {
   clearFavourites,
   type Favourite,
@@ -120,7 +120,7 @@ const Index = () => {
               )}
               <PriceTotal favourites={favourites} />
               <div className="buttons">
-                <SharingButton
+                <ShareButton
                   label={
                     canShare
                       ? 'Lähetä keräilykori...'
@@ -164,11 +164,7 @@ const Index = () => {
                 Huom! Merkitsemäsi tuotteet ovat tallentuneet vain tähän
                 selaimeen.
               </p>
-              <RentalItemsTable
-                itemList={items}
-                shareable={false}
-                quantities={true}
-              />
+              <RentalItemsTable itemList={items} quantities={true} />
             </>
           )}
         </div>
@@ -223,7 +219,6 @@ function SharedList({
           <h2>Keräilykorissa olevat tuotteet</h2>
           <RentalItemsTable
             itemList={itemsOf(shared)}
-            shareable={false}
             fixedQuantities={Object.fromEntries(
               shared.map(({ path, quantity }) => [path, quantity])
             )}

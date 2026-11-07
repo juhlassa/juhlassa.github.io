@@ -36,55 +36,6 @@ test.describe('Item share pages', () => {
       page.locator('#kapea-kerrostarjotin-3-kerrosta')
     ).toBeInViewport()
   })
-
-  test('share button shares the item page', async ({ page }) => {
-    await page.addInitScript(() => {
-      navigator.share = async (data) => {
-        ;(window as unknown as { shared: ShareData }).shared = data!
-      }
-    })
-    await page.goto('/tarjoilu/')
-    const item = page.getByRole('row').filter({
-      has: page.getByRole('link', {
-        name: 'Kapea kerrostarjotin, 3 kerrosta',
-        exact: true
-      })
-    })
-    await item.getByRole('button', { name: 'Jaa' }).click()
-
-    const shared = await page.waitForFunction(
-      () => (window as unknown as { shared?: ShareData }).shared
-    )
-    expect(await shared.jsonValue()).toEqual({
-      title: 'Kapea kerrostarjotin, 3 kerrosta',
-      url: new URL(path, page.url()).href
-    })
-  })
-
-  test('share button copies the link without a share menu', async ({
-    page,
-    context,
-    browserName
-  }) => {
-    test.skip(browserName !== 'chromium', 'Clipboard permissions')
-    await context.grantPermissions(['clipboard-read', 'clipboard-write'])
-    await page.addInitScript(() => {
-      delete (Navigator.prototype as Partial<Navigator>).share
-    })
-    await page.goto('/tarjoilu/')
-    const item = page.getByRole('row').filter({
-      has: page.getByRole('link', {
-        name: 'Kapea kerrostarjotin, 3 kerrosta',
-        exact: true
-      })
-    })
-    await item.getByRole('button', { name: 'Jaa' }).click()
-
-    await expect(item.locator('.message')).toBeVisible()
-    expect(await page.evaluate(() => navigator.clipboard.readText())).toBe(
-      new URL(path, page.url()).href
-    )
-  })
 })
 
 test('every item share page leads to its item', async ({ request }) => {
