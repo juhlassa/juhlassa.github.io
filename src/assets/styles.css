@@ -394,6 +394,10 @@ button.small {
     margin-top: 60px;
 }
 
+.favourites-hint-hidden .favourites-hint {
+    display: none;
+}
+
 .inspiration-close {
     position: relative;
     top: -100px;

@@ -73,6 +73,14 @@ test.describe('Favourites', () => {
       await page.goto(url)
       await expect(instructions).toBeHidden()
     }
+
+    // Not even the static HTML shows it before hydration
+    await page.route('**/*.js', (route) => route.abort())
+    await page.goto('/lasit/')
+    await expect(
+      page.getByRole('heading', { name: 'Lasit', level: 1 })
+    ).toBeVisible()
+    await expect(instructions).toBeHidden()
   })
 
   test('favourites are shared with links to the item pages', async ({

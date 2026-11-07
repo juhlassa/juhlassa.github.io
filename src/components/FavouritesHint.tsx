@@ -3,6 +3,8 @@ import { useSyncExternalStore } from 'react'
 const storageKey = 'favourites-hint-hidden'
 const changeEvent = 'favourites-hint-change'
 
+export const hideFavouritesHintScript = `try{if(localStorage.getItem(${JSON.stringify(storageKey)})==='true')document.documentElement.classList.add('favourites-hint-hidden')}catch(e){}`
+
 function isHidden() {
   try {
     return localStorage.getItem(storageKey) === 'true'
