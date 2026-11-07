@@ -1,7 +1,7 @@
 name: pramiatvadit
 services:
   webserver:
-    container_name: pramatvadit_nginx
+    container_name: pramiatvadit_nginx
     image: nginx:stable-alpine-slim
     restart: unless-stopped
     ports:
